@@ -2,7 +2,7 @@
 ?><!--<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
 	<div class="sidebar-module sidebar-module-inset">
 		<h4>About</h4>
-		<p><?php echo get_bloginfo( 'description' ); ?> </p>
+		<p><?= get_bloginfo( 'description' ); ?> </p>
 	</div>
 	<div class="sidebar-module">
 		<h4>Archives</h4>

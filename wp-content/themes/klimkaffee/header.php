@@ -9,26 +9,27 @@
     <meta name="author" content="">
 
     <title><?php echo get_bloginfo( 'name' ); ?></title>
-    <link href="<?php echo get_bloginfo( 'template_directory' ); ?>/reset.css" rel="stylesheet">
-    <link href="<?php echo get_bloginfo( 'template_directory' ); ?>/css/style.css" rel="stylesheet">
+    <link href="<?= get_bloginfo( 'template_directory' ); ?>/reset.css" rel="stylesheet">
+    <link href="<?= get_bloginfo( 'template_directory' ); ?>/css/style.css" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
 
 <body>
 <header>
-    <div class="head">
-        <div class="hamburger">
+	<?= wp_is_mobile() ? "<div class=\"head\">
+        <div class=\"hamburger\">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>
-    <nav class="main">
+    </div>" : "" ?>
+    <nav class="main <?= wp_is_mobile() ? "mobile" : "" ?>">
 		<?php wp_nav_menu( array(
-			'theme_location' => 'main',
-			'container_class' => 'custom-menu-class' ) );  ?>
+			'theme_location'  => 'main',
+			'container_class' => 'custom-menu-class'
+		) ); ?>
     </nav>
 </header>
 

@@ -2,7 +2,7 @@
 
 $montserrat: "Montserrat", sans-serif;
 
-$font-size-xs: 12px;
+$font-size-xs: 14px;
 $font-size-small: 16px;
 $font-size-medium: 32px;
 $font-size-large: 52px;
@@ -52,6 +52,7 @@ p {
 a {
   text-decoration: none;
   display: inline-block;
+  transition: $transition;
 }
 
 a:after {

@@ -24,38 +24,38 @@ header {
       }
 
       div:nth-child(1) {
-        top: 0
+        top: 0;
       }
 
       div:nth-child(2), div:nth-child(3) {
-        top: 8px
+        top: 8px;
       }
 
       div:nth-child(4) {
-        top: 16px
+        top: 16px;
       }
     }
 
     .hamburger:hover {
-      cursor: pointer
+      cursor: pointer;
     }
 
     .hamburger.open {
       div:nth-child(1), div:nth-child(4) {
         top: 8px;
-        opacity: 0
+        opacity: 0;
       }
 
       div:nth-child(2) {
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
-        transform: rotate(45deg)
+        transform: rotate(45deg);
       }
 
       div:nth-child(3) {
         -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg)
+        transform: rotate(-45deg);
       }
     }
   }
@@ -63,16 +63,7 @@ header {
   nav.main {
     width: 80%;
     margin: auto;
-    display: flex;
-    flex-direction: column;
     background: $white;
-
-    li.current_menu_item {
-      a {
-        color: $red_main;
-        font-weight: $font-weight-bold;
-      }
-    }
 
     li.menu-item {
       list-style-type: none;
@@ -83,10 +74,21 @@ header {
       }
     }
 
+    li.current-menu-item, li.current-menu-parent {
+      a {
+        color: $red_light;
+        font-weight: $font-weight-bold;
+      }
+    }
+
     li.menu-item-has-children {
       li {
         margin-left: 25px;
       }
+    }
+
+    li.menu-item-has-children > a:first-child:hover {
+      cursor: pointer;
     }
 
     li.menu-item-has-children > a:first-child:after {
@@ -104,12 +106,72 @@ header {
     }
 
     li.menu-item-has-children > a:first-child:hover:after {
+      cursor: pointer;
       background: none;
     }
 
     li.menu-item-has-children > a.open:first-child:after {
       border-top: none;
       border-bottom: 10px solid $red_main;
+    }
+
+    // 992px window width and more
+    @include lg {
+      .menu {
+        display: flex;
+        justify-content: space-between;
+
+        li.menu-item {
+          a {
+            font-weight: $font-weight-bold;
+          }
+        }
+
+        li.current-menu-item:after, li.current-menu-parent:after {
+          content: '';
+          display: block;
+          bottom: 0;
+          position: relative;
+          right: 0;
+          height: 2px;
+          width: 100%;
+          background: $red_light;
+        }
+
+        li.menu-item-has-children {
+          ul {
+            background: $red_light;
+            transition: $transition;
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            position: absolute;
+            display: block;
+
+            li {
+              margin-left: 0;
+              padding: 10px;
+
+              a {
+                color: $white;
+                font-size: $font-size-xs;
+              }
+
+              a:hover {
+                color: $red_dark;
+              }
+            }
+          }
+        }
+
+        li.menu-item-has-children > a:first-child:after {
+          display: none;
+        }
+
+        li.menu-item-has-children > a:hover + ul, li.menu-item-has-children ul:hover {
+          max-height: 100vh;
+        }
+      }
     }
   }
 }

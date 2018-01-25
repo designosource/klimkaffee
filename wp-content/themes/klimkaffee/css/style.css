@@ -40,7 +40,9 @@ p {
 
 a {
   text-decoration: none;
-  display: inline-block; }
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 a:after {
   content: '';
@@ -66,10 +68,6 @@ a:hover:after {
 
 .red {
   color: #591c1d; }
-
-.container {
-  width: 80%;
-  margin: auto; }
 
 header {
   position: -webkit-sticky;
@@ -113,24 +111,19 @@ header {
   header nav.main {
     width: 80%;
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     background: #fff; }
-    header nav.main li.current_menu_item a {
-      color: #8e2c28;
-      font-weight: 600; }
     header nav.main li.menu-item {
       list-style-type: none;
       padding: 10px 0; }
       header nav.main li.menu-item a {
         color: #313130; }
+    header nav.main li.current-menu-item a, header nav.main li.current-menu-parent a {
+      color: #bf3e3c;
+      font-weight: 600; }
     header nav.main li.menu-item-has-children li {
       margin-left: 25px; }
+    header nav.main li.menu-item-has-children > a:first-child:hover {
+      cursor: pointer; }
     header nav.main li.menu-item-has-children > a:first-child:after {
       content: '';
       display: block;
@@ -145,7 +138,52 @@ header {
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease; }
     header nav.main li.menu-item-has-children > a:first-child:hover:after {
+      cursor: pointer;
       background: none; }
     header nav.main li.menu-item-has-children > a.open:first-child:after {
       border-top: none;
       border-bottom: 10px solid #8e2c28; }
+    @media (min-width: 992px) {
+      header nav.main .menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        header nav.main .menu li.menu-item a {
+          font-weight: 600; }
+        header nav.main .menu li.current-menu-item:after, header nav.main .menu li.current-menu-parent:after {
+          content: '';
+          display: block;
+          bottom: 0;
+          position: relative;
+          right: 0;
+          height: 2px;
+          width: 100%;
+          background: #bf3e3c; }
+        header nav.main .menu li.menu-item-has-children ul {
+          background: #bf3e3c;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          margin-top: 10px;
+          max-height: 0;
+          overflow: hidden;
+          position: absolute;
+          display: block; }
+          header nav.main .menu li.menu-item-has-children ul li {
+            margin-left: 0;
+            padding: 10px; }
+            header nav.main .menu li.menu-item-has-children ul li a {
+              color: #fff;
+              font-size: 14px; }
+            header nav.main .menu li.menu-item-has-children ul li a:hover {
+              color: #591c1d; }
+        header nav.main .menu li.menu-item-has-children > a:first-child:after {
+          display: none; }
+        header nav.main .menu li.menu-item-has-children > a:hover + ul, header nav.main .menu li.menu-item-has-children ul:hover {
+          max-height: 100vh; } }
+
+.container {
+  width: 80%;
+  margin: auto; }

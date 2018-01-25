@@ -8,13 +8,14 @@ Version: 1.0
 */
 
 // import partials
-@import "components/colors";
-@import "components/fonts";
+@import "components/_breakpoints";
+@import "components/_mixins";
+@import "components/_colors";
 @import "components/_others";
+@import "components/_fonts";
+@import "components/header";
 
 .container {
   width: 80%;
   margin: auto;
 }
-
-@import "components/header";
