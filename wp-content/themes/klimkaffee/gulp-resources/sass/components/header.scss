@@ -1,0 +1,31 @@
+header {
+
+  div.head {
+    height: 50px;
+    background: $red_main;
+  }
+
+  nav.main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+
+    li.menu-item {
+      list-style-type: none;
+      padding: 10px 0;
+
+      a {
+        color: $black;
+      }
+    }
+
+    li.current_menu_item {
+      a {
+        color: $red_main;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}

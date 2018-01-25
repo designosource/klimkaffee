@@ -1,0 +1,19 @@
+/*
+Theme Name: Klimkaffee
+Theme URI:
+Author: Designosource
+Author URI: https://designosource.be/
+Description: Template for Klimkaffee Mechelen
+Version: 1.0
+*/
+
+// import partials
+@import "components/colors";
+@import "components/fonts";
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+@import "components/header";

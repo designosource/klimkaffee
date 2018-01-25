@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,600');
+
+$montserrat: "Montserrat", sans-serif;
+
+$font-size-xs: 12px;
+$font-size-small: 16px;
+$font-size-medium: 32px;
+$font-size-large: 52px;
+
+$font-weight-light: 300;
+$font-weight-bold: 600;
+
+body {
+  font-family: $montserrat;
+}
+
+h1 {
+  color: $red_main;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: $red_light;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+h1.banner {
+  color: $white;
+  font-size: $font-size-large;
+}
+
+h2.banner {
+  color: $white;
+  font-size: $font-size-medium;
+}
+
+p {
+  color: $black;
+  font-size: $font-size-small;
+  font-weight: $font-weight-light;
+  line-height: 23px;
+
+  a {
+    color: $red_light;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:after {
+  content: '';
+  display: block;
+  bottom: 0;
+  position: relative;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: 0 0;
+  -webkit-transition: width .5s ease, background-color .5s ease;
+  -o-transition: width .5s ease, background-color .5s ease;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+a:hover:after {
+  width: 100%;
+  background: $red_light;
+}
+
+.bold {
+  font-weight: $font-weight-bold;
+}
+
+.white {
+  color: $white;
+}
+
+.red {
+  color: $red_dark;
+}
