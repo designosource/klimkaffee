@@ -1,5 +1,5 @@
 <?php
-
+add_theme_support( 'custom-logo' );
 function wpb_custom_new_menu() {
 	register_nav_menus(
 		array(
