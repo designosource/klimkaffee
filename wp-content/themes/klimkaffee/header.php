@@ -17,7 +17,14 @@
 
 <body>
 <header>
-    <div class="head"></div>
+    <div class="head">
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <nav class="main">
 		<?php wp_nav_menu( array(
 			'theme_location' => 'main',

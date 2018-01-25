@@ -1,8 +1,63 @@
 header {
+  position: sticky;
+  width: 100%;
+  z-index: 2;
 
   div.head {
+    position: relative;
     height: 50px;
+    padding: 0 10%;
     background: $red_main;
+
+    .hamburger {
+      position: absolute;
+      top: 50%;
+      height: 25px;
+      margin-top: -12.5px;
+
+      div {
+        position: absolute;
+        height: 3px;
+        width: 25px;
+        background: $white;
+        transition: $transition;
+      }
+
+      div:nth-child(1) {
+        top: 0
+      }
+
+      div:nth-child(2), div:nth-child(3) {
+        top: 8px
+      }
+
+      div:nth-child(4) {
+        top: 16px
+      }
+    }
+
+    .hamburger:hover {
+      cursor: pointer
+    }
+
+    .hamburger.open {
+      div:nth-child(1), div:nth-child(4) {
+        top: 8px;
+        opacity: 0
+      }
+
+      div:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg)
+      }
+
+      div:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+      }
+    }
   }
 
   nav.main {
