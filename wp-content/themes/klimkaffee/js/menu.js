@@ -5,9 +5,10 @@ $(document).ready(function () {
     $(".hamburger").on("click", function () {
         $(this).toggleClass("open");
         $("nav.main").slideToggle("slow");
+    });
 
-        $("nav.main li.menu-item-has-children").on("click", function () {
-            $(this).children("ul").slideToggle("slow");
-        });
+    $("nav.main li.menu-item-has-children").on("click", function () {
+        $(this).children("a").toggleClass("open");
+        $(this).children("ul").slideToggle("slow");
     });
 });

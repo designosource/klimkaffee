@@ -121,11 +121,31 @@ header {
     -ms-flex-direction: column;
     flex-direction: column;
     background: #fff; }
+    header nav.main li.current_menu_item a {
+      color: #8e2c28;
+      font-weight: 600; }
     header nav.main li.menu-item {
       list-style-type: none;
       padding: 10px 0; }
       header nav.main li.menu-item a {
         color: #313130; }
-    header nav.main li.current_menu_item a {
-      color: #8e2c28;
-      font-weight: 600; }
+    header nav.main li.menu-item-has-children li {
+      margin-left: 25px; }
+    header nav.main li.menu-item-has-children > a:first-child:after {
+      content: '';
+      display: block;
+      position: relative;
+      left: calc(100vw - 30vw);
+      top: -10px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #8e2c28;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    header nav.main li.menu-item-has-children > a:first-child:hover:after {
+      background: none; }
+    header nav.main li.menu-item-has-children > a.open:first-child:after {
+      border-top: none;
+      border-bottom: 10px solid #8e2c28; }
