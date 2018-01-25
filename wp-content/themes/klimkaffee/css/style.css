@@ -48,7 +48,6 @@ a:after {
   content: '';
   display: block;
   bottom: 0;
-  top: -20px;
   position: relative;
   right: 0;
   height: 0;
@@ -162,6 +161,8 @@ header {
           line-height: 80px; }
           header nav.main .menu li.menu-item a {
             font-weight: 600; }
+          header nav.main .menu li.menu-item a:after {
+            top: -20px; }
       header nav.main li.current-menu-item:after, header nav.main li.current-menu-parent:after {
         content: '';
         display: block;
