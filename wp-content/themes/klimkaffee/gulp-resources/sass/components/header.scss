@@ -74,6 +74,15 @@ header {
       }
     }
 
+    li.menu-item-home {
+      a {
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+
     li.current-menu-item, li.current-menu-parent {
       a {
         color: $red_light;
@@ -84,6 +93,11 @@ header {
     li.menu-item-has-children {
       li {
         margin-left: 25px;
+
+        a {
+          color: $black;
+          font-weight: $font-weight-light;
+        }
       }
     }
 
@@ -122,55 +136,79 @@ header {
         justify-content: space-between;
 
         li.menu-item {
+          line-height: 80px;
           a {
             font-weight: $font-weight-bold;
           }
         }
+      }
 
-        li.current-menu-item:after, li.current-menu-parent:after {
-          content: '';
-          display: block;
-          bottom: 0;
-          position: relative;
-          right: 0;
-          height: 2px;
-          width: 100%;
-          background: $red_light;
+      li.current-menu-item:after, li.current-menu-parent:after {
+        content: '';
+        display: block;
+        top: -20px;
+        bottom: 0;
+        position: relative;
+        right: 0;
+        height: 2px;
+        width: 100%;
+        background: $red_light;
+      }
+
+      li.menu-item-home.current-menu-item:after {
+        background: none;
+      }
+
+      li.menu-item-home {
+        a:after {
+          background: none;
         }
 
-        li.menu-item-has-children {
-          ul {
-            background: $red_light;
-            transition: $transition;
-            margin-top: 10px;
-            max-height: 0;
-            overflow: hidden;
-            position: absolute;
-            display: block;
+        a:hover:after {
+          background: none;
+        }
 
-            li {
-              margin-left: 0;
-              padding: 10px;
+        a {
+          img {
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
 
-              a {
-                color: $white;
-                font-size: $font-size-xs;
-              }
+      li.menu-item-has-children {
+        ul {
+          background: $red_light;
+          transition: $transition;
+          max-height: 0;
+          overflow: hidden;
+          position: absolute;
+          display: block;
+          margin-top: -20px;
 
-              a:hover {
-                color: $red_dark;
-              }
+          li.menu-item {
+            margin-left: 0;
+            padding: 10px;
+            line-height: normal;
+
+            a {
+              color: $white;
+              font-size: $font-size-xs;
+            }
+
+            a:hover {
+              color: $red_dark;
             }
           }
         }
+      }
 
-        li.menu-item-has-children > a:first-child:after {
-          display: none;
-        }
+      li.menu-item-has-children > a:first-child:after {
+        display: none;
+      }
 
-        li.menu-item-has-children > a:hover + ul, li.menu-item-has-children ul:hover {
-          max-height: 100vh;
-        }
+      li.menu-item-has-children > a:hover + ul, li.menu-item-has-children ul:hover {
+        max-height: 100vh;
       }
     }
   }
