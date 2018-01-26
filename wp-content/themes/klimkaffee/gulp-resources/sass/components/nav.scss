@@ -1,0 +1,30 @@
+%nav {
+  width: 80%;
+  max-width: 1920px;
+  margin: auto;
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+
+    li.menu-item {
+      list-style-type: none;
+      padding: 10px 0;
+
+      a {
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    li.menu-item-home {
+      a:after {
+        background: none;
+      }
+
+      a:hover:after {
+        background: none;
+        height: 0;
+      }
+    }
+  }
+}

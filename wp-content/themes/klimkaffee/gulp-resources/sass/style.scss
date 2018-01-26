@@ -13,6 +13,7 @@ Version: 1.0
 @import "components/_colors";
 @import "components/_others";
 @import "components/_fonts";
+@import "components/nav";
 @import "components/header";
 @import "components/footer";
 
@@ -30,5 +31,6 @@ body {
 
 .content {
   width: 80%;
+  max-width: 1920px;
   margin: auto;
 }

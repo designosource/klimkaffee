@@ -61,117 +61,19 @@ header {
   }
 
   nav.main {
-    width: 80%;
-    margin: auto;
+    @extend %nav;
     background: $white;
 
-    li.menu-item {
-      list-style-type: none;
-      padding: 10px 0;
+    .menu {
+      flex-direction: column;
 
-      a {
-        color: $black;
-      }
-    }
-
-    li.menu-item-home {
-      a {
-        img {
-          width: 80px;
-          height: 80px;
-        }
-      }
-    }
-
-    li.current-menu-item, li.current-menu-parent {
-      a {
-        color: $red_light;
-        font-weight: $font-weight-bold;
-      }
-    }
-
-    li.menu-item-has-children {
-      li {
-        margin-left: 25px;
-
+      li.menu-item {
         a {
           color: $black;
-          font-weight: $font-weight-light;
         }
-      }
-    }
-
-    li.menu-item-has-children > a:first-child:hover {
-      cursor: pointer;
-    }
-
-    li.menu-item-has-children > a:first-child:after {
-      content: '';
-      display: block;
-      position: relative;
-      left: calc(100vw - 30vw);
-      top: -10px;
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid $red_main;
-      transition: $transition;
-    }
-
-    li.menu-item-has-children > a:first-child:hover:after {
-      cursor: pointer;
-      background: none;
-    }
-
-    li.menu-item-has-children > a.open:first-child:after {
-      border-top: none;
-      border-bottom: 10px solid $red_main;
-    }
-
-    // 992px window width and more
-    @include lg {
-      .menu {
-        display: flex;
-        justify-content: space-between;
-
-        li.menu-item {
-          line-height: 80px;
-          a {
-            font-weight: $font-weight-bold;
-          }
-
-          a:after {
-            top: -20px;
-          }
-        }
-      }
-
-      li.current-menu-item:after, li.current-menu-parent:after {
-        content: '';
-        display: block;
-        top: -20px;
-        bottom: 0;
-        position: relative;
-        right: 0;
-        height: 2px;
-        width: 100%;
-        background: $red_light;
-      }
-
-      li.menu-item-home.current-menu-item:after {
-        background: none;
       }
 
       li.menu-item-home {
-        a:after {
-          background: none;
-        }
-
-        a:hover:after {
-          background: none;
-        }
-
         a {
           img {
             width: 80px;
@@ -180,39 +82,131 @@ header {
         }
       }
 
+      li.current-menu-item, li.current-menu-parent {
+        a {
+          color: $red_light;
+          font-weight: $font-weight-bold;
+        }
+      }
+
       li.menu-item-has-children {
-        ul {
-          background: $red_light;
-          transition: $transition;
-          max-height: 0;
-          overflow: hidden;
-          position: absolute;
-          display: block;
-          margin-top: -20px;
+        li {
+          margin-left: 25px;
 
-          li.menu-item {
-            margin-left: 0;
-            padding: 10px;
-            line-height: normal;
-
-            a {
-              color: $white;
-              font-size: $font-size-xs;
-            }
-
-            a:hover {
-              color: $red_dark;
-            }
+          a {
+            color: $black;
+            font-weight: $font-weight-light;
           }
         }
       }
 
-      li.menu-item-has-children > a:first-child:after {
-        display: none;
+      li.menu-item-has-children > a:first-child:hover {
+        cursor: pointer;
       }
 
-      li.menu-item-has-children > a:hover + ul, li.menu-item-has-children ul:hover {
-        max-height: 100vh;
+      li.menu-item-has-children > a:first-child:after {
+        content: '';
+        display: block;
+        position: relative;
+        left: calc(100vw - 30vw);
+        top: -10px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid $red_main;
+        transition: $transition;
+      }
+
+      li.menu-item-has-children > a:first-child:hover:after {
+        cursor: pointer;
+        background: none;
+      }
+
+      li.menu-item-has-children > a.open:first-child:after {
+        border-top: none;
+        border-bottom: 10px solid $red_main;
+      }
+    }
+
+    // 992px window width and more
+    @include lg {
+      .menu {
+        flex-direction: row;
+
+        li.menu-item {
+          line-height: 80px;
+
+          a:after {
+            top: -20px;
+          }
+        }
+
+        li.current-menu-item:after, li.current-menu-parent:after {
+          content: '';
+          display: block;
+          top: -20px;
+          bottom: 0;
+          position: relative;
+          right: 0;
+          height: 2px;
+          width: 100%;
+          background: $red_light;
+        }
+
+        li.menu-item-home.current-menu-item:after {
+          background: none;
+        }
+
+        li.menu-item-home {
+          a {
+            img {
+              width: 80px;
+              height: 80px;
+            }
+          }
+        }
+
+        li.menu-item-has-children {
+          ul {
+            background: $red_light;
+            transition: $transition;
+            max-height: 0;
+            overflow: hidden;
+            position: absolute;
+            display: block;
+            margin-top: -20px;
+
+            li.menu-item {
+              margin-left: 0;
+              padding: 10px;
+              line-height: normal;
+
+              a {
+                color: $white;
+                font-size: $font-size-xs;
+                font-weight: $font-weight-bold;
+              }
+
+              a:hover {
+                color: $red_dark;
+              }
+
+              a:hover:after {
+                background: none;
+                height: 0;
+              }
+            }
+          }
+        }
+
+        li.menu-item-has-children > a:first-child:after {
+          display: none;
+        }
+
+        li.menu-item-has-children > a:hover + ul, li.menu-item-has-children ul:hover {
+          max-height: 100vh;
+        }
       }
     }
   }
