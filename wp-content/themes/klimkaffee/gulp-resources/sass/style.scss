@@ -14,8 +14,21 @@ Version: 1.0
 @import "components/_others";
 @import "components/_fonts";
 @import "components/header";
+@import "components/footer";
+
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
 
 .container {
+  min-height:100%;
+  position:relative;
+}
+
+.content {
   width: 80%;
   margin: auto;
 }

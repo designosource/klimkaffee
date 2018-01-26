@@ -9,15 +9,20 @@
     <meta name="author" content="">
 
     <title><?php echo get_bloginfo( 'name' ); ?></title>
+    <script src="https://use.fontawesome.com/3a7851ae28.js"></script>
     <link href="<?= get_bloginfo( 'template_directory' ); ?>/reset.css" rel="stylesheet">
     <link href="<?= get_bloginfo( 'template_directory' ); ?>/css/style.css" rel="stylesheet">
+
 
 	<?php wp_head(); ?>
 </head>
 
 <body>
-<header>
-	<?= wp_is_mobile() ? "<div class=\"head\">
+<div class="container">
+
+
+    <header>
+		<?= wp_is_mobile() ? "<div class=\"head\">
         <div class=\"hamburger\">
             <div></div>
             <div></div>
@@ -25,12 +30,12 @@
             <div></div>
         </div>
     </div>" : "" ?>
-    <nav class="main <?= wp_is_mobile() ? "mobile" : "" ?>">
-		<?php wp_nav_menu( array(
-			'theme_location'  => 'main',
-			'container_class' => 'custom-menu-class'
-		) ); ?>
-    </nav>
-</header>
+        <nav class="main <?= wp_is_mobile() ? "mobile" : "" ?>">
+			<?php wp_nav_menu( array(
+				'theme_location'  => 'main',
+				'container_class' => 'custom-menu-class'
+			) ); ?>
+        </nav>
+    </header>
 
-<div class="container">
+    <div class="content">
