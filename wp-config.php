@@ -37,8 +37,8 @@ define('DB_CHARSET', 'utf8mb4');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
-define('WP_SITEURL', 'http://localhost/klimkaffee');
-define('WP_HOME', 'http://localhost/klimkaffee');
+define('WP_SITEURL', 'http://klimkaffee.memes');
+define('WP_HOME', 'http://klimkaffee.memes');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -86,7 +86,7 @@ define('WP_DEBUG', true);
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+    define('ABSPATH', dirname(__FILE__) . '/');
 
 define('CONCATENATE_SCRIPTS', false);
 
