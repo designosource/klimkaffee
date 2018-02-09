@@ -1,0 +1,72 @@
+.page-contact {
+  .blog-main {
+    padding: 50px 0;
+  }
+
+  .contact-bits {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .contact-bit {
+      clear: both;
+      padding: 10px 0;
+
+      i {
+        color: $red_main;
+        display: inline-block;
+        float: left;
+        width: 40px;
+      }
+
+      p {
+        position: relative;
+        top: -3px;
+        margin: 0;
+      }
+    }
+  }
+
+  .social-icons {
+    a {
+      background-color: $red_main;
+      color: #FFF;
+      text-decoration: none;
+      text-align: center;
+      width: 40px;
+      padding: 10px;
+      font-size: 1.3em;
+    }
+  }
+
+  select {
+    margin-top: 40px;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    color: #FFF;
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    background-color: $red_dark;
+  }
+
+  input[type="text"], input[type="email"], input[type="tel"], textarea {
+    border: none;
+    border-bottom: 1px solid #a0a0a0;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    font-size: .9em;
+  }
+
+  input[type="submit"] {
+    margin-top: 20px;
+    border: none;
+    padding: 15px 40px;
+    background-color: $red_main;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+  }
+}

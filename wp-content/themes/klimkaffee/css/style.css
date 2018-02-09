@@ -69,6 +69,11 @@ a:hover:after {
 .red {
   color: #441c19; }
 
+h3 {
+  font-weight: bold;
+  font-size: 2em;
+  color: #8e2c28; }
+
 @-ms-viewport {
   width: device-width; }
 
@@ -920,10 +925,8 @@ header {
           max-height: 100vh; } }
 
 footer {
-  position: absolute;
   width: 100%;
   height: 150px;
-  bottom: 0;
   background: #8e2c28; }
   footer nav {
     display: none;
@@ -1032,6 +1035,63 @@ footer {
   @media (min-width: 992px) {
     footer {
       height: inherit; } }
+
+.page-contact .blog-main {
+  padding: 50px 0; }
+
+.page-contact .contact-bits {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .page-contact .contact-bits .contact-bit {
+    clear: both;
+    padding: 10px 0; }
+    .page-contact .contact-bits .contact-bit i {
+      color: #8e2c28;
+      display: inline-block;
+      float: left;
+      width: 40px; }
+    .page-contact .contact-bits .contact-bit p {
+      position: relative;
+      top: -3px;
+      margin: 0; }
+
+.page-contact .social-icons a {
+  background-color: #8e2c28;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  width: 40px;
+  padding: 10px;
+  font-size: 1.3em; }
+
+.page-contact select {
+  margin-top: 40px;
+  border: none;
+  width: 100%;
+  font-weight: bold;
+  color: #FFF;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #441c19; }
+
+.page-contact input[type="text"], .page-contact input[type="email"], .page-contact input[type="tel"], .page-contact textarea {
+  border: none;
+  border-bottom: 1px solid #a0a0a0;
+  padding: 10px;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  font-size: .9em; }
+
+.page-contact input[type="submit"] {
+  margin-top: 20px;
+  border: none;
+  padding: 15px 40px;
+  background-color: #8e2c28;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif; }
 
 html,
 body {
