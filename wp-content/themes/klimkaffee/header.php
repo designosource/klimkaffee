@@ -38,4 +38,6 @@
         </nav>
     </header>
 
+    <?= wp_is_mobile() ? get_custom_logo() : "" ?>
+
     <div class="content">

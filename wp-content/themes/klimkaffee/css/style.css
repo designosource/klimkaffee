@@ -840,8 +840,9 @@ header {
       header nav.main .menu li.menu-item a {
         color: #313130; }
       header nav.main .menu li.menu-item-home a img {
-        width: 80px;
-        height: 80px; }
+        display: none; }
+      header nav.main .menu li.menu-item-home a:before {
+        content: "home"; }
       header nav.main .menu li.current-menu-item a, header nav.main .menu li.current-menu-parent a {
         color: #bf3e3c;
         font-weight: 600; }
@@ -894,8 +895,11 @@ header {
         header nav.main .menu li.menu-item-home.current-menu-item:after {
           background: none; }
         header nav.main .menu li.menu-item-home a img {
+          display: block;
           width: 80px;
           height: 80px; }
+        header nav.main .menu li.menu-item-home a:before {
+          content: none; }
         header nav.main .menu li.menu-item-has-children ul {
           background: #bf3e3c;
           -webkit-transition: all 0.3s ease;
@@ -923,6 +927,12 @@ header {
           display: none; }
         header nav.main .menu li.menu-item-has-children > a:hover + ul, header nav.main .menu li.menu-item-has-children ul:hover {
           max-height: 100vh; } }
+
+.custom-logo {
+  display: block;
+  width: 30%;
+  margin: 20px auto;
+  height: 100%; }
 
 footer {
   width: 100%;

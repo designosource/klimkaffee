@@ -76,9 +76,14 @@ header {
       li.menu-item-home {
         a {
           img {
-            width: 80px;
-            height: 80px;
+            //width: 80px;
+            //height: 80px;
+            display: none;
           }
+        }
+
+        a:before {
+          content: "home";
         }
       }
 
@@ -161,9 +166,14 @@ header {
         li.menu-item-home {
           a {
             img {
+              display: block;
               width: 80px;
               height: 80px;
             }
+          }
+
+          a:before {
+            content: none;
           }
         }
 
@@ -211,4 +221,11 @@ header {
       }
     }
   }
+}
+
+.custom-logo {
+  display: block;
+  width: 30%;
+  margin: 20px auto;
+  height: 100%;
 }
