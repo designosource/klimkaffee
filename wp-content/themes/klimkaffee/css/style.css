@@ -1064,6 +1064,19 @@ footer {
     width: 100%;
     height: 100%;
     margin-bottom: 20px; }
+  .blog-post a.read-more-link {
+    display: block;
+    max-width: 115px;
+    color: white;
+    background: #bf3e3c;
+    padding: 5px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 20px; }
+  .blog-post a.read-more-link:hover {
+    background: #742423; }
+  .blog-post a.read-more-link:hover:after {
+    content: none; }
   @media (min-width: 992px) {
     .blog-post {
       display: -webkit-box;
@@ -1141,7 +1154,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   overflow-x: hidden; }
 
 .container {
