@@ -30,13 +30,14 @@ h2 {
 }
 
 h1.banner {
-  color: $white;
   font-size: $font-size-large;
+  color: $white;
+  text-align: center;
 }
 
 h2.banner {
   color: $white;
-  font-size: $font-size-medium;
+  text-align: center;
 }
 
 p {
@@ -73,18 +74,6 @@ a:after {
 a:hover:after {
   height: 3px;
   background: $red_light;
-}
-
-.bold {
-  font-weight: $font-weight-bold;
-}
-
-.white {
-  color: $white;
-}
-
-.red {
-  color: $red_dark;
 }
 
 h3 {

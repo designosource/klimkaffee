@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-    <div class="page-title">
-        <img src="<?php the_header_image_tag(); ?>" alt="">
-        <h1 class=""><?php
+    <div class="page-title" style="background-image: <?= $post->post_parent ? "url(".wp_get_attachment_url( get_post_thumbnail_id($post->post_parent) ).")" : "".the_post_thumbnail(); ?>">
+
+        <h1 class="banner"><?php
 			if ( $post->post_parent ) {
 				$parent_title = get_the_title( $post->post_parent );
 				echo $parent_title;
@@ -10,7 +10,7 @@
 				echo get_the_title( $post->ID );
 			}
 			?></h1>
-        <h2 class=""><?php if ( $post->post_parent ) {
+        <h2 class="banner"><?php if ( $post->post_parent ) {
 				$parent_subtitle = get_post_meta( wp_get_post_parent_id( $post->ID ), 'Subtitle', true );
 				echo $parent_subtitle;
 			} else {
@@ -19,9 +19,13 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-12">
-
-
+        <div class="col-xs-10 col-xs-offset-1">
+	        <?php
+	        if ( have_posts() ) : while ( have_posts() ) : the_post();
+		        get_template_part( 'content-single', get_post_format() );
+	        endwhile;
+	        endif;
+	        ?>
         </div> <!-- /.col -->
     </div> <!-- /.row -->
 

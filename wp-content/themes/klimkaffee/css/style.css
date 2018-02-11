@@ -24,12 +24,13 @@ h2 {
   margin: 10px 0 30px; }
 
 h1.banner {
+  font-size: 52px;
   color: #fff;
-  font-size: 52px; }
+  text-align: center; }
 
 h2.banner {
   color: #fff;
-  font-size: 32px; }
+  text-align: center; }
 
 p {
   color: #313130;
@@ -60,15 +61,6 @@ a:after {
 a:hover:after {
   height: 3px;
   background: #bf3e3c; }
-
-.bold {
-  font-weight: 600; }
-
-.white {
-  color: #fff; }
-
-.red {
-  color: #441c19; }
 
 h3 {
   font-weight: bold;
@@ -944,6 +936,64 @@ header {
     width: 30%;
     margin: 20px auto;
     height: 100%; }
+
+.content {
+  width: 100%; }
+  .content .page-title {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .content .blog-post-content {
+    width: 100%; }
+    .content .blog-post-content .sub-content {
+      margin-bottom: 50px; }
+      .content .blog-post-content .sub-content .prices {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        .content .blog-post-content .sub-content .prices .price {
+          background: #ede4e5;
+          margin: 10px 0;
+          width: 100%;
+          height: 150px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center; }
+          .content .blog-post-content .sub-content .prices .price p {
+            text-align: center;
+            color: #8e2c28;
+            font-weight: 600; }
+          .content .blog-post-content .sub-content .prices .price p.price-tag {
+            margin-bottom: 10px; }
+          .content .blog-post-content .sub-content .prices .price p.price-value {
+            font-size: 32px; }
+  @media (min-width: 768px) {
+    .content .page-title {
+      height: 400px; }
+    .content .blog-post-content .sub-content .prices .price {
+      width: 20%; } }
 
 footer {
   width: 100%;
