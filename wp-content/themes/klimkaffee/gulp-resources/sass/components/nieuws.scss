@@ -1,0 +1,21 @@
+.blog-post {
+  margin: 50px auto;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  @include lg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    img {
+      width: 40%;
+      margin-right: 6%;
+    }
+  }
+}

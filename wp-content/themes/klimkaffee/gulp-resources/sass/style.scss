@@ -17,6 +17,7 @@ Version: 1.0
 @import "components/nav";
 @import "components/header";
 @import "components/footer";
+@import "components/nieuws";
 @import "components/contact";
 
 html,
@@ -24,15 +25,10 @@ body {
   margin:0;
   padding:0;
   height:100%;
+  overflow-x: hidden;
 }
 
 .container {
   min-height:100%;
   position:relative;
-}
-
-.content {
-  width: 80%;
-  max-width: 1920px;
-  margin: auto;
 }
