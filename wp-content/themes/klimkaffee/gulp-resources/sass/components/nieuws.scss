@@ -38,3 +38,64 @@
     }
   }
 }
+
+.post-navigation {
+  margin: 20px 0;
+
+  h2 {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+
+    a span {
+      display: none;
+      color: $black;
+      font-weight: $font-weight-bold;
+    }
+
+    a:before {
+      content: url("../img/navigation.png");
+      display: block;
+      position: relative;
+    }
+
+    a:after {
+      content: none;
+    }
+
+    .nav-previous {
+      a:before {
+        transform: rotate(-90deg) scale(0.3);
+      }
+    }
+
+    .nav-next {
+      a:before {
+        transform: rotate(90deg) scale(0.3);
+      }
+    }
+
+    @include md {
+      a span {
+        display: inline-block;
+      }
+
+      .nav-previous {
+        a:before {
+          bottom: -50px;
+          left: -70px;
+        }
+      }
+
+      .nav-next {
+        a:before {
+          bottom: -55px;
+          left: 85px;
+        }
+      }
+    }
+  }
+}

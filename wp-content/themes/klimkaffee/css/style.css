@@ -1093,6 +1093,43 @@ footer {
         width: 40%;
         margin-right: 6%; } }
 
+.post-navigation {
+  margin: 20px 0; }
+  .post-navigation h2 {
+    display: none; }
+  .post-navigation .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .post-navigation .nav-links a span {
+      display: none;
+      color: #313130;
+      font-weight: 600; }
+    .post-navigation .nav-links a:before {
+      content: url("../img/navigation.png");
+      display: block;
+      position: relative; }
+    .post-navigation .nav-links a:after {
+      content: none; }
+    .post-navigation .nav-links .nav-previous a:before {
+      -webkit-transform: rotate(-90deg) scale(0.3);
+      transform: rotate(-90deg) scale(0.3); }
+    .post-navigation .nav-links .nav-next a:before {
+      -webkit-transform: rotate(90deg) scale(0.3);
+      transform: rotate(90deg) scale(0.3); }
+    @media (min-width: 768px) {
+      .post-navigation .nav-links a span {
+        display: inline-block; }
+      .post-navigation .nav-links .nav-previous a:before {
+        bottom: -50px;
+        left: -70px; }
+      .post-navigation .nav-links .nav-next a:before {
+        bottom: -55px;
+        left: 85px; } }
+
 .page-contact .blog-main {
   padding: 50px 0; }
 
