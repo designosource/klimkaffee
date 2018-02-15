@@ -38,7 +38,7 @@ define('DB_CHARSET', 'utf8mb4');
 define('DB_COLLATE', '');
 
 define('WP_SITEURL', 'http://klimkaffee.memes');
-define('WP_HOME', 'http://klimkaffee.memes');
+define('WP_HOME', 'http://klimka');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -80,7 +80,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 

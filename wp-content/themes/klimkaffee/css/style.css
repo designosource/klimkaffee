@@ -67,6 +67,12 @@ h3 {
   font-size: 2em;
   color: #8e2c28; }
 
+.page-content h4 {
+  color: #8e2c28;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-weight: bold; }
+
 @-ms-viewport {
   width: device-width; }
 
@@ -1286,6 +1292,15 @@ footer {
         position: absolute;
         top: 0;
         right: 0; }
+
+.page-trainingen .trainer {
+  text-align: center; }
+  .page-trainingen .trainer img {
+    width: 100%;
+    height: auto; }
+
+.page-trainingen p {
+  margin-bottom: 30px; }
 
 html,
 body {
