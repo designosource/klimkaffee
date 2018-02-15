@@ -1266,29 +1266,29 @@ footer {
 .page-openingsuren {
   padding: 100px 0; }
 
-.opening-hours .opening-moment {
+.page-openingsuren .opening-moment {
   margin: 40px 0; }
-  .opening-hours .opening-moment p {
+  .page-openingsuren .opening-moment p {
     font-weight: bold; }
-  .opening-hours .opening-moment .opening-bar {
+  .page-openingsuren .opening-moment .opening-bar {
     margin-top: 10px;
     background-color: #441c19;
     height: 40px;
     width: 100%;
     position: relative; }
-    .opening-hours .opening-moment .opening-bar .opening-bar-inner {
+    .page-openingsuren .opening-moment .opening-bar .opening-bar-inner {
       background-color: #8e2c28;
       position: absolute;
       top: 0;
       height: 40px; }
-      .opening-hours .opening-moment .opening-bar .opening-bar-inner p {
+      .page-openingsuren .opening-moment .opening-bar .opening-bar-inner p {
         margin: 10px;
         color: #FFF; }
-      .opening-hours .opening-moment .opening-bar .opening-bar-inner p:first-of-type {
+      .page-openingsuren .opening-moment .opening-bar .opening-bar-inner p:first-of-type {
         position: absolute;
         top: 0;
         left: 0; }
-      .opening-hours .opening-moment .opening-bar .opening-bar-inner p:last-of-type {
+      .page-openingsuren .opening-moment .opening-bar .opening-bar-inner p:last-of-type {
         position: absolute;
         top: 0;
         right: 0; }
@@ -1298,6 +1298,8 @@ footer {
   .page-trainingen .trainer img {
     width: 100%;
     height: auto; }
+  .page-trainingen .trainer h4 {
+    font-size: .9em; }
 
 .page-trainingen p {
   margin-bottom: 30px; }
