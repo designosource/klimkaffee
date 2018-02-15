@@ -9,15 +9,15 @@
                 <div class="contact-bits">
                     <div class="contact-bit">
                         <i class="fa fa-map-marker"></i>
-                        <p>Douaneplain 2800 Mechelen</p>
+                        <p><?php echo get_post_meta(get_the_id(), "address", true) ?></p>
                     </div>
                     <div class="contact-bit">
                         <i class="fa fa-envelope"></i>
-                        <p>boulder@klimkaffee.be</p>
+                        <p><?php echo get_post_meta(get_the_id(), "email", true) ?></p>
                     </div>
                     <div class="contact-bit">
                         <i class="fa fa-phone"></i>
-                        <p>04xx xx xx xx</p>
+                        <p><?php echo get_post_meta(get_the_id(), "phone_number", true) ?></p>
                     </div>
                 </div>
                 <div class="social-icons">

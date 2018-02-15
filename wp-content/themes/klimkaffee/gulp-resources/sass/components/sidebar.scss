@@ -1,0 +1,32 @@
+.submenu {
+  text-align: right;
+  border-right: 1px solid #d5d5d5;
+  padding-right: 30px;
+
+  h3 {
+    font-size: 1em;
+    color: #424242;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 20px 0;
+  }
+
+  ul {
+    li {
+      a {
+        color: #555555;
+        font-weight: bold;
+        padding: 15px 0;
+
+        &:hover {
+          color: $red_light;
+          border: none;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1093,6 +1093,29 @@ footer {
   font-weight: bold;
   font-family: "Montserrat", sans-serif; }
 
+.submenu {
+  text-align: right;
+  border-right: 1px solid #d5d5d5;
+  padding-right: 30px; }
+  .submenu h3 {
+    font-size: 1em;
+    color: #424242;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 20px 0; }
+  .submenu ul li a {
+    color: #555555;
+    font-weight: bold;
+    padding: 15px 0; }
+    .submenu ul li a:hover {
+      color: #bf3e3c;
+      border: none; }
+    .submenu ul li a::after {
+      display: none; }
+
+.page-openingsuren {
+  padding: 100px 0; }
+
 html,
 body {
   margin: 0;
