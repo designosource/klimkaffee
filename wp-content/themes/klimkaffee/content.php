@@ -1,8 +1,11 @@
-<?php
-?><div class="blog-post">
-	<h2 class="blog-post-title"><?php the_title(); ?></h2>
-	<p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a></p>
+<div class="blog-post">
+	<?php the_post_thumbnail(); ?>
 
-	<?php the_content(); ?>
+    <div class="blog-post-content">
+        <h1 class="blog-post-title"><?php the_title(); ?></h1>
+        <h2><?php echo get_post_meta( get_the_ID(), 'Subtitle', true ); ?></h2>
+	    <?php the_excerpt() ?>
+		<?php /*the_content("Lees meer" , FALSE);*/ ?>
+    </div>
 
 </div><!-- /.blog-post -->

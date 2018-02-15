@@ -8,3 +8,5 @@ function wpb_custom_new_menu() {
 	);
 }
 add_action( 'init', 'wpb_custom_new_menu' );
+add_theme_support( 'post-thumbnails' );
+
