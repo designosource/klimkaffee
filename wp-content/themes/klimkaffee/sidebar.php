@@ -13,7 +13,8 @@
     <?php
     foreach($page_children as $page_child) {
         ?>
-            <li><a href="<?php $page_child->post_name ?>"><?php echo $page_child->post_title ?></a></li>
+
+            <li><a href="../<?php echo $page_child->post_name ?>"><?php echo $page_child->post_title ?></a></li>
         <?php
     }
     ?>

@@ -1269,3 +1269,6 @@ body {
 .container {
   min-height: 100%;
   position: relative; }
+
+.page-content {
+  padding: 75px 0 75px; }

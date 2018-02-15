@@ -17,16 +17,23 @@
 				echo get_post_meta( get_the_ID(), 'Subtitle', true );
 			} ?></h2>
     </div>
+    <div class="page-content">
+
 
     <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-	        <?php
-	        if ( have_posts() ) : while ( have_posts() ) : the_post();
-		        get_template_part( 'content-single', get_post_format() );
-	        endwhile;
-	        endif;
-	        ?>
-        </div> <!-- /.col -->
+            <div class="col-md-3">
+                <?php get_sidebar(); ?>
+            </div>
+            <div class="col-md-9">
+                <?php
+                if ( have_posts() ) : while ( have_posts() ) : the_post();
+                    get_template_part( 'content-single', get_post_format() );
+                endwhile;
+                endif;
+                ?>
+
+            </div>
+    </div>
     </div> <!-- /.row -->
 
 <?php get_footer(); ?>
