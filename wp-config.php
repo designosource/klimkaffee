@@ -38,7 +38,7 @@ define('DB_CHARSET', 'utf8mb4');
 define('DB_COLLATE', '');
 
 define('WP_SITEURL', 'http://klimkaffee.memes');
-define('WP_HOME', 'http://klimka');
+define('WP_HOME', 'http://klimkaffee.memes');
 
 /**#@+
  * Authentication Unique Keys and Salts.
