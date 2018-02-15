@@ -1,3 +1,45 @@
 .page-openingsuren {
   padding: 100px 0;
 }
+
+.opening-hours {
+  .opening-moment {
+    margin: 40px 0;
+
+    p {
+      font-weight: bold;
+    }
+
+    .opening-bar {
+      margin-top: 10px;
+      background-color: $red_dark;
+      height: 40px;
+      width: 100%;
+      position: relative;
+
+      .opening-bar-inner {
+        background-color: $red_main;
+        position: absolute;
+        top: 0;
+        height: 40px;
+
+        p {
+          margin: 10px;
+          color: #FFF;
+        }
+
+        p:first-of-type {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        p:last-of-type {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}

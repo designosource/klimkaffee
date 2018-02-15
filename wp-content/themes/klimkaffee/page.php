@@ -20,11 +20,12 @@
     <div class="page-content">
 
 
-    <div class="row">
-            <div class="col-md-3">
+    <div class="custom-container">
+        <div class="row">
+            <div class="col-md-2">
                 <?php get_sidebar(); ?>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <?php
                 if ( have_posts() ) : while ( have_posts() ) : the_post();
                     get_template_part( 'content-single', get_post_format() );
@@ -33,6 +34,7 @@
                 ?>
 
             </div>
+        </div>
     </div>
     </div> <!-- /.row -->
 
