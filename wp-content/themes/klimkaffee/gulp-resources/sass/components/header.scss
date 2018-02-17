@@ -101,6 +101,8 @@ header {
           a {
             color: $black;
             font-weight: $font-weight-light;
+            pointer-events: auto;
+            cursor: pointer;
           }
         }
       }
@@ -165,7 +167,7 @@ header {
           }
         }
 
-        li.menu-item-home.current-menu-item{
+        li.menu-item-home.current-menu-item {
           a:after {
             background: none;
           }

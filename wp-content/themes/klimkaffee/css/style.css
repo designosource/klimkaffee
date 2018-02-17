@@ -849,7 +849,9 @@ header {
         margin-left: 25px; }
         header nav.main .menu li.menu-item-has-children li a {
           color: #313130;
-          font-weight: 300; }
+          font-weight: 300;
+          pointer-events: auto;
+          cursor: pointer; }
       header nav.main .menu li.menu-item-has-children > a:first-child:hover {
         cursor: pointer; }
       header nav.main .menu li.menu-item-has-children > a:first-child:after {
