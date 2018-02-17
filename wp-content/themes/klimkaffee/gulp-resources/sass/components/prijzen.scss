@@ -1,0 +1,36 @@
+.sub-content {
+  margin-bottom: 50px;
+
+  .prices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .price {
+      background: $gray;
+      margin: 10px 0;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        text-align: center;
+        color: $red_main;
+        font-weight: $font-weight-bold;
+      }
+
+      p.price-tag {
+        margin-bottom: 10px;
+      }
+
+      p.price-value {
+        font-size: $font-size-medium;
+      }
+    }
+
+    @include md {
+
+    }
+  }
+}

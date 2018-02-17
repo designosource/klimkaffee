@@ -10,8 +10,8 @@
 
     <title><?php echo get_bloginfo( 'name' ); ?></title>
     <script src="https://use.fontawesome.com/3a7851ae28.js"></script>
-    <link href="<?= get_bloginfo( 'template_directory' ); ?>/reset.css" rel="stylesheet">
-    <link href="<?= get_bloginfo( 'template_directory' ); ?>/css/style.css" rel="stylesheet">
+    <link href="<?php echo get_bloginfo( 'template_directory' ); ?>/reset.css" rel="stylesheet">
+    <link href="<?php echo get_bloginfo( 'template_directory' ); ?>/css/style.css" rel="stylesheet">
 
 
 	<?php wp_head(); ?>
@@ -22,7 +22,7 @@
 
 
     <header>
-		<?= wp_is_mobile() ? "<div class=\"head\">
+		<?php echo wp_is_mobile() ? "<div class=\"head\">
         <div class=\"hamburger\">
             <div></div>
             <div></div>
@@ -30,7 +30,7 @@
             <div></div>
         </div>
     </div>" : "" ?>
-        <nav class="main <?= wp_is_mobile() ? "mobile" : "" ?>">
+        <nav class="main <?php echo wp_is_mobile() ? "mobile" : "" ?>">
 			<?php wp_nav_menu( array(
 				'theme_location'  => 'main',
 				'container_class' => 'custom-menu-class'
@@ -38,6 +38,6 @@
         </nav>
     </header>
 
-    <?= wp_is_mobile() ? get_custom_logo() : "" ?>
+    <?php echo wp_is_mobile() ? get_custom_logo() : "" ?>
 
     <div class="content">
