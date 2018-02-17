@@ -76,6 +76,26 @@ a:hover:after {
   background: $red_light;
 }
 
+a.read-more-link {
+  display: block;
+  max-width: 120px;
+  max-width: max-content;
+  color: white;
+  background: $red_light;
+  padding: 5px 20px;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-xs;
+  margin-top: 20px;
+}
+
+a.read-more-link:hover {
+  background: $red_medium;
+}
+
+a.read-more-link:hover:after {
+  content: none;
+}
+
 h3 {
   font-weight: bold;
   font-size: 2em;
@@ -89,8 +109,4 @@ h3 {
     text-transform: uppercase;
     font-weight: bold;
   }
-
-
-
-
 }
