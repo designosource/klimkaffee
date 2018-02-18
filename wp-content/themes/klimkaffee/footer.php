@@ -25,6 +25,9 @@
 </div> <!-- /.container -->
 <script src="<?= get_bloginfo( 'template_directory' ); ?>/js/jquery-2.1.4.min.js"></script>
 <script src="<?= get_bloginfo( 'template_directory' ); ?>/js/menu.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://kenwheeler.github.io/slick/slick/slick.js" ></script>
+<script src="<?= get_bloginfo( 'template_directory' ); ?>/js/script.js" ></script>
 <?php wp_footer(); ?>
 </body>
 </html>

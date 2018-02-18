@@ -12,6 +12,9 @@
     <script src="https://use.fontawesome.com/3a7851ae28.js"></script>
     <link href="<?= get_bloginfo( 'template_directory' ); ?>/reset.css" rel="stylesheet">
     <link href="<?= get_bloginfo( 'template_directory' ); ?>/css/style.css" rel="stylesheet">
+    <link href="https://kenwheeler.github.io/slick/slick/slick.css" rel="stylesheet">
+    <link href="https://kenwheeler.github.io/slick/slick/slick-theme.css" rel="stylesheet">
+    <link href="<?= get_bloginfo( 'template_directory' ); ?>/sander.css" rel="stylesheet">
 
 
 	<?php wp_head(); ?>

@@ -1,0 +1,111 @@
+@media (min-width: 992px) {
+    header nav.main .menu {
+        height: 100px;
+    }
+}
+
+.maxwidth {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slick-slider {
+    margin-bottom: 0;
+    height: 600px;
+}
+
+.slick-slider > div, .slick-track, .slick-item > div {
+    height: 100%;
+}
+
+.slick-dots {
+    bottom: 30px;
+}
+
+.slick-container .slick-item {
+    background-size: cover;
+    background-position: center 70%;
+}
+
+.slick-container .slick-item > div {
+    list-style-type: none;
+    margin: 0;
+    display: block;
+    width: 100vw;
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+}
+
+.slide-text {
+    display: block;
+    text-align: left;
+    font-family : Montserrat, sans-serif;
+    color: white;
+    padding: 50px 0;
+}
+
+.slide-text h1 {
+    font-size : 30px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.slide-text h1 span {
+	display: block;
+	font-size: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.slide-text p {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+.slide-text a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    min-width: 150px;
+    background-color: #B93D3C;
+    transition: 0.5s;
+    border: 2px solid #B93D3C;
+}
+
+.slide-text a:hover {
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.slide-text a:hover:after {
+    display: none;
+}
+
+ul.slick-dots li button:before {
+    content:'';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 9px;
+    background-color: white;
+    opacity: 1;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+ul.slick-dots li.slick-active button:before {
+    background-color: #B93D3C;
+    opacity: 1;
+}
+
+.page-content img {
+    width: 100%;
+    height: auto;
+}
+
