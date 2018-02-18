@@ -8,25 +8,6 @@
     margin-bottom: 20px;
   }
 
-  a.read-more-link {
-    display: block;
-    max-width: 115px;
-    color: white;
-    background: $red_light;
-    padding: 5px 20px;
-    font-weight: $font-weight-bold;
-    font-size: $font-size-xs;
-    margin-top: 20px;
-  }
-
-  a.read-more-link:hover {
-    background: $red_medium;
-  }
-
-  a.read-more-link:hover:after {
-    content: none;
-  }
-
   @include lg {
     display: flex;
     flex-direction: row;

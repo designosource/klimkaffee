@@ -46,18 +46,20 @@ Template Name: Homepage
             
                 <h2><?php the_field('introduction_small_title') ?><br><span><?php the_field('introduction_big_title') ?></span></h2>
             
-                <div class="col-md-7">
-                    
-                    <!-- Content -->
-                    <?php the_field('introduction_content'); ?>
-                    
-                </div>
-                
-                <div class="col-md-5">
-                    
-                    <!-- Image -->
-                    <img src="<?php the_field('introduction_image'); ?>" alt="Image homepage Klimkaffee">
-                    
+                <div class="row">
+                    <div class="col-md-7">
+
+                        <!-- Content -->
+                        <?php the_field('introduction_content'); ?>
+
+                    </div>
+
+                    <div class="col-md-5">
+
+                        <!-- Image -->
+                        <img src="<?php the_field('introduction_image'); ?>" alt="Image homepage Klimkaffee">
+
+                    </div>
                 </div>
             
             </div>

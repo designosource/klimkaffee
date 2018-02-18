@@ -23,11 +23,16 @@
     </div>
 </footer>
 </div> <!-- /.container -->
+<<<<<<< HEAD
 <script src="<?= get_bloginfo( 'template_directory' ); ?>/js/jquery-2.1.4.min.js"></script>
 <script src="<?= get_bloginfo( 'template_directory' ); ?>/js/menu.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="https://kenwheeler.github.io/slick/slick/slick.js" ></script>
 <script src="<?= get_bloginfo( 'template_directory' ); ?>/js/script.js" ></script>
+=======
+<script src="<?php echo get_bloginfo( 'template_directory' ); ?>/js/jquery-2.1.4.min.js"></script>
+<script src="<?php echo get_bloginfo( 'template_directory' ); ?>/js/menu.js"></script>
+>>>>>>> 78bbc03c567909c9007935d269f6d99e5856f7af
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -62,6 +62,25 @@ a:hover:after {
   height: 3px;
   background: #bf3e3c; }
 
+a.read-more-link {
+  display: block;
+  max-width: 120px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  color: white;
+  background: #bf3e3c;
+  padding: 5px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 20px; }
+
+a.read-more-link:hover {
+  background: #742423; }
+
+a.read-more-link:hover:after {
+  content: none; }
+
 h3 {
   font-weight: bold;
   font-size: 2em;
@@ -849,7 +868,9 @@ header {
         margin-left: 25px; }
         header nav.main .menu li.menu-item-has-children li a {
           color: #313130;
-          font-weight: 300; }
+          font-weight: 300;
+          pointer-events: auto;
+          cursor: pointer; }
       header nav.main .menu li.menu-item-has-children > a:first-child:hover {
         cursor: pointer; }
       header nav.main .menu li.menu-item-has-children > a:first-child:after {
@@ -961,45 +982,9 @@ header {
     justify-content: center; }
   .content .blog-post-content {
     width: 100%; }
-    .content .blog-post-content .sub-content {
-      margin-bottom: 50px; }
-      .content .blog-post-content .sub-content .prices {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between; }
-        .content .blog-post-content .sub-content .prices .price {
-          background: #ede4e5;
-          margin: 10px 0;
-          width: 100%;
-          height: 150px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center; }
-          .content .blog-post-content .sub-content .prices .price p {
-            text-align: center;
-            color: #8e2c28;
-            font-weight: 600; }
-          .content .blog-post-content .sub-content .prices .price p.price-tag {
-            margin-bottom: 10px; }
-          .content .blog-post-content .sub-content .prices .price p.price-value {
-            font-size: 32px; }
   @media (min-width: 768px) {
     .content .page-title {
-      height: 400px; }
-    .content .blog-post-content .sub-content .prices .price {
-      width: 20%; } }
+      height: 400px; } }
 
 footer {
   width: 100%;
@@ -1120,19 +1105,6 @@ footer {
     width: 100%;
     height: 100%;
     margin-bottom: 20px; }
-  .blog-post a.read-more-link {
-    display: block;
-    max-width: 115px;
-    color: white;
-    background: #bf3e3c;
-    padding: 5px 20px;
-    font-weight: 600;
-    font-size: 14px;
-    margin-top: 20px; }
-  .blog-post a.read-more-link:hover {
-    background: #742423; }
-  .blog-post a.read-more-link:hover:after {
-    content: none; }
   @media (min-width: 992px) {
     .blog-post {
       display: -webkit-box;
@@ -1262,6 +1234,40 @@ footer {
       border: none; }
     .submenu ul li a::after {
       display: none; }
+
+.sub-content {
+  margin-bottom: 50px; }
+  .sub-content .prices {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .sub-content .prices .price {
+      background: #ede4e5;
+      margin: 10px 0;
+      height: 150px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .sub-content .prices .price p {
+        text-align: center;
+        color: #8e2c28;
+        font-weight: 600; }
+      .sub-content .prices .price p.price-tag {
+        margin-bottom: 10px; }
+      .sub-content .prices .price p.price-value {
+        font-size: 32px; }
 
 .page-openingsuren {
   padding: 100px 0; }

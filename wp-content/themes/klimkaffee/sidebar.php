@@ -11,7 +11,7 @@
     <h3><?php echo $parent_page->post_title ?></h3>
     <ul>
     <?php
-    foreach($page_children as $page_child) {
+    foreach(array_reverse($page_children) as $page_child) {
         ?>
 
             <li><a href="../<?php echo $page_child->post_name ?>"><?php echo $page_child->post_title ?></a></li>
