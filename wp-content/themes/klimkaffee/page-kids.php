@@ -3,10 +3,10 @@ include( 'banner.php' ) ?>
     <div class="page-content page-prijzen">
         <div class="custom-container">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
 					<?php get_sidebar(); ?>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-9">
                     <h1><?php the_title(); ?></h1>
 					<?php if ( have_rows( 'content' ) ):
 						// loop through the rows of data

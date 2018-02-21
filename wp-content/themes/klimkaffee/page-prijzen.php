@@ -3,10 +3,10 @@ include( 'banner.php' ) ?>
     <div class="page-content page-prijzen">
         <div class="custom-container">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
 					<?php get_sidebar(); ?>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-9">
                     <h1><?php the_title(); ?></h1>
 					<?php if ( have_rows( 'categorie' ) ):
 						// loop through the rows of data
@@ -24,6 +24,13 @@ include( 'banner.php' ) ?>
                                                 <p class="price-value">€<?php echo get_sub_field( 'soort_prijs' ) ?></p>
                                             </div>
 										<?php endwhile; endif; ?>
+                                </div>
+                                <div class="col-md-12 no-padding">
+                                    <?php if( !empty( get_sub_field('extra_information') ) ): ?>
+                                    
+                                        <?php the_sub_field('extra_information'); ?>
+                                    
+                                    <?php endif; ?>
                                 </div>
                             </div>
 						<?php endwhile; endif; ?>

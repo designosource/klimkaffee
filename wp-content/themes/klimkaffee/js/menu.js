@@ -9,7 +9,7 @@ $(document).ready(function () {
     });
 
     $("nav.main.mobile li.menu-item-has-children").on("click", function () {
-        $(this).children("a").toggleClass("open");
-        $(this).children("ul").slideToggle("slow");
+        $(this).find("a").toggleClass("open");
+        $(this).find("ul").slideToggle("slow");
     });
 });

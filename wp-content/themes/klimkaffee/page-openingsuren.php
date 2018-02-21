@@ -4,10 +4,10 @@ include( 'banner.php' )?>
     <div class="page-content page-openingsuren">
         <div class="custom-container">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <?php get_sidebar(); ?>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-9">
                     <h4><?php echo get_field('training_naam') ?></h4>
                     <p><?php echo get_field('training_beschrijving') ?></p>
                     <h1>Openingsuren</h1>

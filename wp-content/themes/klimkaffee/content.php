@@ -1,5 +1,7 @@
 <div class="blog-post">
-	<?php the_post_thumbnail(); ?>
+	<div class="blog-post-image-container">
+    <?php the_post_thumbnail(); ?>
+    </div>
 
     <div class="blog-post-content">
         <h1 class="blog-post-title"><?php the_title(); ?></h1>

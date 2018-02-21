@@ -10,17 +10,11 @@
 
     <title><?php echo get_bloginfo( 'name' ); ?></title>
     <script src="https://use.fontawesome.com/3a7851ae28.js"></script>
-<<<<<<< HEAD
     <link href="<?= get_bloginfo( 'template_directory' ); ?>/reset.css" rel="stylesheet">
     <link href="<?= get_bloginfo( 'template_directory' ); ?>/css/style.css" rel="stylesheet">
     <link href="https://kenwheeler.github.io/slick/slick/slick.css" rel="stylesheet">
     <link href="https://kenwheeler.github.io/slick/slick/slick-theme.css" rel="stylesheet">
     <link href="<?= get_bloginfo( 'template_directory' ); ?>/sander.css" rel="stylesheet">
-=======
-    <link href="<?php echo get_bloginfo( 'template_directory' ); ?>/reset.css" rel="stylesheet">
-    <link href="<?php echo get_bloginfo( 'template_directory' ); ?>/css/style.css" rel="stylesheet">
->>>>>>> 78bbc03c567909c9007935d269f6d99e5856f7af
-
 
 	<?php wp_head(); ?>
 </head>
