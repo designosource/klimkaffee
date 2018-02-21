@@ -38,8 +38,8 @@ define('DB_CHARSET', 'utf8mb4');
 define('DB_COLLATE', '');
 
 
-define('WP_SITEURL', 'http://192.168.1.6/klimkaffee');
-define('WP_HOME', 'http://192.168.1.6/klimkaffee');
+define('WP_SITEURL', 'http://klimkaffee.akxis.io/');
+define('WP_HOME', 'http://klimkaffee.akxis.io/');
 
 /**#@+
  * Authentication Unique Keys and Salts.
