@@ -7,6 +7,7 @@ include( 'banner.php' ) ?>
 					<?php get_sidebar(); ?>
                 </div>
                 <div class="col-md-9">
+                    <h1>Trainingen</h1>
                     <h4><?php echo get_field( 'training_naam' ) ?></h4>
                     <p><?php echo get_field( 'training_beschrijving' ) ?></p>
                     <h4>Trainers</h4>
