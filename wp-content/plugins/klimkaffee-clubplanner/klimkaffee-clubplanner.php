@@ -31,9 +31,13 @@ function klimkaffee_clubplanner() {
 }
 function elegance_referal_init()
 {
-	if(is_page('reserveren')){
-		$dir = plugin_dir_url( __FILE__ );
-		echo file_get_contents($dir."reserveren.php");
+
+    if(is_page('boek-les')) {
+        require('boek.php');
+        die();
+    }
+	if(is_page('reserveren')) {
+		require('reserveren.php');
 		die();
 	}
 }
