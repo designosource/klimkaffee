@@ -36,6 +36,7 @@ function elegance_referal_init()
         require('boek.php');
         die();
     }
+
 	if(is_page('reserveren')) {
 		require('reserveren.php');
 		die();

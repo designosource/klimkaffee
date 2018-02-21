@@ -27,7 +27,7 @@ $lessons = json_decode(file_get_contents("https://klimcaffee.clubplanner.be/api/
                         <b>tot</b> <?php echo date('l N F o H:i', strtotime($lesson->StopTime)) ?> </p>
                     <p><b>Plaatsen vrij:</b> <?php echo $lesson->FreePlaces ?> plaatsen </p>
                     <p><b>Plaat:</b> <?php echo $lesson->RoomDescription ?></p>
-                    <a class="red-btn red-text" href="/boek?les=<?php echo $lesson->Id ?>">Boek nu</a>
+                    <a class="red-btn red-text" href="/boek-les?les=<?php echo $lesson->Id ?>">Boek nu</a>
                 </div>
                 <?php
             } else {
@@ -39,7 +39,7 @@ $lessons = json_decode(file_get_contents("https://klimcaffee.clubplanner.be/api/
                         <b>tot</b> <?php echo date('l N F o H:i', strtotime($lesson->StopTime)) ?> </p>
                     <p><b>Plaatsen vrij:</b> <?php echo $lesson->FreePlaces ?> plaatsen </p>
                     <p><b>Plaat:</b> <?php echo $lesson->RoomDescription ?></p>
-                    <a class="red-btn red-text" href="/boek?les=<?php echo $lesson->Id ?>">Boek nu</a>
+                    <a class="red-btn red-text" href="/boek-les?les=<?php echo $lesson->Id ?>">Boek nu</a>
                 </div>
                 <?php
             }
