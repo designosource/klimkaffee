@@ -3,29 +3,54 @@
         <div class="custom-container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="acf-map">
-                        <div class="marker" data-lat="<?php echo get_field('kaart')['lat']; ?>" data-lng="<?php echo get_field('kaart')['lng']; ?>"></div>
+                    <div id="map">
+
                     </div>
                 </div>
+                <style>
+                    #map {
+                        height: 600px;
+                        width: 100%;
+                    }
+                </style>
+
+                <script>
+                    function initMap() {
+                        var klimkaffee = {lat: <?php echo get_field('kaart')['lat']; ?>, lng: <?php echo get_field('kaart')['lng']; ?>};
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 4,
+                            center: klimkaffee
+                        });
+                        var marker = new google.maps.Marker({
+                            position: klimkaffee,
+                            map: map
+                        });
+                    }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgMPREl8xsRcL_9-WDJz_5KjvYqijr-aE&callback=initMap">
+                </script>
                 <div class="col-md-4 page-contact-info blog-main">
-                    <h3>CONTACT</h3>
-                    <div class="contact-bits">
-                        <div class="contact-bit">
-                            <i class="fa fa-map-marker"></i>
-                            <p><?php echo get_field("address") ?></p>
+                    <div class="contact-bit">
+                        <h3>CONTACT</h3>
+                        <div class="contact-bits">
+                            <div class="contact-bit">
+                                <i class="fa fa-map-marker"></i>
+                                <p><?php echo get_field("address") ?></p>
+                            </div>
+                            <div class="contact-bit">
+                                <i class="fa fa-envelope"></i>
+                                <p><?php echo get_field("email") ?></p>
+                            </div>
+                            <div class="contact-bit">
+                                <i class="fa fa-phone"></i>
+                                <p><?php echo get_field("phone_number") ?></p>
+                            </div>
                         </div>
-                        <div class="contact-bit">
-                            <i class="fa fa-envelope"></i>
-                            <p><?php echo get_field("email") ?></p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
                         </div>
-                        <div class="contact-bit">
-                            <i class="fa fa-phone"></i>
-                            <p><?php echo get_field("phone_number") ?></p>
-                        </div>
-                    </div>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 blog-main">
