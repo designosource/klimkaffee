@@ -1215,6 +1215,9 @@ footer {
   font-weight: bold;
   font-family: "Montserrat", sans-serif; }
 
+.contact-bit {
+  padding-left: 50px; }
+
 .submenu {
   text-align: right;
   border-right: 1px solid #d5d5d5;
