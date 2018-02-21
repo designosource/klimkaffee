@@ -478,3 +478,74 @@ a.read-more-link:hover {
     transition: 0.3s;
     color: #bf3e3c;
 }
+
+ul.albums {
+    max-width: 1000px;
+}
+
+ul.images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.images li {
+    flex-basis: 100%;
+    padding: 10px;
+}
+
+@media screen and (min-width: 800px) {
+    ul.images li {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    ul.images li {
+        flex-basis: 33.33%;
+    }
+}
+
+ul.albums li.album {
+    padding-top: 30px;
+}
+
+.photo-albums-per-year {
+    margin-bottom: 30px;
+    display: none;
+}
+
+.photo-navigation-year {
+    position: relative;
+    padding-right: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.photo-navigation-year ul li {
+    font-weight: bold;
+}
+
+.photo-navigation-year:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -10px;
+    top: 6px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #8e2c28;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.reverse-arrow {
+    color: #D63A39;
+    transition: 0.3s;
+}
+
+.reverse-arrow:before {
+    transform: rotate(180deg);
+}

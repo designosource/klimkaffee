@@ -15,8 +15,8 @@ function bldrzl_add_options_page() {
 		// add settings page
 		acf_add_options_page(
 			array(
-				'page_title' => 'Boulderzaal Instellingen',
-				'menu_title' => 'Boulderzaal',
+				'page_title' => 'Foto albums Klimkaffee',
+				'menu_title' => 'Foto albums',
 				'menu_slug'  => 'theme-general-settings',
 				'capability' => 'edit_posts',
 				'redirect'   => FALSE,
@@ -37,6 +37,11 @@ function bldrzl_album_loop_functionality( $atts ) {
 				?>
 
 				<li class="album">
+				
+                    <?php if( !empty( get_sub_field('bldrzl_album_naam') ) ): ?>
+				    <h2><?php the_sub_field('bldrzl_album_naam') ?></h2>
+				    <?php endif; ?>
+				
 					<ul class="images">
 					<?php
 					foreach ($images as $image){ ?>
@@ -58,3 +63,4 @@ function bldrzl_album_loop_functionality( $atts ) {
 }
 
 bldrzl_add_options_page();
+
