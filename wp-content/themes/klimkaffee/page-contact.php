@@ -18,7 +18,7 @@
                     function initMap() {
                         var klimkaffee = {lat: <?php echo get_field('kaart')['lat']; ?>, lng: <?php echo get_field('kaart')['lng']; ?>};
                         var map = new google.maps.Map(document.getElementById('map'), {
-                            zoom: 4,
+                            zoom: 16,
                             center: klimkaffee
                         });
                         var marker = new google.maps.Marker({

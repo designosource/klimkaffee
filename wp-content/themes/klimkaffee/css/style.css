@@ -6,7 +6,7 @@ Author URI: https://designosource.be/
 Description: Template for Klimkaffee Mechelen
 Version: 1.0
 */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,600");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,500,600");
 body {
   font-family: "Montserrat", sans-serif; }
 
@@ -1168,7 +1168,7 @@ footer {
     clear: both;
     padding: 10px 0; }
     .page-contact .contact-bits .contact-bit i {
-      color: #8e2c28;
+      color: #bf3e3c;
       display: inline-block;
       float: left;
       width: 40px; }
@@ -1178,13 +1178,18 @@ footer {
       margin: 0; }
 
 .page-contact .social-icons a {
-  background-color: #8e2c28;
+  background-color: #bf3e3c;
   color: #FFF;
   text-decoration: none;
   text-align: center;
   width: 40px;
   padding: 10px;
   font-size: 1.3em; }
+  .page-contact .social-icons a::after {
+    display: none; }
+  .page-contact .social-icons a:hover {
+    border: none !important;
+    background-color: #8e2c28; }
 
 .page-contact select {
   margin-top: 40px;
@@ -1209,11 +1214,15 @@ footer {
   margin-top: 20px;
   border: none;
   padding: 15px 40px;
-  background-color: #8e2c28;
+  background-color: #bf3e3c;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
   text-align: center;
   color: #FFF;
-  font-weight: bold;
+  font-weight: 500;
   font-family: "Montserrat", sans-serif; }
+  .page-contact input[type="submit"]:hover {
+    background-color: #8e2c28; }
 
 .contact-bit {
   padding-left: 50px; }
@@ -1224,7 +1233,7 @@ footer {
   padding-right: 30px; }
   .submenu h3 {
     font-size: 1em;
-    color: #424242;
+    color: #252525;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 20px 0; }
