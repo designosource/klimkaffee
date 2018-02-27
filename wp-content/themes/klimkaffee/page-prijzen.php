@@ -7,14 +7,14 @@ include( 'banner.php' ) ?>
 					<?php get_sidebar(); ?>
                 </div>
                 <div class="col-md-9">
-                    <h1><?php the_title(); ?></h1>
+                    <h2><?php the_title(); ?></h2>
 					<?php if ( have_rows( 'categorie' ) ):
 						// loop through the rows of data
 						while ( have_rows( 'categorie' ) ) : the_row();
 							// display a sub field value ?>
                             <div class="sub-content col-md-12">
-                                <h2><?php echo get_sub_field( 'categorie_naam' ) ?></h2>
-                                <div class="prices col-md-12">
+                                <h3><?php echo get_sub_field( 'categorie_naam' ) ?></h3>
+                                <div class="prices">
 									<?php if ( have_rows( 'categorie_soort' ) ):
 										// loop through the rows of data
 										while ( have_rows( 'categorie_soort' ) ) : the_row();
@@ -25,7 +25,7 @@ include( 'banner.php' ) ?>
                                             </div>
 										<?php endwhile; endif; ?>
                                 </div>
-                                <div class="col-md-12 no-padding">
+                                <div>
                                     <?php if( !empty( get_sub_field('extra_information') ) ): ?>
                                     
                                         <?php the_sub_field('extra_information'); ?>

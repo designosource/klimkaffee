@@ -7,10 +7,10 @@ include( 'banner.php' ) ?>
 					<?php get_sidebar(); ?>
                 </div>
                 <div class="col-md-9">
-                    <h1>Trainingen</h1>
-                    <h4><?php echo get_field( 'training_naam' ) ?></h4>
+                    <h2>Trainingen</h2>
+                    <h3><?php echo get_field( 'training_naam' ) ?></h3>
                     <p><?php echo get_field( 'training_beschrijving' ) ?></p>
-                    <h4>Trainers</h4>
+                    <h3>Trainers</h3>
                     <div class="row">
 						<?php
 						if ( have_rows( 'trainers' ) ):
