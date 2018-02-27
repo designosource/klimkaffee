@@ -5,11 +5,13 @@ $(document).ready(function () {
 
     $(".hamburger").on("click", function () {
         $(this).toggleClass("open");
-        $("nav.main.mobile").slideToggle("slow");
+        $("nav.main.mobile").slideToggle();
     });
 
     $("nav.main.mobile li.menu-item-has-children").on("click", function () {
+        $("nav.main.mobile li.menu-item-has-children").not(this).find("ul").slideUp();
+        $("nav.main.mobile li.menu-item-has-children").not(this).find("a").removeClass("open");
         $(this).find("a").toggleClass("open");
-        $(this).find("ul").slideToggle("slow");
+        $(this).find("ul").slideToggle();
     });
 });

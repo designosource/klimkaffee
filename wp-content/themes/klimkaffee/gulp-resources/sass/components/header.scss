@@ -11,9 +11,8 @@ header {
 
     .hamburger {
       position: absolute;
-      top: 50%;
+      top: 25%;
       height: 25px;
-      margin-top: -12.5px;
 
       div {
         position: absolute;
@@ -68,9 +67,14 @@ header {
       flex-direction: column;
 
       li.menu-item {
+        //height: 46px;
         a {
           color: $black;
         }
+      }
+
+      li.menu-item{
+
       }
 
       li.menu-item-home {
@@ -97,6 +101,7 @@ header {
       li.menu-item-has-children {
         li {
           margin-left: 25px;
+          height: auto;
 
           a {
             color: $black;
@@ -143,6 +148,7 @@ header {
 
         li.menu-item {
           line-height: 80px;
+          height: auto;
 
           a:after {
             top: -20px;

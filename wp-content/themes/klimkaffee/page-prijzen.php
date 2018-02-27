@@ -21,7 +21,7 @@ include( 'banner.php' ) ?>
 											// display a sub field value ?>
                                             <div class="price col-xs-12 col-sm-3">
                                                 <p class="price-tag"><?php echo get_sub_field( 'soort_naam' ) ?></p>
-                                                <p class="price-value">€<?php echo get_sub_field( 'soort_prijs' ) ?></p>
+                                                <p class="price-value">€ <?php echo get_sub_field( 'soort_prijs' ) ?></p>
                                             </div>
 										<?php endwhile; endif; ?>
                                 </div>
