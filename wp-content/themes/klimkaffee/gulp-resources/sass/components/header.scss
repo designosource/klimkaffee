@@ -67,14 +67,9 @@ header {
       flex-direction: column;
 
       li.menu-item {
-        //height: 46px;
         a {
           color: $black;
         }
-      }
-
-      li.menu-item{
-
       }
 
       li.menu-item-home {
@@ -98,6 +93,10 @@ header {
         }
       }
 
+      li.menu-item:not(.menu-item-has-children):not(.menu-item-has-children li) {
+        height: 46px;
+      }
+
       li.menu-item-has-children {
         li {
           margin-left: 25px;
@@ -108,6 +107,7 @@ header {
             font-weight: $font-weight-light;
             pointer-events: auto;
             cursor: pointer;
+            height: auto;
           }
         }
       }

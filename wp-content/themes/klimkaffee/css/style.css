@@ -863,6 +863,8 @@ header {
       header nav.main .menu li.current-menu-item a, header nav.main .menu li.current-menu-parent a {
         color: #bf3e3c;
         font-weight: 600; }
+      header nav.main .menu li.menu-item:not(.menu-item-has-children):not(.menu-item-has-children li) {
+        height: 46px; }
       header nav.main .menu li.menu-item-has-children li {
         margin-left: 25px;
         height: auto; }
@@ -870,7 +872,8 @@ header {
           color: #313130;
           font-weight: 300;
           pointer-events: auto;
-          cursor: pointer; }
+          cursor: pointer;
+          height: auto; }
       header nav.main .menu li.menu-item-has-children > a:first-child:hover {
         cursor: pointer; }
       header nav.main .menu li.menu-item-has-children > a:first-child:after {
