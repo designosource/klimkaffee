@@ -87,7 +87,7 @@ Template Name: Homepage
 
     </div>
         
-    <div class="row">
+    <div class="row light-pink">
 
         <div class="col-md-6 dark-pink homepage-openingsuren">
 
