@@ -11,26 +11,36 @@ body {
   font-family: "Montserrat", sans-serif; }
 
 h1 {
+  font-size: 52px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px; }
+
+p.subtitle {
+  color: #fff;
+  text-align: center;
+  font-size: 24px; }
+
+h2 {
   color: #8e2c28;
   font-size: 32px;
   font-weight: 600;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 20px; }
 
-h2 {
+.page-content p.small-title {
+  color: #8e2c28;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px; }
+
+h3 {
   color: #bf3e3c;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   margin: 10px 0 30px; }
-
-h1.banner {
-  font-size: 52px;
-  color: #fff;
-  text-align: center; }
-
-h2.banner {
-  color: #fff;
-  text-align: center; }
 
 p {
   color: #313130;
@@ -80,11 +90,6 @@ a.read-more-link:hover {
 
 a.read-more-link:hover:after {
   content: none; }
-
-h3 {
-  font-weight: 600;
-  font-size: 2em;
-  color: #8e2c28; }
 
 .page-content h4 {
   color: #8e2c28;
@@ -863,6 +868,8 @@ header {
       header nav.main .menu li.current-menu-item a, header nav.main .menu li.current-menu-parent a {
         color: #bf3e3c;
         font-weight: 600; }
+      header nav.main .menu li.menu-item:not(.menu-item-has-children):not(.menu-item-has-children li) {
+        height: 46px; }
       header nav.main .menu li.menu-item-has-children li {
         margin-left: 25px;
         height: auto; }
@@ -870,7 +877,8 @@ header {
           color: #313130;
           font-weight: 300;
           pointer-events: auto;
-          cursor: pointer; }
+          cursor: pointer;
+          height: auto; }
       header nav.main .menu li.menu-item-has-children > a:first-child:hover {
         cursor: pointer; }
       header nav.main .menu li.menu-item-has-children > a:first-child:after {
@@ -1259,7 +1267,7 @@ footer {
     color: #252525;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 20px 0; }
+    margin: 0 0 20px; }
   .submenu ul li a {
     color: #555555;
     font-weight: bold;
@@ -1271,7 +1279,8 @@ footer {
       display: none; }
 
 .sub-content {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  padding: 0; }
   .sub-content .prices {
     display: -webkit-box;
     display: -ms-flexbox;

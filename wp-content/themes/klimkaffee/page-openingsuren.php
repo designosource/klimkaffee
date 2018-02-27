@@ -8,7 +8,7 @@ include( 'banner.php' )?>
                     <?php get_sidebar(); ?>
                 </div>
                 <div class="col-md-9">
-                    <h2 class="introduction-title"><span>Openingsuren</span></h2>
+                    <h2>Openingsuren</h2>
                     <?php
                         if (have_rows('openingsuren')):
 

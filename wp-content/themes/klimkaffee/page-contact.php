@@ -32,7 +32,7 @@
                 </script>
                 <div class="col-md-4 page-contact-info blog-main">
                     <div class="contact-bit">
-                        <h3>CONTACT</h3>
+                        <h2>CONTACT</h2>
                         <div class="contact-bits">
                             <div class="contact-bit">
                                 <i class="fa fa-map-marker"></i>
@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 blog-main">
-                    <h3>HEEFT U EEN VRAAG?</h3>
+                    <h2>HEEFT U EEN VRAAG?</h2>
                     <?php
                     if ( have_posts() ) : while ( have_posts() ) : the_post();
 
