@@ -77,7 +77,10 @@
     text-align: center;
     color: #FFF;
     font-weight: 500;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     &:hover {
 
