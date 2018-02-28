@@ -32,6 +32,10 @@ p.price-value {
         margin-bottom: 2em;
         min-height: 8em;
     }
+    
+    .homepage-openingsuren-inner-container {
+        width: 60%;
+    }
 }
 
 .maxwidth {
@@ -354,7 +358,6 @@ strong {
 
 .homepage-openingsuren-inner-container {
     width: 80%;
-    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -568,4 +571,8 @@ a.read-more-link:hover {
 
 .reverse-arrow:before {
     transform: rotate(-180deg);
+}
+
+.page-openingsuren .custom-container .row .col-md-9 .row:nth-child(odd) .col-md-6:nth-child(1) {
+    float: right;
 }
