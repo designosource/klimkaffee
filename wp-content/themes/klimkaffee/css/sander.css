@@ -576,3 +576,7 @@ a.read-more-link:hover {
 .page-openingsuren .custom-container .row .col-md-9 .row:nth-child(odd) .col-md-6:nth-child(1) {
     float: right;
 }
+
+.active-page {
+    color: #bf3e3c !important;
+}
