@@ -9,9 +9,9 @@ $(document).ready(function () {
     });
 
     $("nav.main.mobile li.menu-item-has-children").on("click", function () {
-        $("nav.main.mobile li.menu-item-has-children").not(this).find("ul").slideUp();
-        $("nav.main.mobile li.menu-item-has-children").not(this).find("a").removeClass("open");
-        $(this).find("a").toggleClass("open");
-        $(this).find("ul").slideToggle();
-    });
+    $("nav.main.mobile li.menu-item-has-children").not(this).find("ul").slideUp();
+    $("nav.main.mobile li.menu-item-has-children").not(this).find("a").removeClass("open");
+    $(this).find("a").toggleClass("open");
+    $(this).find("ul").slideToggle();
+});
 });

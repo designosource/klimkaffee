@@ -65,7 +65,7 @@ footer {
             a {
               text-transform: none;
               font-size: $font-size-xs;
-              font-weight normal;
+              font-weight: normal;
             }
 
             a:hover {
@@ -96,7 +96,6 @@ footer {
 
         i {
           color: $white;
-          background: $red_light;
           padding: 10px;
           margin: 0 10px;
           transition: $transition;
