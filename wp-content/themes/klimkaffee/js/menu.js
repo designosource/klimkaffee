@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    $('li.menu-item-has-children > a:first-child').click(function(e){e.preventDefault();});
     $("nav.main.mobile").hide();
     $("nav.main.mobile li.menu-item-has-children ul").hide();
 

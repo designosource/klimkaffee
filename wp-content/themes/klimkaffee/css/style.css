@@ -1080,7 +1080,7 @@ footer {
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
-        height: 50px;
+        height: 60px;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
