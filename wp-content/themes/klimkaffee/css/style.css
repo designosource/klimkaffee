@@ -970,6 +970,7 @@ header {
   .custom-logo-link .custom-logo {
     display: block;
     width: 30%;
+    max-width: 150px;
     margin: 20px auto;
     height: 100%; }
 
