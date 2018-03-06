@@ -7,6 +7,10 @@
 		    'theme_location'  => 'footer',
 		    'container_class' => 'custom-menu-class'
 	    ) ); ?>
+
+        <div class="go-up">
+            <div class="arrow"></div>
+        </div>
     </nav>
     <div class="bottom">
         <div class="social-media">
