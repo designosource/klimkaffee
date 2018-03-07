@@ -26,7 +26,7 @@ h2 {
   font-size: 32px;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 20px; }
+  margin-bottom: 40px; }
 
 .page-content p.small-title {
   color: #8e2c28;
@@ -46,7 +46,7 @@ p {
   color: #313130;
   font-size: 16px;
   font-weight: 300;
-  line-height: 23px; }
+  line-height: 25px; }
   p a {
     color: #bf3e3c; }
 
@@ -948,11 +948,11 @@ header {
           margin-top: -20px; }
           header nav.main .menu li.menu-item-has-children ul li.menu-item {
             margin-left: 0;
-            padding: 10px;
+            padding: 5px 10px;
             line-height: normal; }
             header nav.main .menu li.menu-item-has-children ul li.menu-item a {
               color: #fff;
-              font-size: 13px;
+              font-size: 14px;
               font-weight: 600;
               width: 100%; }
             header nav.main .menu li.menu-item-has-children ul li.menu-item a:hover {
