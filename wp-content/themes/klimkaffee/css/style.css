@@ -915,7 +915,7 @@ header {
           -webkit-box-flex: 1;
           -ms-flex-positive: 1;
           flex-grow: 1; }
-        header nav.main .menu li.current-menu-item a:after, header nav.main .menu li.current-menu-parent a:after {
+        header nav.main .menu li.current-menu-item a:after {
           content: '';
           display: block;
           top: -20px;
@@ -962,6 +962,18 @@ header {
               height: 0; }
         header nav.main .menu li.menu-item-has-children > a:first-child:after {
           display: none; }
+        header nav.main .menu li.current-menu-ancestor > a:first-child:after {
+          content: '';
+          display: block;
+          top: -20px;
+          left: 0;
+          bottom: 0;
+          position: relative;
+          right: 0;
+          height: 2px;
+          width: 100%;
+          background: #bf3e3c;
+          border: none; }
         header nav.main .menu li.menu-item-has-children > a:hover + ul, header nav.main .menu li.menu-item-has-children ul:hover {
           max-height: 100vh; } }
 
