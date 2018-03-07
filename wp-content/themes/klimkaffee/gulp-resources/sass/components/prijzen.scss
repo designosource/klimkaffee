@@ -1,5 +1,6 @@
 .sub-content {
   margin-bottom: 50px;
+  padding: 0;
 
   .prices {
     display: flex;
@@ -25,7 +26,7 @@
       }
 
       p.price-value {
-        font-size: $font-size-medium;
+        font-size: $font-size-large;
       }
     }
 

@@ -11,9 +11,8 @@ header {
 
     .hamburger {
       position: absolute;
-      top: 50%;
+      top: 25%;
       height: 25px;
-      margin-top: -12.5px;
 
       div {
         position: absolute;
@@ -94,15 +93,21 @@ header {
         }
       }
 
+      li.menu-item:not(.menu-item-has-children):not(.menu-item-has-children li) {
+        height: 46px;
+      }
+
       li.menu-item-has-children {
         li {
           margin-left: 25px;
+          height: auto;
 
           a {
             color: $black;
             font-weight: $font-weight-light;
             pointer-events: auto;
             cursor: pointer;
+            height: auto;
           }
         }
       }
@@ -143,6 +148,7 @@ header {
 
         li.menu-item {
           line-height: 80px;
+          height: auto;
 
           a:after {
             top: -20px;
@@ -241,6 +247,7 @@ header {
   .custom-logo {
     display: block;
     width: 30%;
+    max-width: 150px;
     margin: 20px auto;
     height: 100%;
   }

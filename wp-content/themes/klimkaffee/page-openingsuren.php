@@ -8,10 +8,8 @@ include( 'banner.php' )?>
                     <?php get_sidebar(); ?>
                 </div>
                 <div class="col-md-9">
-                    <h4><?php echo get_field('training_naam') ?></h4>
-                    <p><?php echo get_field('training_beschrijving') ?></p>
-                    <h1>Openingsuren</h1>
-                        <?php
+                    <h2>Openingsuren</h2>
+                    <?php
                         if (have_rows('openingsuren')):
 
                             // loop through the rows of data

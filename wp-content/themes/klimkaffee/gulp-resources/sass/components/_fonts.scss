@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,600');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,600');
 
 $montserrat: "Montserrat", sans-serif;
 
-$font-size-xs: 14px;
+$font-size-xs: 13px;
 $font-size-small: 16px;
-$font-size-medium: 32px;
-$font-size-large: 52px;
+$font-size-medium: 24px;
+$font-size-large: 32px;
+$font-size-xl: 52px;
 
 $font-weight-light: 300;
 $font-weight-bold: 600;
@@ -15,29 +16,40 @@ body {
 }
 
 h1 {
+  font-size: $font-size-xl;
+  color: $white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p.subtitle {
+  color: $white;
+  text-align: center;
+  font-size: $font-size-medium;
+  //font-weight: $font-weight-bold;
+}
+
+h2 {
+  color: $red_main;
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.page-content p.small-title {
   color: $red_main;
   font-size: $font-size-medium;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-h2 {
+h3 {
   color: $red_light;
   font-size: $font-size-small;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
   margin: 10px 0 30px;
-}
-
-h1.banner {
-  font-size: $font-size-large;
-  color: $white;
-  text-align: center;
-}
-
-h2.banner {
-  color: $white;
-  text-align: center;
 }
 
 p {
@@ -94,12 +106,6 @@ a.read-more-link:hover {
 
 a.read-more-link:hover:after {
   content: none;
-}
-
-h3 {
-  font-weight: bold;
-  font-size: 2em;
-  color: $red_main;
 }
 
 .page-content {

@@ -12,7 +12,7 @@
       padding: 10px 0;
 
       i {
-        color: $red_main;
+        color: $red_light;
         display: inline-block;
         float: left;
         width: 40px;
@@ -28,13 +28,22 @@
 
   .social-icons {
     a {
-      background-color: $red_main;
+      background-color: $red_light;
       color: #FFF;
       text-decoration: none;
       text-align: center;
       width: 40px;
       padding: 10px;
       font-size: 1.3em;
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        border: none !important;
+        background-color: $red_main;
+      }
     }
   }
 
@@ -59,15 +68,25 @@
     font-size: .9em;
   }
 
+
   input[type="submit"] {
     margin-top: 20px;
     border: none;
     padding: 15px 40px;
-    background-color: $red_main;
+    background-color: $red_light;
+    transition: all .2s ease;
     text-align: center;
     color: #FFF;
-    font-weight: bold;
-    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:hover {
+
+      background-color: $red_main;
+    }
   }
 }
 
