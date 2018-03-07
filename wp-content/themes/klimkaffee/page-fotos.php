@@ -19,7 +19,7 @@ Template Name: Photo gallery
                 <div class="row">
                     <div class="col-md-3">
                        
-                        <?php get_sidebar('fotos'); ?>
+                        <?php echo do_shortcode('[bldrzl-album-loop-filter]'); ?>
                         
                     </div>
                     

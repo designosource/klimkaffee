@@ -32,7 +32,7 @@ function klimkaffee_clubplanner() {
 function elegance_referal_init()
 {
 
-    if(is_page('boek-les')) {
+   /* if(is_page('boek-les')) {
         require('boek.php');
         die();
     }
@@ -40,7 +40,48 @@ function elegance_referal_init()
 	if(is_page('reserveren')) {
 		require('reserveren.php');
 		die();
-	}
+	}*/
 }
 
 add_action( 'wp', 'elegance_referal_init' );
+
+
+// HIER IS STEFANO's CODE: VIA CURL
+// 
+add_shortcode( 'boek-shortcode', 'boek_shortcode_functionality' );
+function boek_shortcode_functionality( $atts ) {
+	ob_start();
+	$token = "\$kl1mc@ff00";
+
+	//setup the request, you can also use CURLOPT_URL
+	$ch =
+		curl_init(
+			'https://klimcaffee.clubplanner.be/api/planner/addReservation?memberid=1&itemid=5&quanty=1&logtype=type&from=1&token=' .
+			$token );
+
+// Returns the data/output as a string instead of raw data
+	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, TRUE );
+
+// Good practice to let people know who's accessing their servers. See https://en.wikipedia.org/wiki/User_agent
+//	curl_setopt( $ch, CURLOPT_USERAGENT, 'YourScript/0.1 (contact@email)' );
+
+//Set your auth headers
+	curl_setopt(
+		$ch, CURLOPT_HTTPHEADER, array(
+		'Content-Type: application/json',
+		'Authorization: Bearer ' . $token,
+	) );
+
+// get stringified data/output. See CURLOPT_RETURNTRANSFER
+	$data = curl_exec( $ch );
+
+// get info about the request
+	$info = curl_getinfo( $ch );
+
+// close curl resource to free up system resources
+	curl_close( $ch );
+	$data = json_decode( $data );
+
+	return print_r( $data );
+}
+

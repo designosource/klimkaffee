@@ -479,34 +479,33 @@ a.read-more-link:hover {
     color: #bf3e3c;
 }
 
-ul.albums {
-    max-width: 1000px;
+.albums {
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+.images {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
-ul.images {
-    display: flex;
-    flex-wrap: wrap;
+.images .image-container {
+	width: 150px;
+	height: 150px;
+	background-size: cover;
+	background-position: center center;
+	margin-bottom: 60px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
-ul.images li {
-    flex-basis: 100%;
-    padding: 10px;
-}
-
-@media screen and (min-width: 800px) {
-    ul.images li {
-        flex-basis: 50%;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    ul.images li {
-        flex-basis: 33.33%;
-    }
-}
-
-ul.albums li.album {
-    padding-top: 30px;
+@media screen and (min-width: 500px) {
+	.images .image-container {
+		width: 200px;
+		height: 200px;
+		margin-bottom: 40px;
+	}
 }
 
 .photo-albums-per-year {
@@ -541,11 +540,15 @@ ul.albums li.album {
     transition: all 0.3s ease;
 }
 
+.album-name {
+    cursor: pointer
+}
+
 .reverse-arrow {
     color: #D63A39;
     transition: 0.3s;
 }
 
 .reverse-arrow:before {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
 }
