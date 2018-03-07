@@ -948,11 +948,11 @@ header {
           margin-top: -20px; }
           header nav.main .menu li.menu-item-has-children ul li.menu-item {
             margin-left: 0;
-            padding: 10px;
+            padding: 5px 10px;
             line-height: normal; }
             header nav.main .menu li.menu-item-has-children ul li.menu-item a {
               color: #fff;
-              font-size: 13px;
+              font-size: 14px;
               font-weight: 600;
               width: 100%; }
             header nav.main .menu li.menu-item-has-children ul li.menu-item a:hover {
