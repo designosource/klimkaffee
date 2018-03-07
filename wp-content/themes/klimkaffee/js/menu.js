@@ -12,6 +12,9 @@ $(document).ready(function () {
             $('a.custom-logo-link').show();
             $("nav.main.mobile").hide();
             $("nav.main.mobile li.menu-item-has-children ul").hide();
+            $("nav.main.mobile li.menu-item-has-children a").on('click', function(e){
+                e.preventDefault();
+            })
         }
         if ($(window).width() >= 1024){
             $('div.head').css('display', 'none');
