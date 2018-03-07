@@ -7,6 +7,8 @@
         $navigatie[$jaar['bldrzl_jaar']][] = $jaar;
     }
 
+    //var_dump($navigatie);
+
     ?>
     
     <?php if( have_rows('bldrzl_albums') ) ?>
@@ -23,10 +25,10 @@
                 <ul class="photo-albums-per-year">
                 <?php foreach( $jaar as $album ) { ?>
                 
-                    <li>
-                        <a href="<?php echo $album['bldrzl_album_naam']; ?>">
+                    <li data-album="<?php echo $jaar[0]['ID']; ?>">
+                        <p class="album-name">
                             <?php echo $album['bldrzl_album_naam']; ?>
-                        </a>
+                        </p>
                     </li>
                 <?php } ?>
                 </ul>

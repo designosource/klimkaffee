@@ -44,7 +44,7 @@
                             </div>
                             <div class="contact-bit">
                                 <i class="fa fa-phone"></i>
-                                <p><?php echo get_field("phone_number") ?></p>
+                                <p><?php echo get_field("telefoonnummer") ?></p>
                             </div>
                         </div>
                         <div class="social-icons">

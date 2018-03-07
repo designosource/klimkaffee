@@ -7,7 +7,7 @@ $date = "02/21/2018";
 $lessons = json_decode(file_get_contents("https://klimcaffee.clubplanner.be/api/planner/getcalendaritems?token=" . $token . "&id=1&date=" . $date . "&days=31"));
 
 // voor al degene die deze code bekijken / editen, het spijt me. Er was weinig tijd :^)
-
+// 
 ?>
 <div class="page-title"
      style="background-size: cover; background-image: url('https://images.unsplash.com/photo-1428968941220-58e83e6096dd?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&dl=austin-ban-14620-unsplash.jpg&s=e5d2e435756df4768a268e1f8b12152c')">

@@ -10,13 +10,13 @@ function wpb_custom_new_menu() {
 add_action( 'init', 'wpb_custom_new_menu' );
 add_theme_support( 'post-thumbnails' );
 
-function bldrzl_add_options_page() {
+/*function bldrzl_add_options_page() {
 	if ( function_exists( 'acf_add_options_page' ) ) {
 		// add settings page
 		acf_add_options_page(
 			array(
-				'page_title' => 'Foto albums Klimkaffee',
-				'menu_title' => 'Foto albums',
+				'page_title' => 'Boulderzaal Instellingen',
+				'menu_title' => 'Boulderzaal',
 				'menu_slug'  => 'theme-general-settings',
 				'capability' => 'edit_posts',
 				'redirect'   => FALSE,
@@ -37,11 +37,6 @@ function bldrzl_album_loop_functionality( $atts ) {
 				?>
 
 				<li class="album">
-				
-                    <?php if( !empty( get_sub_field('bldrzl_album_naam') ) ): ?>
-				    <h2><?php the_sub_field('bldrzl_album_naam') ?></h2>
-				    <?php endif; ?>
-				
 					<ul class="images">
 					<?php
 					foreach ($images as $image){ ?>
@@ -63,4 +58,4 @@ function bldrzl_album_loop_functionality( $atts ) {
 }
 
 bldrzl_add_options_page();
-
+*/
