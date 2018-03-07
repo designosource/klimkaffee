@@ -21,8 +21,8 @@
         <a href="https://www.designosource.be" target="_blank" class="copyright">&copy; 2017 - Designosource</a>
 
         <div class="links">
-            <a href="#">Algemene voorwaarden</a>
-            <a href="#">Huisregels</a>
+            <a href="/<?php the_field('algemene_voorwaarden', 'boulderhal')?>">Algemene voorwaarden</a>
+            <a href="/<?php the_field('huisregels', 'boulderhal')?>">Huisregels</a>
         </div>
     </div>
 </footer>
