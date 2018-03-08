@@ -24,6 +24,18 @@ p.price-value {
     header nav.main .menu {
         height: 100px;
     }
+    
+    .homepage-aanbod .col-md-4 p {
+        font-size : 14px;
+        line-height : 19px;
+        color : white;
+        margin-bottom: 2em;
+        min-height: 8em;
+    }
+    
+    .homepage-openingsuren-inner-container {
+        width: 77%;
+    }
 }
 
 .maxwidth {
@@ -58,12 +70,12 @@ p.price-value {
     display: flex !important;
     justify-content: flex-start;
     align-items: center;
-    padding: 50px;
+    padding: 50px 10%;
 }
 
 .slide-text {
     display: block;
-    text-align: left;
+    text-align: left !important;
     font-family : Montserrat, sans-serif;
     color: white;
     padding: 50px 0;
@@ -72,6 +84,7 @@ p.price-value {
 .slide-text h1 {
     font-size : 20px;
     text-transform: uppercase;
+    text-align: left !important;
     color: white;
 }
 
@@ -95,7 +108,6 @@ p.price-value {
     display: inline-block;
     text-decoration: none;
     color: inherit;
-    text-transform: uppercase;
     padding: 14px 28px;
     min-width: 150px;
     background-color: #B93D3C;
@@ -157,20 +169,23 @@ ul.slick-dots li.slick-active button:before {
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 20px;
 }
 
 @media screen and (min-width: 500px) {
     .slide-text h1 {
         font-size : 30px;
         text-transform: uppercase;
+        text-align: left;
         color: white;
     }
 
     .slide-text h1 span {
         display: block;
-        font-size: 50px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        font-size: 70px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: left;
     }
 
     .slide-text p {
@@ -202,7 +217,7 @@ ul.slick-dots li.slick-active button:before {
     }
     
     .page-content {
-        padding: 75px 0;
+        padding: 75px 0 50px 0;
     }
     
     .homepage-aanbod h3, .homepage-openingsuren h3, .homepage-contact h3 {
@@ -256,6 +271,11 @@ strong {
     color : #FFFFFF;
 }
 
+.homepage-aanbod .col-md-4 {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 .homepage-aanbod .col-md-4 img {
     height: 100px;
     width: auto;
@@ -280,11 +300,19 @@ strong {
     line-height : 19px;
     color : white;
     margin-bottom: 2em;
+    min-height: inherit;
+}
+
+.homepage-aanbod .red-btn:hover {
+    color: #B93D3C;
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
 }
 
 .red-btn {
     display: inline-block;
     font-size : 14px;
+    font-weight: 100;
     letter-spacing : 0.7px;
     background-color: #B93D3C;
     border: 2px solid #B93D3C;
@@ -316,7 +344,7 @@ strong {
 }
 
 .homepage-aanbod, .homepage-openingsuren, .homepage-contact {
-    padding-top: 2em;
+    padding: 2em 0;
 }
 
 .homepage-aanbod h3, .homepage-openingsuren h3, .homepage-contact h3 {
@@ -332,8 +360,8 @@ strong {
 }
 
 .homepage-openingsuren-inner-container {
-    width: 80%;
-    max-width: 500px;
+    width: 60%;
+	max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -369,7 +397,7 @@ strong {
 
 .homepage-contact-inner-container {
     width: 80%;
-    max-width: 300px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -395,10 +423,6 @@ strong {
 
 .contact-item a:hover:after {
     display: none;
-}
-
-.homepage-openingsuren, .homepage-contact {
-    padding-bottom: 80px;
 }
 
 .col-md-9 .row:nth-child(3) {
@@ -551,4 +575,47 @@ a.read-more-link:hover {
 
 .reverse-arrow:before {
     transform: rotate(-180deg);
+}
+
+.page-openingsuren .custom-container .row .col-md-9 .row:nth-child(odd) .col-md-6:nth-child(1) {
+    float: right;
+}
+
+.active-page {
+    color: #bf3e3c !important;
+}
+
+.trainer-image-container {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center 40%;
+}
+
+.col-md-12.trainer {
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.trainer-image-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.col-md-12.trainer a {
+    flex-basis: 20%;
+    margin-right: 5%;
+}
+
+.trainer-image-container {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center 40%;
+}
+
+.col-md-12.trainer a:after {
+    display: none;
 }

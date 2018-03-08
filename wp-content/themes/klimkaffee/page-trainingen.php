@@ -12,25 +12,23 @@ include( 'banner.php' ) ?>
                     <p><?php echo get_field( 'training_beschrijving' ) ?></p>
                     <h3>Trainers</h3>
                     <div class="row">
-						<?php
-						if ( have_rows( 'trainers' ) ):
-
-							// loop through the rows of data
-							while ( have_rows( 'trainers' ) ) : the_row();
-
-								// display a sub field value
-								?>
-                                <div class="col-md-3 trainer">
-                                    <img src="<?php echo get_sub_field( 'trainer_picture' )["url"] ?>"
-                                         alt="<?php echo get_sub_field( 'trainer_name' ) ?>">
+                        <?php if ( have_rows( 'trainers' ) ): ?>
+                           
+                            <div class="col-md-12 trainer">
+                            
+							<?php while ( have_rows( 'trainers' ) ) : the_row() ?>
+                                
+                                <a target="_blank" href="<?php echo get_sub_field('trainer_link') ?>">
+                                    <div class="trainer-image-container" style="background-image: url('<?php echo get_sub_field( 'trainer_picture' )["url"] ?>');"></div>
                                     <h4><?php echo get_sub_field( 'trainer_name' ) ?></h4>
-                                </div>
-								<?php
-
-							endwhile;
-
-						endif;
-						?>
+                                </a>
+                                
+				            <?php endwhile; ?>
+                           
+                            </div>
+                            
+				        <?php endif; ?>
+                   
                     </div>
                 </div>
             </div>
