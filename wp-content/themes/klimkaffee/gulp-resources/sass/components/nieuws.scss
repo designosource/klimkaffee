@@ -9,11 +9,18 @@
     }
   }
 
+  .blog-post-image.content-single {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
   .blog-post-content {
     margin-top: 30px;
     padding: 0;
     h2 {
       text-transform: capitalize;
+      margin-bottom: 5px;
     }
 
     @include lg {

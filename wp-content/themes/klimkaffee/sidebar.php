@@ -1,10 +1,14 @@
 <?php
 
-    $all_pages = get_pages();
-
-    // Then get your current page ID and children (out of all the pages)
+$args = array(
+	'child_of' => wp_get_post_parent_id(get_the_ID()),
+	'parent' => wp_get_post_parent_id(get_the_ID()),
+	'hierarchical' => 0,
+	'sort_column' => 'menu_order',
+	'sort_order' => 'asc'
+);
     $parent_page_id = wp_get_post_parent_id(get_the_ID());
-    $page_children = get_page_children($parent_page_id, $all_pages);
+    $page_children = get_pages( $args );
     $parent_page = get_post($parent_page_id);
     $current_page = home_url( $wp->request );
     ?>
@@ -12,7 +16,7 @@
     <h3><?php echo $parent_page->post_title ?></h3>
     <ul>
     <?php
-    foreach(array_reverse($page_children) as $page_child) {
+    foreach($page_children as $page_child) {
         ?>
 
             <li>

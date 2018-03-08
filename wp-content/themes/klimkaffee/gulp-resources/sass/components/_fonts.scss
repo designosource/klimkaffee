@@ -48,7 +48,6 @@ h3 {
   color: $red_light;
   font-size: $font-size-small;
   font-weight: $font-weight-bold;
-  text-transform: uppercase;
   margin: 10px 0 30px;
 }
 
@@ -115,4 +114,20 @@ a.read-more-link:hover:after {
     text-transform: uppercase;
     font-weight: bold;
   }
+}
+
+.align-left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.white {
+  color: $white;
+}
+
+.no-margin {
+  margin: 0;
 }
