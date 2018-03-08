@@ -964,7 +964,7 @@ header {
             header nav.main .menu li.menu-item-has-children ul li.menu-item a {
               color: #fff;
               font-size: 14px;
-              font-weight: 600;
+              font-weight: normal;
               width: 100%; }
             header nav.main .menu li.menu-item-has-children ul li.menu-item a:hover {
               color: #441c19; }
