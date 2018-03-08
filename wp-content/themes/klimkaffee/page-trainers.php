@@ -9,7 +9,12 @@ Template Name: Trainers
 	get_header();
 
 ?>
-<?php include( 'banner.php' ) ?>
+<div class="page-title"
+     style="background-image: url('<?php the_field('header_image'); ?>');">
+
+	<h1><?php the_field('header_title') ?></h1>
+	<p class="subtitle"><?php the_field('header_subtitle') ?></p>
+</div>
     <div class="page-content page-trainingen">
         <div class="custom-container">
             <div class="row">
@@ -25,33 +30,6 @@ Template Name: Trainers
                         <div class="col-md-6">
                             <img src="<?php echo get_field('trainer_afbeelding')['url'] ?>" alt="<?php echo get_field('trainer_afbeelding')['alt'] ?>">
                         </div>
-                    </div>
-                    <div class="row">
-                        <?php 
-                            $args = array(
-                                    'post_parent' => $post->post_parent,
-                                    'post_type'   => 'page',
-                                    'order'		  => 'ASC',
-                                    'numberposts' => -1,
-                                    'post_status' => 'published'
-                            );
-                            $children = get_children( $args );
-                        ?>
-                        
-                        <?php foreach($children as $child): ?>
-                        
-                            <div class="col-md-4">
-                                
-                                <div class="trainer-name">
-                                    <?php echo "Hier komt de trainer naam"; ?>
-                                </div>
-                                <div class="trainer-image">
-                                    <img src="#" alt="Hier komt de trainer image">
-                                </div>
-                                
-                            </div>
-                        
-                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>

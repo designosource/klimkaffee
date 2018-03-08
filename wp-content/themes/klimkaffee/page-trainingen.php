@@ -21,9 +21,11 @@ include( 'banner.php' ) ?>
 								// display a sub field value
 								?>
                                 <div class="col-md-3 trainer">
-                                    <img src="<?php echo get_sub_field( 'trainer_picture' )["url"] ?>"
-                                         alt="<?php echo get_sub_field( 'trainer_name' ) ?>">
-                                    <h4><?php echo get_sub_field( 'trainer_name' ) ?></h4>
+                                    <a target="_blank" href="<?php echo get_sub_field('trainer_link') ?>">
+                                        <img src="<?php echo get_sub_field( 'trainer_picture' )["url"] ?>"
+                                             alt="<?php echo get_sub_field( 'trainer_name' ) ?>">
+                                        <h4><?php echo get_sub_field( 'trainer_name' ) ?></h4>
+                                    </a>
                                 </div>
 								<?php
 
