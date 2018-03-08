@@ -34,7 +34,7 @@ h2 {
   font-size: $font-size-large;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .page-content p.small-title {
   color: $red_main;
@@ -48,7 +48,6 @@ h3 {
   color: $red_light;
   font-size: $font-size-small;
   font-weight: $font-weight-bold;
-  text-transform: uppercase;
   margin: 10px 0 30px;
 }
 
@@ -56,7 +55,7 @@ p {
   color: $black;
   font-size: $font-size-small;
   font-weight: $font-weight-light;
-  line-height: 23px;
+  line-height: 25px;
 
   a {
     color: $red_light;
@@ -115,4 +114,20 @@ a.read-more-link:hover:after {
     text-transform: uppercase;
     font-weight: bold;
   }
+}
+
+.align-left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.white {
+  color: $white;
+}
+
+.no-margin {
+  margin: 0;
 }

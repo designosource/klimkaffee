@@ -307,6 +307,7 @@ strong {
     color: #B93D3C;
     background-color: #FFFFFF;
     border: 2px solid #FFFFFF;
+    font-weight: bold;
 }
 
 .red-btn {
@@ -325,6 +326,7 @@ strong {
 .red-btn:hover {
     background-color: transparent;
     transition: 0.3s;
+    font-weight: bold;
 }
 
 .red-btn:hover:after {
@@ -501,6 +503,7 @@ a.read-more-link:hover {
     background: transparent;
     transition: 0.3s;
     color: #bf3e3c;
+    font-weight: bold;
 }
 
 .albums {
