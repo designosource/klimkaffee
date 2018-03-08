@@ -2060,3 +2060,7 @@ a.read-more-link:hover {
 .col-md-12.trainer a:after {
     display: none;
 }
+
+.col-md-9 .col-md-6 {
+    margin-top: 30px;
+}

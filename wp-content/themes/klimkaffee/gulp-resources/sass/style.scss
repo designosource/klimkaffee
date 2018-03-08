@@ -151,8 +151,6 @@ p.price-value {
     color: white;
 }
 
-
-
 .slide-text a {
     display: inline-block;
     text-decoration: none;
@@ -666,5 +664,9 @@ a.read-more-link:hover {
 }
 
 .col-md-12.trainer a:after {
+    display: none;
+}
+
+.col-md-3.trainer a:after {
     display: none;
 }
