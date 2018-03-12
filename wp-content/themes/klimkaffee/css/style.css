@@ -1684,8 +1684,7 @@ ul.slick-dots li.slick-active button:before {
 @media screen and (min-width: 992px) {
     .submenu {
         display: block;
-    }
-	
+    }	
 	.homepage-aanbod .col-md-4 p {
 		min-height: 9em !important;
 	}
@@ -1745,7 +1744,11 @@ strong {
     line-height : 19px;
     color : white;
     margin-bottom: 2em;
+<<<<<<< HEAD
 	min-height: inherit;
+=======
+    min-height: inherit;
+>>>>>>> 7039493fc39832913fdee844b3f53e9079176466
 }
 
 .homepage-aanbod .red-btn:hover {
@@ -2067,6 +2070,7 @@ a.read-more-link:hover {
 
 .col-md-9 .col-md-6 {
     margin-top: 30px;
+<<<<<<< HEAD
 }
 
 .inline-image {
@@ -2075,4 +2079,6 @@ a.read-more-link:hover {
 	margin-left: 30px;
 	max-width: 250px !important;
 	float: right;
+=======
+>>>>>>> 7039493fc39832913fdee844b3f53e9079176466
 }

@@ -18,70 +18,51 @@
  * Domain Path:       /languages
  */
 
-add_action( 'wp_enqueue_scripts', 'klimkaffee_clubplanner' );
-function klimkaffee_clubplanner() {
-	// enqueue the styles
-	wp_enqueue_style( 'klimkaffee-clubplanner-style', plugin_dir_url( __FILE__ ) . 'style.css' );
-	// register the script
-	wp_register_script( 'klimkaffee-clubplanner-js', plugin_dir_url( __FILE__ ) . 'script.js', [ 'jquery' ] );
-	// enqueue the script
-	wp_enqueue_script( 'klimkaffee-clubplanner-js' );
-
-
-}
-function elegance_referal_init()
+add_action('wp_enqueue_scripts', 'klimkaffee_clubplanner');
+function klimkaffee_clubplanner()
 {
-
-   /* if(is_page('boek-les')) {
-        require('boek.php');
-        die();
-    }
-
-	if(is_page('reserveren')) {
-		require('reserveren.php');
-		die();
-	}*/
+    // enqueue the styles
+    wp_enqueue_style('klimkaffee-clubplanner-style', plugin_dir_url(__FILE__) . 'style.css');
+    // register the script
+    wp_register_script('klimkaffee-clubplanner-js', plugin_dir_url(__FILE__) . 'script.js', ['jquery']);
+    // enqueue the script
+    wp_enqueue_script('klimkaffee-clubplanner-js');
 }
-
-add_action( 'wp', 'elegance_referal_init' );
-
 
 // HIER IS STEFANO's CODE: VIA CURL
 // 
-add_shortcode( 'boek-shortcode', 'boek_shortcode_functionality' );
-function boek_shortcode_functionality( $atts ) {
-	ob_start();
-	$token = "\$kl1mc@ff00";
+add_shortcode('registerview', 'register_view');
+define('API_BASE', 'https://klimcaffee.clubplanner.be/api/');
+define('TOKEN', "\$kl1mc@ff00");
 
-	//setup the request, you can also use CURLOPT_URL
-	$ch =
-		curl_init(
-			'https://klimcaffee.clubplanner.be/api/planner/addReservation?memberid=1&itemid=5&quanty=1&logtype=type&from=1&token=' .
-			$token );
+function register_view($attr)
+{
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        ob_start();
+        $ch = curl_init(API_BASE . 'member/addmember?firstname=' . $_POST["firstname"] . '&lastname=' . $_POST["lastname"] . '&email=' . $_POST["email"] . '&token=' . TOKEN);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        $id = json_decode(curl_exec($ch))->Id;
+        curl_close($ch);
 
-// Returns the data/output as a string instead of raw data
-	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, TRUE );
+        ob_start();
+        $ch = curl_init(API_BASE . 'member/ForgotPassword?memberid=' . $id . '&token=' . TOKEN);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        $res = curl_exec($ch);
+        curl_close($ch);
+        print_r($res);
 
-// Good practice to let people know who's accessing their servers. See https://en.wikipedia.org/wiki/User_agent
-//	curl_setopt( $ch, CURLOPT_USERAGENT, 'YourScript/0.1 (contact@email)' );
+    } else {
+        return "<form method='POST' action='/planner/register'>
+                <input type='email' name='email' placeholder='E-Mail'>
+                <input type='text' name='firstname' placeholder='Voor naam'>
+                <input type='text' name='lastname' placeholder='Achter naam'>
+                <input type='submit' value='Save'>
+            </form>";
+    }
 
-//Set your auth headers
-	curl_setopt(
-		$ch, CURLOPT_HTTPHEADER, array(
-		'Content-Type: application/json',
-		'Authorization: Bearer ' . $token,
-	) );
+}
 
-// get stringified data/output. See CURLOPT_RETURNTRANSFER
-	$data = curl_exec( $ch );
-
-// get info about the request
-	$info = curl_getinfo( $ch );
-
-// close curl resource to free up system resources
-	curl_close( $ch );
-	$data = json_decode( $data );
-
-	return print_r( $data );
+function register_store($attr)
+{
 }
 
