@@ -17,6 +17,7 @@
  * Text Domain:       klimkaffee_clubplanner
  * Domain Path:       /languages
  */
+require('vendor/autoload.php');
 
 add_action('wp_enqueue_scripts', 'klimkaffee_clubplanner');
 function klimkaffee_clubplanner()
@@ -32,6 +33,10 @@ function klimkaffee_clubplanner()
 // HIER IS STEFANO's CODE: VIA CURL
 // 
 add_shortcode('registerview', 'register_view');
+add_shortcode('shoperino', 'shop_view');
+add_shortcode('orderino', 'order_view');
+add_shortcode('mollierino', 'parse_payment');
+
 define('API_BASE', 'https://klimcaffee.clubplanner.be/api/');
 define('TOKEN', "\$kl1mc@ff00");
 
@@ -44,12 +49,11 @@ function register_view($attr)
         $id = json_decode(curl_exec($ch))->Id;
         curl_close($ch);
 
-        ob_start();
         $ch = curl_init(API_BASE . 'member/ForgotPassword?memberid=' . $id . '&token=' . TOKEN);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         $res = curl_exec($ch);
         curl_close($ch);
-        print_r($res);
+        return $res;
 
     } else {
         return "<form method='POST' action='/planner/register'>
@@ -59,10 +63,86 @@ function register_view($attr)
                 <input type='submit' value='Save'>
             </form>";
     }
-
 }
 
-function register_store($attr)
+function shop_view($attr)
 {
+
+    $ch = curl_init(API_BASE . 'member/GetSubscriptions?token=' . TOKEN);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    $res = json_decode(curl_exec($ch));
+    curl_close($ch);
+
+    $html = "";
+
+    foreach ($res as $sub) {
+        $html .= "<a href='/planner/order?package=" . $sub->SubscriptionId . "'>" . $sub->Description . "</a>";
+    }
+
+    return $html;
 }
 
+
+function order_view($attr)
+{
+
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $ch = curl_init(API_BASE . 'member/GetSubscriptions?token=' . TOKEN);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        $res = json_decode(curl_exec($ch));
+        curl_close($ch);
+
+        $sub = null;
+        foreach($res as $sub) {
+            if ($sub->SubscriptionId == $_POST["package"]) {
+                $item = $sub;
+                break;
+            }
+        }
+
+        $mollie = new Mollie_API_Client;
+        $mollie->setApiKey("test_VvzbMtrfKpa8Gw7tcdg3MeCvEeJcux");
+
+        $payment = $mollie->payments->create(array(
+            "amount" => $sub->Cost + 5,
+            "description" => $sub->Description,
+            "redirectUrl" => "http://klimkaffee.akxis.io/planner/thanks",
+            "webhookUrl" => "http://klimkaffee.akxis.io/mollie",
+            "metadata" => json_encode([
+                "userid" => $_POST["userid"],
+                "package" => $_POST["package"]
+            ])
+        ));
+
+        print_r($payment);
+
+        return "<a href='" . $payment->links->paymentUrl . "'>Klik hier om te betalen</a>";
+    } else {
+        return "<form method='POST' action='/planner/order'>
+                    <input type='number' name='userid' placeholder='Klantennummer'>
+                    <p>KIJK NA OF DIT CORRECT IS</p>
+                    <input type='hidden' name='package' value='" . htmlentities($_GET["package"]) . "'>
+                    <input type='submit' value='Bestel'>
+                </form>";
+    }
+}
+
+function parse_payment($attr) {
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $mollie = new Mollie_API_Client;
+        $mollie->setApiKey("test_VvzbMtrfKpa8Gw7tcdg3MeCvEeJcux");
+        $payment = $mollie->payments->get($_POST["id"]);
+
+        if ($payment->isPaid()) {
+            $ch = curl_init(API_BASE . 'member/AddSubscription?token=' . TOKEN . '&memberid=' . json_decode($payment->metadata)->userid . '&subid=' . json_decode($payment->metadata)->package . '&startdate=' . date('d/m/Y') . '&reference=' . $_POST["id"]);
+            echo API_BASE . 'member/AddSubscription?token=' . TOKEN . '&memberid=' . json_decode($payment->metadata)->userid . '&subid=' . json_decode($payment->metadata)->package . '&startdate=' . date('d/m/Y') . '&reference=' . $_POST["id"];
+
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+            $res = curl_exec($ch);
+            curl_close($ch);
+            print_r($res);
+        }
+
+        /*  */
+    }
+}
