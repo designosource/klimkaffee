@@ -6,7 +6,6 @@
  * @package WordPress
  */
 
-error_reporting(E_ALL & ~E_NOTICE);
 /**
  * Tells WordPress to load the WordPress theme and output it.
  *
