@@ -109,6 +109,8 @@ p.price-value {
 .slick-container .slick-item {
     background-size: cover;
     background-position: center 70%;
+    background-color: rgba(0,0,0,0.2);
+    background-blend-mode: overlay;
 }
 
 .slick-container .slick-item > div {
