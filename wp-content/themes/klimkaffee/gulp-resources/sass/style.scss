@@ -24,6 +24,7 @@ Version: 1.0
 @import "components/prijzen";
 @import "components/openingsuren";
 @import "components/trainingen";
+@import "components/planner";
 @import "components/reserveren";
 
 html,
@@ -73,7 +74,7 @@ p.price-value {
     header nav.main .menu {
         height: 100px;
     }
-    
+
     .homepage-aanbod .col-md-4 p {
         font-size : 14px;
         line-height : 19px;
@@ -81,7 +82,7 @@ p.price-value {
         margin-bottom: 2em;
         min-height: 8em;
     }
-    
+
     .homepage-openingsuren-inner-container {
         width: 77%;
     }
@@ -243,16 +244,16 @@ ul.slick-dots li.slick-active button:before {
         font-size: 20px;
         color: white;
     }
-    
+
     .slide-text a {
         font-size: 16px;
     }
-    
+
     .slick-slider {
         margin-bottom: 0;
         height: 600px;
     }
-    
+
     .introduction-title {
         font-size : 24px;
         line-height : 40px;
@@ -264,11 +265,11 @@ ul.slick-dots li.slick-active button:before {
         color: #872B29;
         font-size: 36px;
     }
-    
+
     .page-content {
         padding: 75px 0 50px 0;
     }
-    
+
     .homepage-aanbod h3, .homepage-openingsuren h3, .homepage-contact h3 {
         font-size: 36px;
         margin-bottom: 2em;
@@ -555,7 +556,7 @@ a.read-more-link:hover {
 .albums {
 	margin-left: auto;
 	margin-right: auto;
-} 
+}
 
 .images {
 	display: flex;

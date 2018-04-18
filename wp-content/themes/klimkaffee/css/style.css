@@ -1000,6 +1000,8 @@ header {
 .content .page-title {
   background-size: cover;
   background-position: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: overlay;
   height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1407,6 +1409,23 @@ footer {
 .page-trainingen p {
   margin-bottom: 30px; }
 
+.planner-link {
+  margin: auto;
+  text-align: center; }
+  .planner-link .planner-link-image {
+    display: block;
+    height: 200px;
+    min-width: 100%;
+    margin-bottom: 40px;
+    background-size: cover; }
+  .planner-link .planner-link-image:hover:after {
+    height: 0;
+    display: none; }
+  .planner-link a {
+    color: #555555;
+    font-weight: bold;
+    padding: 15px 0; }
+
 body .lesson-slot {
   background-color: #ede4e5;
   padding: 20px;
@@ -1490,7 +1509,9 @@ p.price-value {
 
 .slick-container .slick-item {
   background-size: cover;
-  background-position: center 70%; }
+  background-position: center 70%;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: overlay; }
 
 .slick-container .slick-item > div {
   list-style-type: none;
