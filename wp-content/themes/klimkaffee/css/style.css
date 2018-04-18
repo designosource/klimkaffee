@@ -6,7 +6,7 @@ Author URI: https://designosource.be/
 Description: Template for Klimkaffee Mechelen
 Version: 1.0
 */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,500,600");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700");
 body {
   font-family: "Montserrat", sans-serif; }
 
@@ -1425,6 +1425,64 @@ footer {
     color: #555555;
     font-weight: bold;
     padding: 15px 0; }
+
+.page-register {
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: overlay;
+  background-size: cover; }
+  .page-register .title {
+    margin: auto;
+    float: none; }
+    .page-register .title h2 {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 120%; }
+  .page-register .register-form {
+    margin: auto;
+    float: none;
+    padding: 100px 50px;
+    background-color: #fff;
+    -webkit-box-shadow: 4px 0 8px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 0 8px 0 rgba(0, 0, 0, 0.3); }
+    .page-register .register-form .blog-post {
+      margin-bottom: 0; }
+      .page-register .register-form .blog-post form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        .page-register .register-form .blog-post form input {
+          padding: 10px 5px;
+          margin-bottom: 50px; }
+        .page-register .register-form .blog-post form input:first-of-type, .page-register .register-form .blog-post form input:nth-of-type(2) {
+          width: 45%; }
+        .page-register .register-form .blog-post form input:nth-of-type(3) {
+          width: 100%; }
+        .page-register .register-form .blog-post form input[type="submit"] {
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 100;
+          letter-spacing: 0.7px;
+          background-color: #8e2c28;
+          border: 2px solid #8e2c28;
+          color: #FFFFFF;
+          padding: 1em 3em;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          margin: auto;
+          margin-bottom: 30px; }
+        .page-register .register-form .blog-post form input[type="submit"]:hover {
+          background-color: transparent;
+          -webkit-transition: 0.5s;
+          transition: 0.5s;
+          color: #8e2c28; }
 
 body .lesson-slot {
   background-color: #ede4e5;

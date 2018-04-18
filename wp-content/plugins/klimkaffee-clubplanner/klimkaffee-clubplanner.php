@@ -31,7 +31,7 @@ function klimkaffee_clubplanner()
 }
 
 // HIER IS STEFANO's CODE: VIA CURL
-// 
+//
 add_shortcode('registerview', 'register_view');
 add_shortcode('shoperino', 'shop_view');
 add_shortcode('orderino', 'order_view');
@@ -56,11 +56,11 @@ function register_view($attr)
         return $res;
 
     } else {
-        return "<form method='POST' action='/planner/register'>
+        return "<form method='POST' action='" . get_site_url() . "/planner/register'>
+                <input type='text' name='firstname' placeholder='Voornaam'>
+                <input type='text' name='lastname' placeholder='Achternaam'>
                 <input type='email' name='email' placeholder='E-Mail'>
-                <input type='text' name='firstname' placeholder='Voor naam'>
-                <input type='text' name='lastname' placeholder='Achter naam'>
-                <input type='submit' value='Save'>
+                <input type='submit' value='Volgende'>
             </form>";
     }
 }
