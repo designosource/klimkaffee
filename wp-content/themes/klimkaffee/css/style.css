@@ -2080,7 +2080,41 @@ a.read-more-link:hover {
   background-position: center 40%; }
 
 .col-md-12.trainer a:after {
+<<<<<<< HEAD
+    display: none;
+}
+
+.col-md-9 .col-md-6 {
+    margin-top: 30px;
+}
+
+.inline-image {
+	padding:0px; margin:0;
+	margin-bottom: 30px;
+	margin-left: 30px;
+	max-width: 250px !important;
+	float: right;
+}
+
+#tribe-events-content-wrapper a:after, .tribe-events-cal-links a:after {
+    display: none;
+}
+
+#tribe-events-pg-template {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a.tribe-events-gcal.tribe-events-button {
+    margin-right: 0;
+}
+
+ul.tribe-events-sub-nav li a {
+    color: #bf3e3c;
+}
+=======
   display: none; }
 
 .col-md-3.trainer a:after {
   display: none; }
+>>>>>>> 3a0ed032ed10b738bd4b5a47aa3918d700e53354
