@@ -2070,7 +2070,6 @@ a.read-more-link:hover {
 
 .col-md-9 .col-md-6 {
     margin-top: 30px;
-<<<<<<< HEAD
 }
 
 .inline-image {
@@ -2079,6 +2078,21 @@ a.read-more-link:hover {
 	margin-left: 30px;
 	max-width: 250px !important;
 	float: right;
-=======
->>>>>>> 7039493fc39832913fdee844b3f53e9079176466
+}
+
+#tribe-events-content-wrapper a:after, .tribe-events-cal-links a:after {
+    display: none;
+}
+
+#tribe-events-pg-template {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a.tribe-events-gcal.tribe-events-button {
+    margin-right: 0;
+}
+
+ul.tribe-events-sub-nav li a {
+    color: #bf3e3c;
 }
