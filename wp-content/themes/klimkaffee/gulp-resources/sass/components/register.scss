@@ -1,0 +1,70 @@
+.page-register {
+    background-color: rgba(255,255,255,0.5);
+    background-blend-mode: overlay;
+    background-size: cover;
+
+    .title {
+        margin: auto;
+        float: none;
+
+        h2 {
+            text-align: center;
+            font-size: $font-size-medium;
+            font-weight: $font-weight-xtrabold;
+            letter-spacing: 1px;
+            line-height: 120%;
+        }
+    }
+
+    .register-form {
+        margin: auto;
+        float: none;
+        padding: 100px 50px;
+        background-color: $white;
+        box-shadow: 4px 0 8px 0 rgba(0, 0, 0, 0.3);
+
+        .blog-post {
+            margin-bottom: 0;
+            
+            form {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                input {
+                    padding: 10px 5px;
+                    margin-bottom: 50px;
+                }
+
+                input:first-of-type, input:nth-of-type(2) {
+                    width: 45%;
+                }
+
+                input:nth-of-type(3) {
+                    width: 100%;
+                }
+
+                input[type="submit"] {
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: 100;
+                    letter-spacing: 0.7px;
+                    background-color: $red_main;
+                    border: 2px solid $red_main;
+                    color: #FFFFFF;
+                    padding: 1em 3em;
+                    transition: 0.3s;
+                    margin: auto;
+                    margin-bottom: 30px;
+                }
+
+                input[type="submit"]:hover {
+                    background-color: transparent;
+                    transition: 0.5s;
+                    color: $red_main;
+                }
+            }
+        }
+    }
+}

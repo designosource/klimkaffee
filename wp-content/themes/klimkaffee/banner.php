@@ -1,5 +1,5 @@
 <div class="page-title"
-     style="background-image: <?php echo $post->post_parent ? "url(" . wp_get_attachment_url(get_post_thumbnail_id($post->post_parent)) . ")" : "" . the_post_thumbnail(); ?>">
+     style="background-image: url( <?php echo $post->post_parent > 0 ?  wp_get_attachment_url(get_post_thumbnail_id($post->post_parent)) :  wp_get_attachment_url(get_post_thumbnail_id($post)); ?>)">
 
 	<h1><?php
 		if ($post->post_parent) {

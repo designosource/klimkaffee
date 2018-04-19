@@ -1,0 +1,24 @@
+.planner-link {
+    margin: auto;
+    text-align: center;
+
+    .planner-link-image {
+        display: block;
+        height: 200px;
+        min-width: 100%;
+        margin-bottom: 40px;
+        background-size: cover;
+    }
+
+    .planner-link-image:hover:after {
+        height: 0;
+        display: none;
+    }
+
+    a {
+        color: #555555;
+        font-weight: bold;
+        padding: 15px 0;
+    }
+
+}

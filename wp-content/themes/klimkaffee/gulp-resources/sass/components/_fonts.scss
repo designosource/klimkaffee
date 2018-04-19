@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,600');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700');
 
 $montserrat: "Montserrat", sans-serif;
 
@@ -10,6 +10,7 @@ $font-size-xl: 52px;
 
 $font-weight-light: 300;
 $font-weight-bold: 600;
+$font-weight-xtrabold: 700;
 
 body {
   font-family: $montserrat;

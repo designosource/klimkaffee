@@ -39,13 +39,6 @@ footer {
           }
         }
 
-        li.menu-item:last-child {
-          width: 100%;
-          text-align: right;
-          margin-top: -150px;
-          padding: 15px 0;
-        }
-
         li.menu-item-home {
           a {
             img {
@@ -82,7 +75,13 @@ footer {
         li.menu-item-has-children > a:first-child {
           padding-bottom: 10px;
         }
+      }
 
+      #menu-footer > li:last-of-type {
+        width: 100%;
+          text-align: right;
+          margin-top: -140px;
+          padding: 15px 0;
       }
 
       div.go-up {
