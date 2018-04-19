@@ -1,10 +1,9 @@
-<?php get_header();
-include( 'banner.php' ) ?>
-    <div class="page-content">
+<?php get_header();?>
+    <div class="page-content page-shop">
         <div class="custom-container">
             <div class="row">
-                <div class="col-md-9">
-                    <h2><?php the_title(); ?></h2>
+                <div class="col-md-10">
+                    <h1><?php the_title(); ?></h1>
                     <?php
                     if ( have_posts() ) : while ( have_posts() ) : the_post();
                         get_template_part( 'content-only-content', get_post_format() );
