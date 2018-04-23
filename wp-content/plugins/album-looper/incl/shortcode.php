@@ -7,6 +7,9 @@ function bldrzl_album_loop_functionality( $atts ) {
 	if ( have_rows( $repeater, 'option' ) ): ?>
 
 		<ul class="albums boulderzaal">
+		
+		    <?php $i = 1; ?>
+		
 			<?php while ( have_rows( $repeater, 'option' ) ): the_row();
 				$year   = get_sub_field( 'bldrzl_jaar', 'option' );
 				$title  = get_sub_field( 'bldrzl_title', 'option' );
@@ -20,7 +23,8 @@ function bldrzl_album_loop_functionality( $atts ) {
 					<ul class="images">
 						<?php
 						foreach ( $images as $image ) { ?>
-							<li class="image"
+							<a data-fancybox="gallery<?php echo $i; ?>" href="<?php echo $image['url'] ?>">
+                            <li class="image"
 							    style="background-image:url('<?php echo $image['url'] ?>')">
 								<p class="meta">
 									<span class="label">
@@ -34,11 +38,14 @@ function bldrzl_album_loop_functionality( $atts ) {
 									</span>
 								</p>
 							</li>
+							</a>
 						<?php }
 						?>
 					</ul>
 				</li>
 
+                <?php $i++; ?>
+        
 			<?php endwhile; ?>
 
 		</ul>
