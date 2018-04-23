@@ -7,10 +7,15 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row; }
+
+.boulderzaal .images a:hover:after {
+    display:none;
+}
   .boulderzaal .images .image {
     flex: 1 1 auto;
-    flex-basis: 250px;
-    height: 250px;
+    flex-basis: 300px;
+    height: 300px;
+    width: 300px;
     margin-right: 25px;
     margin-bottom: 25px;
     background-size: cover;
@@ -27,5 +32,9 @@
       background-color: rgba(255, 255, 255, 0.54); }
       .boulderzaal .images .image .meta .label {
         padding-left: 5%; }
+
+.fancybox-navigation a:after {
+    display: none;
+}
 
 /*# sourceMappingURL=style.css.map */

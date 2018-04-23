@@ -18,7 +18,7 @@ include( 'banner.php' ) ?>
                             
 							<?php while ( have_rows( 'trainers' ) ) : the_row() ?>
                                 
-                                <a target="_blank" href="<?php echo get_sub_field('trainer_link') ?>">
+                                <a href="<?php echo get_sub_field('trainer_link') ?>">
                                     <div class="trainer-image-container" style="background-image: url('<?php echo get_sub_field( 'trainer_picture' )["url"] ?>');"></div>
                                     <h4><?php echo get_sub_field( 'trainer_name' ) ?></h4>
                                 </a>

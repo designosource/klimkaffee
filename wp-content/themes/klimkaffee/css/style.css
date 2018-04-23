@@ -1400,6 +1400,9 @@ footer {
 
 .page-trainingen .trainer {
   text-align: center; }
+.col-md-12.trainer a:after {
+    display: none;
+}
   .page-trainingen .trainer img {
     width: 100%;
     height: auto; }
