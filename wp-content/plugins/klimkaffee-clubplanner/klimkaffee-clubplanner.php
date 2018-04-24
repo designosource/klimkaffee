@@ -36,9 +36,15 @@ add_shortcode('registerview', 'register_view');
 add_shortcode('shoperino', 'shop_view');
 add_shortcode('orderino', 'order_view');
 add_shortcode('mollierino', 'parse_payment');
+add_shortcode('reserverino', 'reserveer_view');
 
 define('API_BASE', 'https://klimcaffee.clubplanner.be/api/');
 define('TOKEN', "\$kl1mc@ff00");
+
+function reserveer_view($attr)
+{
+        return "<iframe src='https://klimcaffee.clubplanner.be/Account/LoginMember' style='border: none; height: 1000px; width: 100%;'></iframe>";
+}
 
 function register_view($attr)
 {
@@ -76,16 +82,19 @@ function shop_view($attr)
     $html = "";
 
     foreach ($res as $sub) {
-        $html .= "<a href='/planner/order?package=" . $sub->SubscriptionId . "'>" . $sub->Description . "</a>";
+        $html .= "
+    <div class='col-md-3'>
+        <div class='shop-item'>
+        <a href='/planner/order?package=" . $sub->SubscriptionId . "'>" . $sub->Description . "</a>
+        </div></div>";
     }
 
-    return $html;
+    return "<div class='row'>" . $html . '</div>';
 }
 
 
 function order_view($attr)
 {
-
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $ch = curl_init(API_BASE . 'member/GetSubscriptions?token=' . TOKEN);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -114,13 +123,11 @@ function order_view($attr)
             ])
         ));
 
-        print_r($payment);
-
-        return "<a href='" . $payment->links->paymentUrl . "'>Klik hier om te betalen</a>";
+        return "<div class='click-to-pay'><a href='" . $payment->links->paymentUrl . "'>Klik hier om te betalen</a></div>";
     } else {
         return "<form method='POST' action='/planner/order'>
                     <input type='number' name='userid' placeholder='Klantennummer'>
-                    <p>KIJK NA OF DIT CORRECT IS</p>
+                    <p><small>(u kan dit in u registratie mail vinden)</small></p>
                     <input type='hidden' name='package' value='" . htmlentities($_GET["package"]) . "'>
                     <input type='submit' value='Bestel'>
                 </form>";
