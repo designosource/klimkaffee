@@ -61,7 +61,7 @@ a:after {
   bottom: 0;
   position: relative;
   right: 0;
-  height: 0;
+  height: 3px;
   width: 100%;
   background: 0 0;
   -webkit-transition: width .5s ease, background-color .5s ease;
@@ -1205,6 +1205,19 @@ footer {
   .blog-post:last-child hr {
     display: none; }
 
+.pagination {
+  text-align: center;
+  margin-bottom: 60px; }
+  .pagination span.page-numbers.current {
+    padding: 0 5px;
+    color: #bf3e3c; }
+  .pagination a.page-numbers {
+    padding: 0 5px;
+    color: #313130; }
+  .pagination a.page-numbers:after {
+    content: '';
+    height: 3px; }
+
 .post-navigation {
   margin: 20px 0; }
   .post-navigation h2 {
@@ -1400,9 +1413,6 @@ footer {
 
 .page-trainingen .trainer {
   text-align: center; }
-.col-md-12.trainer a:after {
-    display: none;
-}
   .page-trainingen .trainer img {
     width: 100%;
     height: auto; }
