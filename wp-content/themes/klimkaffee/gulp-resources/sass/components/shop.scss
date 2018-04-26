@@ -13,6 +13,12 @@
             margin-bottom: 20px;
             text-align: center;
             font-weight: 600;
+
+            span {
+                display: block;
+                line-height: 10px;
+                font-size: 1.2em;
+            }
         }
 
         a:hover:after {

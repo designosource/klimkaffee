@@ -35,6 +35,13 @@
         color: #FFF;
         padding: 20px;
 
+        span {
+            display: block;
+            padding-top: 10px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
         &:hover {
             border-bottom: none;
         }
