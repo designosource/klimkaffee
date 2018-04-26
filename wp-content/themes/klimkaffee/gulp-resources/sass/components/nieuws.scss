@@ -59,6 +59,26 @@
   }
 }
 
+.pagination {
+    text-align: center;
+    margin-bottom: 60px;
+
+    span.page-numbers.current {
+        padding: 0 5px;
+        color: $red_light;
+    }
+
+    a.page-numbers {
+        padding: 0 5px;
+        color: $black;
+    }
+
+    a.page-numbers:after {
+        content: '';
+        height: 3px;
+    }
+}
+
 .post-navigation {
   margin: 20px 0;
 
