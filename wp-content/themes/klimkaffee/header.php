@@ -21,6 +21,7 @@
     <link href="<?= get_bloginfo( 'template_directory' ); ?>/reset.css" rel="stylesheet">
     <link href="https://kenwheeler.github.io/slick/slick/slick.css" rel="stylesheet">
     <link href="https://kenwheeler.github.io/slick/slick/slick-theme.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 	<link href="<?= get_bloginfo( 'template_directory' ); ?>/css/style.css" rel="stylesheet">
 	<link href="<?= get_bloginfo( 'template_directory' ); ?>/css/sander.css" rel="stylesheet">
     

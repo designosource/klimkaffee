@@ -1,0 +1,1439 @@
+
+<!DOCTYPE HTML>
+<html lang="en"> <!-- lang="xx" is allowed, but NO xmlns="http://www.w3.org/1999/xhtml", lang:xml="", and so on -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]> <html class="no-js" lang="en"> <![endif]-->
+<head id="" data-template-set="html5-reset-wordpress-theme"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQYCUFJVDRAHU1hQAAYH"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="UTF-8">    
+<title>Four Climbing Friends</title>
+<meta name="title" content="Four Climbing Friends">
+<meta name="description" content="Four boys who have been friends forever, and all four of whom are headed to nationals next month for bouldering " />
+<!--Google will often use this as its description of your page/site. Make it good.-->
+<meta name="fragment" content="!" />
+<link rel="canonical" href="http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/" />    
+<meta name="Copyright" content="Copyright &copy; Boulder Daily Camera 2018. All Rights Reserved.">
+<link rel="shortcut icon" href="http://extras.mnginteractive.com/live/media/favIcon/DailyCamera/dcicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="http://mediacenter.dailycamera.com/wp-content/themes/media-center-2014/style.min.css" />
+<link rel="stylesheet" href="http://mediacenter.dailycamera.com/wp-content/themes/media-center-2014/local.css" />
+
+<!-- Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://mediacenter.dailycamera.com/wp-content/themes/media-center-2014/js/lib/respond.min.js"></script>
+<![endif]-->
+
+<!-- Application-specific meta tags -->
+	
+
+<!-- Facebook -->
+<meta property="og:description" content="Four boys who have been friends forever, and all four of whom are headed to nationals next month for bouldering " />
+
+	<!-- Transient OG -->
+<meta property="og:image" content="https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-w25HJhh/0/bea10f5a/XL/KidClimbers004-XL.jpg" />
+	
+	<meta property="og:image" content="http://mediacenter.dailycamera.com/files/2016/09/KidClimbers004-S.jpg" />
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://mediacenter.dailycamera.com/xmlrpc.php" />
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v2.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Four Climbing Friends"/>
+<link rel="canonical" href="http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel='dns-prefetch' href='//local.digitalfirstmedia.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Boulder Daily Camera Media Center &raquo; Feed" href="http://mediacenter.dailycamera.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Boulder Daily Camera Media Center &raquo; Comments Feed" href="http://mediacenter.dailycamera.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Boulder Daily Camera Media Center &raquo; Photos: Four Climbing Friends Comments Feed" href="http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/mediacenter.dailycamera.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<script type='text/javascript' src='https://local.digitalfirstmedia.com/common/dfm/assets/js/dfm-core-level1.min.js?ver=1.0'></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='http://mediacenter.dailycamera.com/wp-content/themes/media-center-2014/js/swipy.js?ver=4.7.3'></script>
+<link rel='https://api.w.org/' href='http://mediacenter.dailycamera.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mediacenter.dailycamera.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mediacenter.dailycamera.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.3" />
+<link rel='shortlink' href='http://mediacenter.dailycamera.com/?p=25093' />
+<link rel="alternate" type="application/json+oembed" href="http://mediacenter.dailycamera.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmediacenter.dailycamera.com%2F2016%2F02%2F02%2Fphotos-four-climbing-friends%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://mediacenter.dailycamera.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmediacenter.dailycamera.com%2F2016%2F02%2F02%2Fphotos-four-climbing-friends%2F&#038;format=xml" />
+
+    <script type="text/javascript" src="https://local.denverpost.com/common/dfm/dfm-core.js"></script>
+    <script type="text/javascript">
+        dfm.api("data","siteId",            "");
+        dfm.api("data","company",            "MNG");
+        dfm.api("data","siteName",          "Boulder Daily Camera");
+        dfm.api("data","siteDomain",        "dailycamera.com");
+        dfm.api("data","currentDomain",      "mediacenter.dailycamera.com");
+        dfm.api("data","contentId",         "");
+        dfm.api("data","sectionName",       "Uncategorized");
+        dfm.api("data","pageID",            "");
+        dfm.api("data","pageUrl",           "/2016/02/02/photos-four-climbing-friends/");
+        dfm.api("data","pageTitle",         "Photos: Four Climbing Friends");
+        dfm.api("data","sectionId",         "");
+        dfm.api("data","keywords",          "");
+        dfm.api("data","adTaxonomy",         "");
+        dfm.api("data","Taxonomy1",         "Uncategorized");
+        dfm.api("data","Taxonomy2",         "");
+        dfm.api("data","Taxonomy3",         "");
+        dfm.api("data","Taxonomy4",         "");
+        dfm.api("data","kv",                "news");
+        dfm.api("data","googleUA",          "UA-61435456-9");
+        dfm.api("data","contentGeography",  "");
+        dfm.api("data","contentRegion",     "");
+        dfm.api("data","contentPostalCode", "");
+        dfm.api("data","contentPrice",      "");
+        dfm.api("data","contentChannel",    "");
+        dfm.api("data","contentType",       "");
+        dfm.api("data","contentCity",       "");
+        //Extra
+        dfm.api("data","errorType",      		"");
+        dfm.api("data","pageType",         	"gallery");
+        dfm.api("data", "quantcast",		"p-34ecDc3dtE4OQ");
+        dfm.api("data", "comscore",		"6035443");
+    </script>
+    
+
+		<!-- GTM Data Layer -->
+		<script type="text/javascript">
+		  var dfm_gtm_dataLayer = true;
+
+		var dfm_gtm_publisherproduct = dfm.api("data","currentDomain");
+		var dataLayer_gaua = dfm.api("data", "googleUA");
+		var dataLayer_digitalpublisher = dfm.api("data", "company");
+		var dataLayer_taxonomy1 = dfm.api("data","Taxonomy1");
+		var dataLayer_quantcast = dfm.api("data", "quantcast");
+		var dataLayer_comscore = dfm.api("data", "comscore");
+
+		  analyticsEvent = function() {};
+		  analyticsSocial = function() {};
+		  analyticsVPV = function() {};
+		  analyticsClearVPV = function() {};
+		  analyticsForm = function() {};
+		  window.dataLayer = window.dataLayer || [];
+		  (function() {
+		    window.gaJsonData = window.gaJsonData || [];
+		    var gaTempJson = {
+		      "comscore": "",
+		      "pubplatform": "WP",
+		      "releaseversion": "",
+		      "digitalpublisher": "",
+		      "publisherstate": ""
+		    };
+		    gaJsonData.push(gaTempJson);
+		    var data = gaJsonData[0];
+		    var json = {
+		      "gaua": function() {
+		        return data.gaua;
+		      },
+		      "quantcast": function () {
+		        return data.quantcast;
+		      },
+		      "comscore": function() {
+		        return data.comscore;
+		      },
+		      "pubplatform": function() {
+		        return data.pubplatform;
+		      },
+		      "releaseversion": function() {
+		        return data.releaseversion;
+		      },
+		      "digitalpublisher": function() {
+		        return data.digitalpublisher;
+		      },
+		      "publisherstate": function() {
+		        return data.publisherstate;
+		      }
+		    };
+		    /*
+		      Error type
+		    */
+		     var dataLayer_error = dfm.api("data","errorType");
+		    /*
+		      ga_ua
+		    */
+		    //var dataLayer_gaua = json["gaua"]();
+		    /*
+		      quantcast
+		    */
+		    //var dataLayer_quantcast = json["quantcast"]();
+		    /*
+		      comscore
+		    */
+		    //var dataLayer_comscore = json["comscore"]();
+		    /*
+		      Release Version
+		    */
+		    var dataLayer_releaseversion = json["releaseversion"]();
+		    /*
+		      Digital Publisher
+		    */
+		    //var dataLayer_digitalpublisher = json["digitalpublisher"]();
+		    /*
+		      Platform
+		    */
+		    var dataLayer_pubplatform = json["pubplatform"]();
+		    /*
+		      Publisher State
+		    */
+		    var dataLayer_publisherstate = json["publisherstate"]();
+		    // Push the values into the dataLayer
+		    dataLayer.push({
+		      "errorType":dataLayer_error,
+		      "ga_ua":dataLayer_gaua,
+		      "quantcast":dataLayer_quantcast,
+		      "comscore":dataLayer_comscore,
+		      "Release Version":dataLayer_releaseversion,
+		      "Digital Publisher":dataLayer_digitalpublisher,
+		      "Platform":dataLayer_pubplatform,
+		      "Publisher State":dataLayer_publisherstate
+		    });
+		  }()); 
+		</script>
+
+		<!-- GA global -->
+		<script type="text/javascript" src="https://local.medianewsgroup.com/common/dfm/ga-datalayer.js"></script>
+		<!-- Google Tag Manager dfm -->
+		<noscript>
+			<iframe src="//www.googletagmanager.com/ns.html?id=GTM-TLFP4R" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-TLFP4R');</script>
+		<!-- End Google Tag Manager -->
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="author" href="http://mediacenter.dailycamera.com//humans.txt" />
+<meta name="dcterms.rightsHolder" content="Property name here" />
+<meta name="dcterms.dateCopyrighted" content="2018" />
+
+<!-- ICONS -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#222222">
+
+<!-- iOS apps -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Media Center">
+
+<!-- MODERNIZER -->
+<script src="http://mediacenter.dailycamera.com/wp-content/themes/media-center-2014/js/lib/modernizr.js"></script>
+
+<!-- GPT AD TAGS -->
+<script type="text/javascript" src="https://local.denverpost.com/common/dfm/dfm-core.js"></script>
+<!-- Start: GPT Sync -->
+<script type='text/javascript'>
+ // Load GPT
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function(){
+   var gads = document.createElement('script');
+   gads.async = true;
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+       '//www.googletagservices.com/tag/js/gpt.js';
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+   })();
+
+ googletag.cmd.push(function() {
+    //Adslot 1 declaration//
+            var slot1 = googletag.defineSlot('/8013/dailycamera.com/media-center', [[300,250]],'cube1').setTargeting('pos',['Cube1_RRail_ATF']).addService(googletag.pubads());
+    
+    //Adslot 2 declaration
+    var slot2 = googletag.defineSlot('/8013/dailycamera.com/media-center', [[728,90]],'top_leaderboard').setTargeting('pos',['top_leaderboard']).addService(googletag.pubads());
+
+    //Adslot 3 declaration
+    var slot3 = googletag.defineSlot('/8013/dailycamera.com/media-center', [[300,250]],'cube2').setTargeting('pos',['Cube2_RRail_mid']).addService(googletag.pubads());
+
+    //Adslot 4 declaration
+    var slot4 = googletag.defineSlot('/8013/dailycamera.com/media-center', [[1,1]],'mc_interstitial').setTargeting('pos',['mc_interstitial']).addService(googletag.pubads());
+
+    //Adslot 5 decleration
+    var slot5 = googletag.defineSlot('/8013/dailycamera.com/media-center', [[970,30]], 'div_SBB').setTargeting('pos', ['SBB']).addService(googletag.pubads());
+
+    googletag.pubads().setTargeting('kv',['news']);
+    // Infinite scroll requires SRA
+    googletag.pubads().enableSingleRequest();
+
+    // Disable initial load, we will use refresh() to fetch ads.
+    // Calling this function means that display() calls just
+    // register the slot as ready, but do not fetch ads for it.
+    googletag.pubads().disableInitialLoad();
+
+    // Enable services
+    googletag.enableServices();
+
+ });
+ // Function to generate unique names for slots
+ var nextSlotId = 1;
+ function generateNextSlotName() {
+   var id = nextSlotId++;
+   return 'adslot' + id;
+ }
+
+var cubeCount = 1;
+//loadAd is called for recurring ads -- slogallery and infinitescoll
+
+ 
+  
+ function loadAd( targetDiv, slotType ) {
+    var slotName = generateNextSlotName();
+
+    // Create a div for the slot
+    var slotDiv = document.createElement('div');
+    slotDiv.id = slotName; // Id must be the same as slotName 
+    slotDiv.style.zIndex="999999999999999999999999999999999999999999999999";
+
+    var wrapperDiv = document.getElementById(targetDiv);
+    wrapperDiv.appendChild( slotDiv );
+
+    googletag.cmd.push(function() {
+        switch( slotType ) {
+            case 'gallery':
+                var ad_loc = '/8013/dailycamera.com/media-center';
+                var tagOrd=Math.random()*10000000000000000;
+
+                // May want to change from 500px down the road. 
+                var mq = window.matchMedia( "(min-width: 500px)" );
+                if ( mq.matches ) {
+                    var slot = googletag.defineSlot('/8013/dailycamera.com/media-center/home', [[1,1]],slotName).setTargeting('pos',['mc_interstitial']).addService(googletag.pubads());
+                }
+                else {
+                    // Mobile device, just show a cube ad
+                    var slot = "<iframe width='300px' height='250px' frameborder=0 scrolling=no seamless src='http://pubads.g.doubleclick.net/gampad/adx?iu=/8013/dailycamera.com/Media-Center&t=pos%3D[\"cube1\"]&sz=300x250&c="+tagOrd+"'></iframe>";
+                    $( wrapperDiv ).append( slot );
+                }
+
+                slotDiv.style.top="160px";
+                slotDiv.style.marginLeft="auto";
+                slotDiv.style.marginRight="auto";
+                slotDiv.style.textAlign="center";
+                break;
+        }
+        googletag.pubads().setTargeting('kv',['gallery']);
+
+        // Display has to be called before
+        // refresh and after the slot div is in the page.
+        googletag.display( slotName) ;
+        googletag.pubads().refresh([slot]);
+    });
+}
+
+
+</script>
+
+<!-- End: GPT -->
+
+<script> 
+$( window ).resize(function() {
+	if(menuIsOpen) {
+		//alert(menuIsOpen);
+		screenWMenu=$(window).width();
+		console.log("screenMEnu"+screenWMenu);
+		$("body").width(screenWMenu-300);
+		console.log("Body"+$("body").width());
+		$("#site-header").width(screenWMenu-300);
+		$("#carousel").width(screenWMenu-660);	
+	}
+	$("#carousel").removeAttr("width");
+});
+</script>
+
+<!--share toggles-->
+<script type="text/javascript">
+	$(document).ready(function(){
+        	var $headerShareToggle = $('#site-header').find($('.share-toggle')),
+    		$headerSearchToggle = $('#site-header').find($('.search-toggle'));
+		$headerShareToggle.bind('click', function(e){
+			$('#site-header').toggleClass('share-active').removeClass('search-active');
+		});
+		$headerSearchToggle.bind('click', function(e){
+			$('#site-header').toggleClass('search-active').removeClass('share-active');
+			setTimeout(function(){
+				($('#site-header').hasClass('search-active')) ? $('#search-field').focus() :  $('#search-field').blur();
+			}, 250);
+		});			   
+		loadShareToggles();
+	});
+</script>
+<!--share toggles-->
+
+
+
+<!-- NDN Tag -->
+<script type="text/javascript" src="https://launch.newsinc.com/js/embed.js" id="_nw2e-js"></script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-61435456-9', 'auto');
+ga('send', 'pageview', {'page': 'http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/'+window.location.hash});
+</script>
+
+
+</head>
+<body class="article-page">
+<script>
+var mq = window.matchMedia( "(max-width: 736px)" );
+</script>
+      <nav id="main-menu" class="sidenav default fixed-left offcanvas" role="navigation">
+        <span class="sidenav-brand"> 
+        	<button type="button" class="close-button" data-toggle="offcanvas"  data-target=".sidenav">
+        		<span class="glyphicon glyphicon-remove"></span> Close
+        	</button>
+        </span>
+        <ul class="nav sidenav-nav">
+            <li>
+                <span class="arrow-subnav glyphicon glyphicon-chevron-left"></span>
+                <a onclick="window.location='http://mediacenter.dailycamera.com/category/dc_local/';" href="http://mediacenter.dailycamera.com/category/dc_local/">Daily Camera Local</a>
+                <ul class="subnav">
+                    <li class="back"><a>Back <span style="pointer-events: none;" class="pull-right arrow glyphicon glyphicon-chevron-right"></span></a></li>
+               </ul>
+            </li>
+            <li>
+                <span class="arrow-subnav glyphicon glyphicon-chevron-left"></span>
+                <a onclick="window.location='http://mediacenter.dailycamera.com/category/news/';" href="http://mediacenter.dailycamera.com/category/news/">News</a>
+                <ul class="subnav">
+                    <li class="back"><a>Back <span style="pointer-events: none;" class="pull-right arrow glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/news/conflict/';" href="http://mediacenter.dailycamera.com/category/news/conflict/">Conflict</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/editorial-cartoons/';" href="http://mediacenter.dailycamera.com/category/editorial-cartoons/">Cartoons</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/news/historic/';" href="http://mediacenter.dailycamera.com/category/news/historic/">Historic</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/news/offbeat/';" href="http://mediacenter.dailycamera.com/category/news/offbeat/">Offbeat</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/news/politics/';" href="http://mediacenter.dailycamera.com/category/news/politics/">Politics</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/news/science-and-technology/';" href="http://mediacenter.dailycamera.com/category/news/science-and-technology/">Science and Technology</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/news/severe-weather/';" href="http://mediacenter.dailycamera.com/category/news/severe-weather/">Severe Weather</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/news/state-and-regional/';" href="http://mediacenter.dailycamera.com/category/news/state-and-regional/">State and Regional</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/news/u-s-national/';" href="http://mediacenter.dailycamera.com/category/news/u-s-national/">U.S. National</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/news/weird-news/';" href="http://mediacenter.dailycamera.com/category/news/weird-news/">Weird News</a></li>
+               </ul>
+            </li>
+            <li>
+                <span class="arrow-subnav glyphicon glyphicon-chevron-left"></span>
+                <a onclick="window.location='http://mediacenter.dailycamera.com/category/sports/';" href="http://mediacenter.dailycamera.com/category/sports/">Sports</a>
+                <ul class="subnav">
+                    <li class="back"><a>Back <span style="pointer-events: none;" class="pull-right arrow glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/sports/college-sports/';" href="http://mediacenter.dailycamera.com/category/sports/college-sports/">College Sports</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/sports/mlb/';" href="http://mediacenter.dailycamera.com/category/sports/mlb/">MLB</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/sports/nba/';" href="http://mediacenter.dailycamera.com/category/sports/nba/">NBA</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/nfl/';" href="http://mediacenter.dailycamera.com/category/nfl/">NFL</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/sports/nhl/';" href="http://mediacenter.dailycamera.com/category/sports/nhl/">NHL</a></li>
+               </ul>
+            </li>
+            <li>
+                <span class="arrow-subnav glyphicon glyphicon-chevron-left"></span>
+                <a onclick="window.location='http://mediacenter.dailycamera.com/category/sports/bolder-boulder/';" href="http://mediacenter.dailycamera.com/category/sports/bolder-boulder/">Bolder Boulder</a>
+                <ul class="subnav">
+                    <li class="back"><a>Back <span style="pointer-events: none;" class="pull-right arrow glyphicon glyphicon-chevron-right"></span></a></li>
+               </ul>
+            </li>
+            <li>
+                <span class="arrow-subnav glyphicon glyphicon-chevron-left"></span>
+                <a onclick="window.location='http://mediacenter.dailycamera.com/category/bocopreps/';" href="http://mediacenter.dailycamera.com/category/bocopreps/">BOCOPREPS</a>
+                <ul class="subnav">
+                    <li class="back"><a>Back <span style="pointer-events: none;" class="pull-right arrow glyphicon glyphicon-chevron-right"></span></a></li>
+               </ul>
+            </li>
+            <li>
+                <span class="arrow-subnav glyphicon glyphicon-chevron-left"></span>
+                <a onclick="window.location='http://mediacenter.dailycamera.com/category/buffzone/';" href="http://mediacenter.dailycamera.com/category/buffzone/">BUFFZONE</a>
+                <ul class="subnav">
+                    <li class="back"><a>Back <span style="pointer-events: none;" class="pull-right arrow glyphicon glyphicon-chevron-right"></span></a></li>
+               </ul>
+            </li>
+            <li>
+                <span class="arrow-subnav glyphicon glyphicon-chevron-left"></span>
+                <a onclick="window.location='http://mediacenter.dailycamera.com/category/entertainment/';" href="http://mediacenter.dailycamera.com/category/entertainment/">Entertainment</a>
+                <ul class="subnav">
+                    <li class="back"><a>Back <span style="pointer-events: none;" class="pull-right arrow glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/entertainment/hollywood/';" href="http://mediacenter.dailycamera.com/category/entertainment/hollywood/">Hollywood</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/entertainment/movies/';" href="http://mediacenter.dailycamera.com/category/entertainment/movies/">Movies</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/entertainment/music/';" href="http://mediacenter.dailycamera.com/category/entertainment/music/">Music</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/entertainment/style/';" href="http://mediacenter.dailycamera.com/category/entertainment/style/">Style</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/entertainment/television/';" href="http://mediacenter.dailycamera.com/category/entertainment/television/">Television</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/entertainment/travel/';" href="http://mediacenter.dailycamera.com/category/entertainment/travel/">Travel</a></li>
+                    <li><a onclick="window.location='http://mediacenter.dailycamera.com/category/entertainment/visual-arts/';" href="http://mediacenter.dailycamera.com/category/entertainment/visual-arts/">Visual Arts</a></li>
+               </ul>
+            </li>
+            <li>
+                <span class="arrow-subnav glyphicon glyphicon-chevron-left"></span>
+                <a onclick="window.location='http://mediacenter.dailycamera.com/category/local/';" href="http://mediacenter.dailycamera.com/category/local/">Local</a>
+                <ul class="subnav">
+                    <li class="back"><a>Back <span style="pointer-events: none;" class="pull-right arrow glyphicon glyphicon-chevron-right"></span></a></li>
+               </ul>
+            </li>
+        </ul>
+      </nav>
+<header id="site-header" role="banner">
+  <div class="container">
+    <a class="branding logotype" href="http://mediacenter.dailycamera.com"> MEDIA CENTER </a>
+	    <a class="branding-logo" href="http://dailycamera.com"><img src="https://local.digitalfirstmedia.com/common/dfm/assets/logos/svg/dailycamera.svg" alt="Boulder Daily Camera Media Center" /></a>
+	
+<div id="shareSearch">
+    <div id="share-global" class="share-zipper hidden-touch">
+        <div class="share-zipper">
+	<div class="drawer">
+		<ul class="share-tools">
+						<li>
+			<div class="fc-webicon facebook large" style="cursor:pointer" onClick="shareMC_FB();">
+			</li>
+			<li>
+			<div class="fc-webicon twitter large" style="cursor:pointer" onClick="shareMC_twitter();">
+			</li>
+			<li>
+			<div class="fc-webicon googleplus large" style="cursor:pointer" onClick="shareMC_google();">
+			</li>
+			
+						
+			<li><a class="fc-webicon mail large" href="mailto:?Subject=Photos: Four Climbing Friends"><span class="sr-only">Email</span></a></li>
+		</ul> <!-- .share-tools -->
+	</div> <!-- .drawer -->
+<button class="share-toggle"><span class="glyphicon glyphicon-share-alt"><span class="sr-only">Share</span></span></button>
+</div> <!-- .share-zipper -->    </div> <!-- #share-global -->
+    <div id="global-search" class="search-zipper">
+        <div class="drawer">
+            <form id="site-search" action="http://mediacenter.dailycamera.com" class="search-bar" role="search">
+                <input type="text" name="s" id="search-field"/>
+            </form>
+        </div>
+        <button class="search-toggle"><span class="glyphicon glyphicon-search"><span class="sr-only">Search</span></span></button>
+    </div> <!-- #search-global -->
+</div><!-- #shareSearch -->
+  </div> <!-- .container -->
+</header>
+<div id="top_leaderboard" class="top_leaderboard">
+<script>
+if ( mq.matches === false ) {
+    $('<div id="top_leaderboard" class="top_leaderboard">');
+    $("#top_leaderboard").css('background-image', "url(http://local.dailycamera.com//assets/logo.svg)"); 
+    $("#top_leaderboard").css("background-repeat", "no-repeat");
+    $("#top_leaderboard").css("background-position", "center center");
+    googletag.cmd.push(function() {
+        googletag.display('top_leaderboard');
+        googletag.pubads().refresh();
+    }); 
+}
+else {
+    $(' #top_leaderboard ').append( '<div id="div_mobile" class="div_mobile">' );
+    $( '.top_leaderboard' ).removeClass( 'top_leaderboard' );
+    $('#top_leaderboard').removeAttr('id');
+    
+    var tagOrd=Math.random()*10000000000000000;
+    var mobileAd = "<iframe width='320px' height='50px' frameborder=0 scrolling=no seamless src='https://pubads.g.doubleclick.net/gampad/adx?iu=/8013/denverpost.com/media-center&t=pos%3D[\"div_mobile\"]&sz=320x50&c="+tagOrd+"'></iframe>";
+    $( '#div_mobile' ).html( mobileAd );
+}
+</script>
+<script>
+function shareRedirect(url) {
+	url=escape(url);
+	url=url.replace('%u200E', '');
+	url=unescape(url);
+	if(url=="N\/A"||!url)
+		alert("Google Plus is not available for this site");
+	else
+		window.open(url, '_blank');
+}
+</script>
+<script>
+function getFButton(url) {	
+	$("#FBlikebutton").html("");	
+		$("#FBlikebutton").html('<div style="position:absolute; opacity:0; margin-left:12px;" id="FBlikebutton-inner"  class="fb-like"   data-href="'+url+'"  data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>');
+		FB.XFBML.parse();	
+}
+function getLikes(url) { 
+	var fburl = "https://graph.facebook.com/fql?q=SELECT+total_count+FROM+link_stat+WHERE+url%3D%22"+url+"%22&callback=?"
+	$.getJSON(fburl, function(a){
+		if( a.data[0] !== undefined ){
+			$("#likesFB").html(a.data[0].total_count);
+		}
+	});
+}
+
+//getting url # 
+var hashLocation=window.location.hash;
+hashLocation=hashLocation.split("?");
+hashLocation=hashLocation[0].split("#");
+hashLocation=hashLocation[1];
+if (typeof hashLocation == 'undefined')
+	hashLocation=1;
+setTimeout(function(){ getLikes("http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/?id="+hashLocation); }, 1500);
+//setTimeout(function(){ getLikes("http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/"); }, 1500);
+$(document).ready(function(){
+	$("#FBlikebutton-inner").attr("data-href", "http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/?id="+hashLocation);
+	//alert($("#FBsharebutton-inner").length);
+	//$("#FBsharebutton-inner").append("hola msundo");	
+});
+
+function shareMC_FB() {
+	var myLocation=String(window.location);
+	myLocation=myLocation.replace("#", "?id=");
+	myLocation="http://www.facebook.com/sharer.php?u="+myLocation;
+	window.open(myLocation,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+}
+function shareMC_twitter() {
+	var myLocation=String(window.location);
+	myLocation=myLocation.replace("#", "?id=");
+	myLocation="http://twitter.com/share?url="+myLocation+"&text=Photos: Four Climbing Friends&via=dailycamera";
+	window.open(myLocation,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+}
+function shareMC_google() {
+	var myLocation=String(window.location);
+	myLocation=myLocation.replace("#", "?id=");
+	myLocation="https://plus.google.com/share?url="+myLocation;
+	window.open(myLocation,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+}
+</script>
+</div>
+<div id="content" class="container"><!-- #content -->
+    <body>
+    	<br>
+
+	<noscript>
+	<h5>Photo navigation</h5>
+	<ul>
+	    	        <li><a href="http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/#!photo_num/1">Team BRC's Tanner Bauer, at right, and Chris Deuto, hang on the wall with Team ABC's Colin Duffy and Cody Stevenson at the ABC Kids Climbing gym on Friday in Boulder. The four 12-year-olds will be competing in the USA Climbing Bouldering Youth Nationals.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016</a></li>
+	    	        <li><a href="http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/#!photo_num/2">Tanner Bauer, 12, practices on the climbing wall at the Boulder Rock Club on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016</a></li>
+	    	        <li><a href="http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/#!photo_num/3">Chris Deuto, 12, practices on the climbing wall at the Boulder Rock Club on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016</a></li>
+	    	        <li><a href="http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/#!photo_num/4">BEST 2. Tanner Bauer, 12, and his friend Chris Deuto, look at climbing routes on the climbing wall at the Boulder Rock Club on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016</a></li>
+	    	        <li><a href="http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/#!photo_num/5">Team ABC's Cody Stevenson, 12, practices on the climbing wall at the ABC Kids Climbing gym on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016</a></li>
+	    	        <li><a href="http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/#!photo_num/6">Team BRC's Tanner Bauer, at right, and Chris Deuto, hang on the wall with Team ABC's Cody Stevenson and Colin Duffy at the ABC Kids Climbing gym on Friday in Boulder. The four 12-year-olds will be competing in the USA Climbing Bouldering Youth Nationals.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016</a></li>
+	    	        <li><a href="http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/#!photo_num/7">BEST 3. Team ABC's Colin Duffy, 12, practices on the climbing wall at the ABC Kids Climbing gym on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016</a></li>
+	    	</ul>
+	</noscript>
+
+<div class="story">
+	<div class="content-well">
+	<!-- Carousel -->
+			<script type="text/javascript" src="http://dfm-ssp.medianewsgroup.com/dailycamera/wp-content/mu-plugins/dfm-wp-photogallery/js/carousel.js"></script>
+<script type="text/javascript" src="http://dfm-ssp.medianewsgroup.com/dailycamera/wp-content/mu-plugins/dfm-wp-photogallery/js/smart-resize.js"></script>
+<script type="text/javascript" src="http://dfm-ssp.medianewsgroup.com/dailycamera/wp-content/mu-plugins/dfm-wp-photogallery/js/bootstrap-transition.js"></script>
+<script type="text/javascript" src="http://dfm-ssp.medianewsgroup.com/dailycamera/wp-content/mu-plugins/dfm-wp-photogallery/js/handlebars.min.js"></script>
+<script type="text/javascript" src="http://dfm-ssp.medianewsgroup.com/dailycamera/wp-content/mu-plugins/dfm-wp-photogallery/js/imagesLoaded.js"></script>
+<script type="text/javascript" src="http://dfm-ssp.medianewsgroup.com/dailycamera/wp-content/mu-plugins/dfm-wp-photogallery/js/custom/JSON-helper.js"></script>
+<script type="text/javascript" src="http://dfm-ssp.medianewsgroup.com/dailycamera/wp-content/mu-plugins/dfm-wp-photogallery/js/custom/carousel-bindings.js"></script>
+<link type="text/css" rel="stylesheet" href="http://dfm-ssp.medianewsgroup.com/dailycamera/wp-content/mu-plugins/dfm-wp-photogallery/css/gallery-styles.css" />
+<link type="text/css" rel="stylesheet" href="http://dfm-ssp.medianewsgroup.com/dailycamera/wp-content/mu-plugins/dfm-wp-photogallery/css/custom/gallery-styles.css" />
+
+<div class="photo-gallery">
+<p><!-- .photo-gallery -->
+	<div id="carousel" class="carousel slide">
+		<div class="carousel-inner">
+						<div class="item">
+							<div class="image-container widescreen">
+					<div class="interstitial"></div>
+										<img src="https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-w25HJhh/0/bea10f5a/XL/KidClimbers004-XL.jpg" srcset="
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-w25HJhh/0/bea10f5a/S/KidClimbers004-S.jpg 1014w,
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-w25HJhh/0/bea10f5a/XL/KidClimbers004-XL.jpg 1430w, 
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-w25HJhh/0/bea10f5a/X3/KidClimbers004-X3.jpg 2x" 
+					alt=". Team BRC\'s Tanner Bauer, at right, and Chris Deuto, hang on the wall with Team ABC\'s Colin Duffy and Cody Stevenson at the ABC Kids Climbing gym on Friday in Boulder. The four 12-year-olds will be competing in the USA Climbing Bouldering Youth Nationals.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016"/>
+							</div>
+<div class="carousel-caption">
+					<!-- Buy this button -->
+													<div class="forsale">
+								<a href="http://photos.dailycamera.com/FOUR-CLIMBING-FRIENDS/i-w25HJhh" target="_blank">Buy This Photo</a>
+							</div>
+						 <!-- end if forsale -->
+							Team BRC's Tanner Bauer, at right, and Chris Deuto, hang on the wall with Team ABC's Colin Duffy and Cody Stevenson at the ABC Kids Climbing gym on Friday in Boulder. The four 12-year-olds will be competing in the USA Climbing Bouldering Youth Nationals.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016<!-- end if caption -->
+						</div>
+			<!-- end else -->
+			</div>
+						<div class="item">
+							<div class="image-container widescreen">
+					<div class="interstitial"></div>
+										<img src="https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-SS7Sqq8/0/e545ea4c/XL/KidClimbers001-XL.jpg" srcset="
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-SS7Sqq8/0/e545ea4c/S/KidClimbers001-S.jpg 1014w,
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-SS7Sqq8/0/e545ea4c/XL/KidClimbers001-XL.jpg 1430w, 
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-SS7Sqq8/0/e545ea4c/X3/KidClimbers001-X3.jpg 2x" 
+					alt=". Tanner Bauer, 12, practices on the climbing wall at the Boulder Rock Club on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016"/>
+							</div>
+<div class="carousel-caption">
+					<!-- Buy this button -->
+													<div class="forsale">
+								<a href="http://photos.dailycamera.com/FOUR-CLIMBING-FRIENDS/i-SS7Sqq8" target="_blank">Buy This Photo</a>
+							</div>
+						 <!-- end if forsale -->
+							Tanner Bauer, 12, practices on the climbing wall at the Boulder Rock Club on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016<!-- end if caption -->
+						</div>
+			<!-- end else -->
+			</div>
+						<div class="item">
+							<div class="image-container widescreen">
+					<div class="interstitial"></div>
+										<img src="https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-CbRDTCj/0/86dc406a/XL/KidClimbers002-XL.jpg" srcset="
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-CbRDTCj/0/86dc406a/S/KidClimbers002-S.jpg 1014w,
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-CbRDTCj/0/86dc406a/XL/KidClimbers002-XL.jpg 1430w, 
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-CbRDTCj/0/86dc406a/X3/KidClimbers002-X3.jpg 2x" 
+					alt=". Chris Deuto, 12, practices on the climbing wall at the Boulder Rock Club on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016"/>
+							</div>
+<div class="carousel-caption">
+					<!-- Buy this button -->
+													<div class="forsale">
+								<a href="http://photos.dailycamera.com/FOUR-CLIMBING-FRIENDS/i-CbRDTCj" target="_blank">Buy This Photo</a>
+							</div>
+						 <!-- end if forsale -->
+							Chris Deuto, 12, practices on the climbing wall at the Boulder Rock Club on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016<!-- end if caption -->
+						</div>
+			<!-- end else -->
+			</div>
+						<div class="item">
+							<div class="image-container widescreen">
+					<div class="interstitial"></div>
+										<img src="https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-3KTdpwL/0/6e125e92/XL/KidClimbers003-XL.jpg" srcset="
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-3KTdpwL/0/6e125e92/S/KidClimbers003-S.jpg 1014w,
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-3KTdpwL/0/6e125e92/XL/KidClimbers003-XL.jpg 1430w, 
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-3KTdpwL/0/6e125e92/X3/KidClimbers003-X3.jpg 2x" 
+					alt=". BEST 2. Tanner Bauer, 12, and his friend Chris Deuto, look at climbing routes on the climbing wall at the Boulder Rock Club on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016"/>
+							</div>
+<div class="carousel-caption">
+					<!-- Buy this button -->
+													<div class="forsale">
+								<a href="http://photos.dailycamera.com/FOUR-CLIMBING-FRIENDS/i-3KTdpwL" target="_blank">Buy This Photo</a>
+							</div>
+						 <!-- end if forsale -->
+							BEST 2. Tanner Bauer, 12, and his friend Chris Deuto, look at climbing routes on the climbing wall at the Boulder Rock Club on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016<!-- end if caption -->
+						</div>
+			<!-- end else -->
+			</div>
+						<div class="item">
+							<div class="image-container widescreen">
+					<div class="interstitial"></div>
+										<img src="https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-K9KZkSf/0/d663f2df/XL/KidClimbers006-XL.jpg" srcset="
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-K9KZkSf/0/d663f2df/S/KidClimbers006-S.jpg 1014w,
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-K9KZkSf/0/d663f2df/XL/KidClimbers006-XL.jpg 1430w, 
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-K9KZkSf/0/d663f2df/X3/KidClimbers006-X3.jpg 2x" 
+					alt=". Team ABC\'s Cody Stevenson, 12, practices on the climbing wall at the ABC Kids Climbing gym on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016"/>
+							</div>
+<div class="carousel-caption">
+					<!-- Buy this button -->
+													<div class="forsale">
+								<a href="http://photos.dailycamera.com/FOUR-CLIMBING-FRIENDS/i-K9KZkSf" target="_blank">Buy This Photo</a>
+							</div>
+						 <!-- end if forsale -->
+							Team ABC's Cody Stevenson, 12, practices on the climbing wall at the ABC Kids Climbing gym on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016<!-- end if caption -->
+						</div>
+			<!-- end else -->
+			</div>
+						<div class="item">
+							<div class="image-container widescreen">
+					<div class="interstitial"></div>
+										<img src="https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-3W9JWF3/0/7f8de11b/XL/KidClimbers005-XL.jpg" srcset="
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-3W9JWF3/0/7f8de11b/S/KidClimbers005-S.jpg 1014w,
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-3W9JWF3/0/7f8de11b/XL/KidClimbers005-XL.jpg 1430w, 
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-3W9JWF3/0/7f8de11b/X3/KidClimbers005-X3.jpg 2x" 
+					alt=". Team BRC\'s Tanner Bauer, at right, and Chris Deuto, hang on the wall with Team ABC\'s Cody Stevenson and Colin Duffy at the ABC Kids Climbing gym on Friday in Boulder. The four 12-year-olds will be competing in the USA Climbing Bouldering Youth Nationals.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016"/>
+							</div>
+<div class="carousel-caption">
+					<!-- Buy this button -->
+													<div class="forsale">
+								<a href="http://photos.dailycamera.com/FOUR-CLIMBING-FRIENDS/i-3W9JWF3" target="_blank">Buy This Photo</a>
+							</div>
+						 <!-- end if forsale -->
+							Team BRC's Tanner Bauer, at right, and Chris Deuto, hang on the wall with Team ABC's Cody Stevenson and Colin Duffy at the ABC Kids Climbing gym on Friday in Boulder. The four 12-year-olds will be competing in the USA Climbing Bouldering Youth Nationals.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016<!-- end if caption -->
+						</div>
+			<!-- end else -->
+			</div>
+						<div class="item">
+							<div class="image-container widescreen">
+					<div class="interstitial"></div>
+										<img src="https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-2crR6cH/0/df1509cd/XL/KidClimbers007-XL.jpg" srcset="
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-2crR6cH/0/df1509cd/S/KidClimbers007-S.jpg 1014w,
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-2crR6cH/0/df1509cd/XL/KidClimbers007-XL.jpg 1430w, 
+					https://photos.smugmug.com/FOUR-CLIMBING-FRIENDS/i-2crR6cH/0/df1509cd/X3/KidClimbers007-X3.jpg 2x" 
+					alt=". BEST 3. Team ABC\'s Colin Duffy, 12, practices on the climbing wall at the ABC Kids Climbing gym on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016"/>
+							</div>
+<div class="carousel-caption">
+					<!-- Buy this button -->
+													<div class="forsale">
+								<a href="http://photos.dailycamera.com/FOUR-CLIMBING-FRIENDS/i-2crR6cH" target="_blank">Buy This Photo</a>
+							</div>
+						 <!-- end if forsale -->
+							BEST 3. Team ABC's Colin Duffy, 12, practices on the climbing wall at the ABC Kids Climbing gym on Friday in Boulder.
+Jeremy Papasso/ Staff Photographer Jan.22, 2016<!-- end if caption -->
+						</div>
+			<!-- end else -->
+			</div>
+			<!-- end foreach -->
+		</div>
+
+		<div class="nav-left"><a class="left carousel-control" href="#carousel" id="prev_btn" data-slide="prev">&lsaquo;</a></div>
+		<div class="nav-right"><a class="right carousel-control" href="#carousel" id="next_btn" data-slide="next">&rsaquo;</a></div>
+	</div>
+						
+<div class="pic_number_box">
+	<span id="num_pic_styled"><span id="num_pic_pg">1</span> of 7</span>
+</div>
+
+</div><!-- .photo-gallery -->
+<!-- end main if that checks if JSON exist -->
+
+  <!-- ON LOAD --></p>
+<p>&nbsp; </p>
+<script>
+(function($){
+	var html,       // html to be printed to carousel container
+		noCache = Date(), // Prevent IE caching of JSON
+		json = _JSONHelper; // CUSTOM CODE found in js/JSON_helper.js
+	var positionCounter = 1;
+	var isiPad = navigator.userAgent.match(/iPad/i) != null;
+	var retina =  window.devicePixelRatio;
+    	var screenW = screen.width;
+		var i=0;
+	$('.carousel-inner').find('.item').first().addClass('active');
+	$('.carousel-indicators').find('li').first().addClass('active');
+
+	// trigger the carousel and add settings
+	$('#carousel').carousel('pause');
+		
+	var url = document.location.toString();
+	if (url.match('#')) {
+		$("#num_pic_pg").html(parseInt(url.split('#')[1]));
+	}
+		
+	$("#carousel .carousel-inner .image-container").on('swiperight',function() {  
+		$("#carousel").carousel('prev'); 
+	});  
+	$("#carousel .carousel-inner .image-container").on('swipeleft',function() {  
+		$("#carousel").carousel('next'); 
+	}); 
+	document.getElementById('carousel').style.webkitTouchCallout = 'none'; 
+		
+	$('#carousel').on('slid.bs.carousel', function (e) {
+		//FB like
+		if($("#FBlikebutton-inner").length) {
+			var pic_index=parseInt($('#carousel .carousel-inner .item.active').index()+1);
+			var permalink=url.split("#");
+			permalink=permalink[0].split("?");
+			permalink=permalink[0];
+			getLikes(permalink+"?id="+pic_index);
+			getFButton(permalink+"?id="+pic_index);
+			//google Analytics
+			ga('send', 'event', 'image view', permalink+'#'+pic_index);	
+		}
+		//omniture  ipad fixes
+		if(isiPad) {
+			window.location.hash=pic_index;
+			omniTrack(pic_index,7);
+		}
+
+		//PHP function to get the title
+		var wpTitle = 'Photos: Four Climbing Friends'; 		// Virtual Page Name to Track current image in GA
+		if ( typeof dfm_gtm_dataLayer !== undefined ){
+			analyticsVPV = function(virtualPageName) {
+				//Gallery functions
+				var pageTitle = wpTitle;
+				var pic_index=parseInt($('#carousel .carousel-inner .item.active').index()+1);
+				var virtualPageName = '/#'+pic_index;
+			
+				//Data Layer
+				dataLayer.push(
+					{ 'event': 'analyticsVPV', 'vpvName': 'ImageView-' + pageTitle + virtualPageName }
+				);
+			}
+			// Run function
+			analyticsVPV();
+		}
+	}); //End of events loading on image change
+
+	window.onhashchange = function() {
+ 		$("#num_pic_pg").html(parseInt($('#carousel .carousel-inner .item.active').index()+1));
+	}
+})(jQuery);
+/*rigth click, drag and copy disable */  
+$('#carousel .carousel-inner .image-container').bind('contextmenu',function(e){
+      e.preventDefault();
+});
+$('#carousel .carousel-inner .image-container').bind('mousedown',function(e){
+     e.preventDefault();
+});
+
+</script>
+<script type="text/javascript" async="async" src="http://widgets.outbrain.com/outbrain.js"></script> 
+
+
+		<div class="story-info">
+		<h5 class="section-name"><a href="http://mediacenter.dailycamera.com/category/uncategorized/">Uncategorized</a></h5>
+		<h1>Photos: Four Climbing Friends</h1>
+				<div class="meta">
+	<p>
+	<span class="posted-by">
+			Posted by Paul Aiken on
+			<span class="timestamp">02/02/2016 4:18pm MDT</span>
+	</span>
+	<span class="divider"></span>
+			<span class="tags">tags: 
+	<a href="http://mediacenter.dailycamera.com/tag/boulder/">boulder</a>,&nbsp;	<a href="http://mediacenter.dailycamera.com/tag/climbing/">climbing</a>,&nbsp;	<a href="http://mediacenter.dailycamera.com/tag/photos/">photos</a>,&nbsp;	<a href="http://mediacenter.dailycamera.com/tag/rock-climbing/">Rock Climbing</a></span>	    
+	</p>
+    <div class="share-zipper">
+	<div class="drawer">
+		<ul class="share-tools">
+						<li>
+			<div class="fc-webicon facebook large" style="cursor:pointer" onClick="shareMC_FB();">
+			</li>
+			<li>
+			<div class="fc-webicon twitter large" style="cursor:pointer" onClick="shareMC_twitter();">
+			</li>
+			<li>
+			<div class="fc-webicon googleplus large" style="cursor:pointer" onClick="shareMC_google();">
+			</li>
+			
+						
+			<li><a class="fc-webicon mail large" href="mailto:?Subject=Photos: Four Climbing Friends"><span class="sr-only">Email</span></a></li>
+		</ul> <!-- .share-tools -->
+	</div> <!-- .drawer -->
+<button class="share-toggle"><span class="glyphicon glyphicon-share-alt"><span class="sr-only">Share</span></span></button>
+</div> <!-- .share-zipper --></div> <!-- .meta -->
+<div id="longform-story-description">
+	<p>
+										Four boys who have been friends forever, and all four of whom are headed to nationals next month for bouldering 
+			 
+				</p>
+</div><!-- #story-description -->
+
+	<ul class="pager plain">
+	
+	<li class="prev">
+		<p class="position"><span class="glyphicon glyphicon-chevron-left"></span> Previous Post</p>
+		<p><a href="http://mediacenter.dailycamera.com/2016/02/02/photos-boulder-county-digs-out-from-snowstorm-on-tuesday/">Photos: Boulder County Digs out from Snowstorm on Tuesday</a></p>
+	</li>
+		
+	<li class="next">
+		<p class="position"></span>Next Post<span class="glyphicon glyphicon-chevron-right"></p>
+		<p><a href="http://mediacenter.dailycamera.com/2016/02/03/photos-tracker-3-avalanche-beacon-at-bca/">Photos: Tracker 3 Avalanche Beacon at BCA</a></p>
+	</li>
+	
+</ul> <!-- .pager -->
+	<div class="comments" id="comments">
+			<h1>&nbsp;</h1>
+<div id="disqus_thread" class="span4"></div>
+<script type="text/javascript">
+            var disqus_shortname = 'boulder-dailycamera'; // required: replace example with your forum shortname
+
+           // Do not edit below this line! 
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		</div>
+
+	</div> <!-- .content-well -->
+	<div class="ad-well">
+        <div class="ad">
+				<div id="cube1" style="background-image: url(http://local.dailycamera.com//assets/logo.svg);">
+		<script>
+			googletag.cmd.push(function() { 
+				googletag.display('cube1');
+				googletag.pubads().refresh();
+			});
+		</script>
+	</div><!-- #adposition -->
+</div><!-- .ad -->
+		<br>
+		<!-- Facebook like function -->
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=717796548271188&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- Facebook like function end-->
+<ul class="stats">
+	<li>
+	<div id="FBlikebutton">
+		<div style="position:absolute; opacity:0; margin-left:12px;" id="FBlikebutton-inner"  class="fb-like"   data-href="http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/"  data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+	</div>
+	<span class="glyphicon glyphicon-thumbs-up"></span><span class="fbLikeText">Like (<span id="likesFB">0</span>)</span></li>
+	<li><span class="glyphicon glyphicon-retweet"></span><a href="http://twitter.com/share?url=http://mediacenter.dailycamera.com/2016/02/02/photos-four-climbing-friends/&text=Photos: Four Climbing Friends&via=dailycamera" target="_blank"><span class="fbLikeText">Retweet</span></a></li>
+	<li><span class="glyphicon glyphicon-envelope"></span><a href="mailto:?Subject=Photos: Four Climbing Friends" target="_blank"><span class="fbLikeText">Email</span></a></li>
+</ul>
+<script type="text/javascript">
+window.fbAsyncInit = function() {
+    FB.Event.subscribe('edge.create',
+        function(response) {
+			var urlTemp=$("#FBlikebutton-inner").attr("data-href");
+        	getLikes(urlTemp);
+			getFButton(urlTemp);
+        }
+    );
+};
+</script>
+<script>
+/*  BOOKMARK THE PAGE  */
+function bookmark()
+{
+	if ((navigator.appName == 'Microsoft Internet Explorer') && (parseInt(navigator.appVersion) >= 4))
+	{
+		window.external.AddFavorite(window.location,document.title);
+	}
+	else
+	{
+		alert('Bookmark  (CTRL-D)');
+	}
+}
+</script>			<div class="related-posts">
+		<h4>Related Posts</h4>
+		<ul class="sm-block-grid-2">
+					<li>
+				<a href="http://dfm-ssp.medianewsgroup.com/dailycamera/?p=61760">
+																	<div class="sm-block-grid-2-th" style="background-image:url(https://photos.smugmug.com/Wind-Creates-Problems-for-Longmont-Residents/i-n9Kk6Zp/0/0994fae4/S/WIND39522-S.jpg);"></div>
+														<div class="quick-info">
+					<h4>Wind Brings Down Trees, Power Lines in Longmont</h4>
+				</div>
+				</a>
+			</li>
+					<li>
+				<a href="http://dfm-ssp.medianewsgroup.com/dailycamera/?p=61750">
+																	<div class="sm-block-grid-2-th" style="background-image:url(https://photos.smugmug.com/The-Garden-Gate-Cafe-in-Niwot/i-nwtt9K3/0/1e3191e1/S/Garden%20Gate52-S.jpg);"></div>
+														<div class="quick-info">
+					<h4>Photos The Garden Gate Cafe in Niwot</h4>
+				</div>
+				</a>
+			</li>
+					<li>
+				<a href="http://dfm-ssp.medianewsgroup.com/dailycamera/?p=61744">
+																	<div class="sm-block-grid-2-th" style="background-image:url(https://photos.smugmug.com/Acreage-by-Stem-Ciders-Restaurant-Review/i-gKbF85L/0/bd3981f4/S/Acreage004-S.jpg);"></div>
+														<div class="quick-info">
+					<h4>Photos: Acreage by Stem Ciders Restaurant Review</h4>
+				</div>
+				</a>
+			</li>
+					<li>
+				<a href="http://dfm-ssp.medianewsgroup.com/dailycamera/?p=61736">
+																	<div class="sm-block-grid-2-th" style="background-image:url(https://photos.smugmug.com/Silver-Creek-and-Longmont-Swim-Meet-41218/i-RXkxL4V/0/9780fb7d/S/SWIM0388-S.jpg);"></div>
+														<div class="quick-info">
+					<h4>Photos: Silver Creek and Longmont Swim Meet 4/12/18</h4>
+				</div>
+				</a>
+			</li>
+					<li>
+				<a href="http://dfm-ssp.medianewsgroup.com/dailycamera/?p=61738">
+																	<div class="sm-block-grid-2-th" style="background-image:url(https://photos.smugmug.com/Future-Proof-Movement-Mobility-Class/i-Wf6n84m/0/ac722a9f/S/MOBILITY1526-S.jpg);"></div>
+														<div class="quick-info">
+					<h4>Photos: Future Proof Movement Mobility Class</h4>
+				</div>
+				</a>
+			</li>
+					<li>
+				<a href="http://dfm-ssp.medianewsgroup.com/dailycamera/?p=61737">
+																	<div class="sm-block-grid-2-th" style="background-image:url(https://photos.smugmug.com/RECORD-STORES-IN-BOULDER-COUNTY/i-qCPqrTt/0/44fa350f/S/ALBUMS-S.jpg);"></div>
+														<div class="quick-info">
+					<h4>Photos: Record Stores in Boulder County</h4>
+				</div>
+				</a>
+			</li>
+				</ul>
+	</div> <!-- .related-posts -->
+		<div class="ad">
+				<div id="cube2" style="background-image: url(http://local.dailycamera.com//assets/logo.svg);">
+		<script>
+			googletag.cmd.push(function() { 
+				googletag.display('cube2');
+				googletag.pubads().refresh();
+			});
+		</script>
+	</div><!-- #adposition -->
+</div><!-- .ad -->
+		<br>
+	</div> <!-- .ad-well -->
+
+</div> <!-- .story -->
+
+
+ 
+        </div><!-- #content -->
+<!-- Asynchronous google analytics; this is the official snippet. -->
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-61435456-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<footer id="site-footer">
+  <div class="container">
+    <div id="ticker" class="moving-feed hidden-sm-down">
+    <h5>Latest Headlines from <a href="http://mediacenter.dailycamera.com">
+          Boulder Daily Camera 
+    </a>:</h5>
+        <ul class="ticker-feed">
+                    <li title="http://www.dailycamera.com/entertainment/ci_31815892/tad-pfeffer-ice-world-and-more-boulder-area?source=rss">
+                <a href="http://www.dailycamera.com/entertainment/ci_31815892/tad-pfeffer-ice-world-and-more-boulder-area?source=rss">Tad Pfeffer: Ice in the World and more Boulder-area events for Thursday, April 19, 2018</a>
+            </li>
+                    <li title="http://www.dailycamera.com/louisville-news/ci_31815140/louisville-mulls-changing-city-marijuana-regulations?source=rss">
+                <a href="http://www.dailycamera.com/louisville-news/ci_31815140/louisville-mulls-changing-city-marijuana-regulations?source=rss">Louisville mulls changing city marijuana regulations</a>
+            </li>
+                    <li title="http://www.dailycamera.com/news/boulder/ci_31815290/boulder-climate-change-suit-federal-court?source=rss">
+                <a href="http://www.dailycamera.com/news/boulder/ci_31815290/boulder-climate-change-suit-federal-court?source=rss">Boulder climate change suit could be destined for federal court</a>
+            </li>
+                    <li title="http://www.dailycamera.com/news/boulder/ci_31815882/gun-control-advocates-boulder-assault-weapons-ban?source=rss">
+                <a href="http://www.dailycamera.com/news/boulder/ci_31815882/gun-control-advocates-boulder-assault-weapons-ban?source=rss">Gun control advocates urge Boulder not to push assault-weapons ban to November election</a>
+            </li>
+                    <li title="http://www.dailycamera.com/louisville-news/ci_31815716/woman-killed-louisville-struck-by-tree-windstorm?source=rss">
+                <a href="http://www.dailycamera.com/louisville-news/ci_31815716/woman-killed-louisville-struck-by-tree-windstorm?source=rss">Woman killed in Louisville after being struck by tree limb during windstorm</a>
+            </li>
+                    <li title="http://www.dailycamera.com/news/boulder/ci_31814710/longmont-wind-tree-damage-aftermath?source=rss">
+                <a href="http://www.dailycamera.com/news/boulder/ci_31814710/longmont-wind-tree-damage-aftermath?source=rss">City crews, homeowners work to clean up aftermath of Longmont's tree-snapping windstorm</a>
+            </li>
+                    <li title="http://www.dailycamera.com/news/boulder/ci_31815546/longmont-man-gets-call-from-virtual-kidnappers-saying?source=rss">
+                <a href="http://www.dailycamera.com/news/boulder/ci_31815546/longmont-man-gets-call-from-virtual-kidnappers-saying?source=rss">Longmont man gets call from 'virtual kidnappers' saying his daughter was taken</a>
+            </li>
+                    <li title="http://www.dailycamera.com/news/boulder/ci_31813621/boulder-sets-affordable-housing-linkage-fee-at-30?source=rss">
+                <a href="http://www.dailycamera.com/news/boulder/ci_31813621/boulder-sets-affordable-housing-linkage-fee-at-30?source=rss">Boulder sets affordable housing linkage fee at $30, just shy of country's highest</a>
+            </li>
+                    <li title="http://www.dailycamera.com/lafayette-news/ci_31815363/lafayette-city-council-extension-oil-gas-moratorium?source=rss">
+                <a href="http://www.dailycamera.com/lafayette-news/ci_31815363/lafayette-city-council-extension-oil-gas-moratorium?source=rss">Lafayette City Council passes first reading of extension on oil, gas moratorium</a>
+            </li>
+                    <li title="http://www.dailycamera.com/news/boulder/ci_31814834/louisiana-investigator-describes-saw-blood-evidence-adam-densmore?source=rss">
+                <a href="http://www.dailycamera.com/news/boulder/ci_31814834/louisiana-investigator-describes-saw-blood-evidence-adam-densmore?source=rss">Louisiana investigator describes saw, blood evidence in Adam Densmore murder trial</a>
+            </li>
+                    <li title="http://www.dailycamera.com/news/boulder/ci_31815334/longmont-housing-authority-moves-forward-meth-remediation?source=rss">
+                <a href="http://www.dailycamera.com/news/boulder/ci_31815334/longmont-housing-authority-moves-forward-meth-remediation?source=rss">Longmont Housing Authority moves forward on meth remediation</a>
+            </li>
+                </ul>
+    </div>
+    <button type="button" class="menu-toggle" data-toggle="offcanvas" data-recalc="false" data-target=".sidenav" data-canvas="body">
+      <span class="glyphicon glyphicon-list">
+        <span class="sr-only">Menu</span>
+      </span>
+    </button>
+
+<div id="loadingInfiniteScroll">loading</div>
+</div> <!-- .container -->
+
+</footer>
+
+
+<script>
+(function($){
+  $('#site-header, #site-footer').addClass('hide-content');
+
+  setTimeout(function(){
+    $(document).on('click',function(){
+      $('#site-header, #site-footer').toggleClass('show-content');
+    });
+
+  },10);
+
+  $(window).resize(function(){  
+    if ($('#site-header').css('opacity') == 0 || $(window).width() <= 736 ){
+      // This takes care of spacing and hides the top_leaderboard ad on mobile devices since nothing ever shows
+      $('#content').addClass('move-up');
+      //$('.top_leaderboard').addClass('display-none');
+    } else {
+      $('#content').removeClass('move-up');
+      //$('top-leaderboard').removeClass('display-none');
+    }
+  });
+
+  if ( mq.matches != false ) {
+    $('#content').addClass('move-up');
+    $('.div_mobile').addClass('display-none');
+    //$('div').css('display','none');
+  } 
+})(jQuery);
+</script>
+
+
+<!--  -->
+
+<!-- JAVASCRIPTS -->
+<script src="http://mediacenter.dailycamera.com/wp-content/themes/media-center-2014/js/script.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://mediacenter.dailycamera.com/wp-content/themes/media-center-2014/js/ie.min.js"></script>
+<![endif]-->
+
+<script id="tickertpl" type="text/x-handlebars-template">
+  <h5>Breaking news from <a href="http://www.dailycamera.com">Boulder Daily Camera</a>:</h5>
+  <ul class="ticker-feed">
+  
+    <li id="" title="">
+      <a href=""></a>
+    </li>
+  
+  </ul>
+</script>
+
+<script>
+  // HANDLEBARS HELPERS
+  Handlebars.registerHelper('unless_blank', function(item, block) {
+    return (item && item.replace(/\s/g,"").length) ? block.fn(this) : block.inverse(this);
+  });
+
+  // share toggles
+    function loadShareToggles () {
+
+      var $shareToggles = $('#content').find($('.share-toggle'));
+     
+	  $.each($shareToggles, function() {
+        $(this).unbind();
+      });
+	 
+	  $.each($shareToggles, function() {
+        $(this).bind('click', function(e){
+          e.preventDefault();
+          $(this).parent().parent().toggleClass('active');
+        });
+      });
+      
+    }
+    
+    //Load toggle effect for header
+    function loadShareTogglesHead () {
+  
+      var $shareTogglesHead = $('#site-header').find($('.share-toggle'));
+     
+	  $.each($shareTogglesHead, function() {
+        $(this).unbind();
+      });
+	 
+	  $.each($shareTogglesHead, function() {
+        $(this).bind('click', function(e){
+          e.preventDefault();
+          $(this).parent().parent().toggleClass('active');
+        });
+      });
+      
+    }
+  
+  // PACKERY
+
+    var container = document.querySelector('#content'),
+        pckryOptions = {
+      // options
+      itemSelector: '.col',
+      isInitLayout: false,
+      gutter: 0
+    },
+    pckry = new Packery(container, pckryOptions),
+    init = true;
+  
+    pckry.on( 'layoutComplete', function() {
+    if (init) {
+      container.className += ' ready';
+      init = false;
+      pckry.layout();
+      setTimeout(isVis, 300); // delay
+    }
+    });
+
+    //////// APPEND NEW PACKERY ITEMS
+        ///////END APPENDING PACKERY ITEMS search
+	
+	 function isVis() {
+    var win = $(window);
+    var allMods = $('.module');
+
+    // Already visible modules
+    allMods.each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        el.addClass('isVis'); 
+      } 
+    });
+
+    $(window).scroll(function(e) {
+      $('.module').each(function(i, el) {
+        var el = $(el);
+        if (el.visible(true)) {
+          if(!el.hasClass('isVis')) {
+            el.addClass('animated fadeInUp');
+            el.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+              el.removeClass('animated fadeInUp').addClass('isVis')});
+            }
+          }
+        });
+      });
+    }
+    
+    // manually trigger initial layout
+    function setLayout(){ pckry.layout() }
+      setTimeout(setLayout, 900); // delay
+
+  // JQUERY
+  ;(function (window, document, $) {
+  
+    // TICKER STUFF
+    var baseURL = $(document).data('baseurl'),
+        currentURL = $(document).data('currenturl'),
+        currentLatestFeed,
+        currentPage;
+
+    $.ajaxSetup({ cache: false });
+    
+    $(document).ready(function(){
+      //loadMediaCenter();
+      setTimeout(function(){rotateItems()}, 7000); // amount of time until the ticker starts
+    });
+
+var $ticker = $('ul.ticker-feed'),
+  currentIndex = 0;
+
+function rotateItems() {
+  var items = $('ul.ticker-feed > li').length;
+  var slideTime = 2500; // amount of time it takes for post to slide from right to left
+  var timeToNextPost = 3000;
+  var timeUntilItemMovesUp = 7000; // Time Item stays in ticker until it moves up.
+  currentIndex ++;
+  currentItem = $(items[currentIndex]);
+  var $this = $('ul.ticker-feed > li').first()
+  $this.animate({'margin-left':'0px'}, slideTime, function(){
+    $this.delay(timeUntilItemMovesUp).animate({'margin-top':-$this.height()}, 1000 /* controls traisition of post from bottom to top */, function(){
+      if(currentIndex == items) {
+        setTimeout( function(){ $('ul.ticker-feed').append($this); resetTicker() }, timeToNextPost );
+      } else {
+        $('ul.ticker-feed').append($this);
+        $this.css('display','none');
+        setTimeout(function(){rotateItems()}, 1000); // amount of time between posts.
+      }
+    });
+  });
+}
+
+function resetTicker(){
+  currentIndex = 0;
+  $('ul.ticker-feed').find('li').css('margin-top','');
+  $('ul.ticker-feed').find('li').css('margin-left','');
+  $('ul.ticker-feed').find('li').css('display','block');
+  rotateItems()      
+}
+    
+    // Footer toggles
+    $('.settings-toggle').click(function(){
+      $(this).toggleClass('active')
+      if($('#global-nav').hasClass('active')) {
+        $('#global-nav').removeClass('active');
+      }
+      if($('.filter-toggle .popover').is(':visible')) {
+        $('.filter-toggle').popover('hide').removeClass('active');
+      }
+    });
+    $('.filter-toggle').click(function(){
+      $(this).toggleClass('active');
+      if($('#global-nav').hasClass('active')) {
+        $('#global-nav').removeClass('active');
+      }
+      if($('.settings-toggle .popover').is(':visible')) {
+        $('.settings-toggle').popover('hide').removeClass('active');
+      }
+    });
+    
+    // menu toggle
+    $('.menu-toggle').click(function(){
+      if($(this).hasClass('active')) {
+        $('.subnav').removeClass('activated');
+      }
+      $(this).toggleClass('active');
+      });
+      
+      $('.arrow-subnav').click(function(e){
+        e.stopPropagation();
+        var subnav = $(e.target.parentNode.children[2]);
+        subnav.addClass('activated');
+        subnav.find('.back').click(function(e){
+          e.preventDefault();
+          subnav.removeClass('activated');
+        });
+      });
+
+    // reset everything on resize
+    $(window).resize(function(){
+      $('.settings-toggle').removeClass('active');
+      $('.filter-toggle').removeClass('active');
+      $('.menu-toggle').removeClass('active');
+      $('[data-toggle=popover]').popover('hide');
+    });
+    
+    // hide popover on modal showing
+    $('#login-form').on('show.bs.modal', function () {
+     $('[data-toggle=popover]').popover('hide');
+    });
+    
+    // tooltips
+    $('.share-tools').tooltip({
+        selector: "[data-toggle=tooltip]",
+        placement: 'bottom',
+        container: "body",
+        delay: { show: 500, hide: 0 }
+      });
+  
+      // popover
+	  $(document).ready(function(e) {
+		$("[data-toggle=popover]").popover();
+		$('span#settings-button').popover();
+    });
+    }(this, document, window.jQuery||window.Zepto));
+</script>
+   
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7faef49a98","applicationID":"7792770","transactionName":"YlEGZEoECxZXBkQLWVsbJVNMDAoLGRZZDFFZUQ==","queueTime":0,"applicationTime":1178,"atts":"ThYFEgIeGBg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+<script type='text/javascript' src='http://mediacenter.dailycamera.com/wp-includes/js/wp-embed.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='http://mediacenter.dailycamera.com/wp-content/plugins/dfm-wp-brightTag/scripts/dfm-wp-brightTag.js?ver=1'></script>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using memcached
+Application Monitoring using New Relic
+
+ Served from: mediacenter.dailycamera.com @ 2018-04-20 01:38:32 by W3 Total Cache -->
