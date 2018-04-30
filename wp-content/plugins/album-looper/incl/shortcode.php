@@ -24,20 +24,7 @@ function bldrzl_album_loop_functionality( $atts ) {
 						<?php
 						foreach ( $images as $image ) { ?>
 							<a data-fancybox="gallery<?php echo $i; ?>" href="<?php echo $image['url'] ?>">
-                            <li class="image"
-							    style="background-image:url('<?php echo $image['url'] ?>')">
-								<p class="meta">
-									<span class="label">
-										<?php
-                                            $image['title'] = ucfirst(strtolower($image['title']));
-                                            $image['title'] = str_replace("_"," ", $image['title']);
-                                            $image['title'] = str_replace("-"," ", $image['title']);
-                                            echo $image['title'];
-                                            
-                                        ?>
-									</span>
-								</p>
-							</li>
+                                <li class="image" style="background-image:url('<?php echo $image['url'] ?>')"></li>
 							</a>
 						<?php }
 						?>
