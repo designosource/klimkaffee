@@ -879,7 +879,7 @@ header {
       header nav.main .menu li.current-menu-item a, header nav.main .menu li.current-menu-parent a {
         color: #bf3e3c;
         font-weight: 600; }
-      header nav.main .menu li.menu-item:not(.menu-item-has-children) {
+      header nav.main .menu li.menu-item:not(.menu-item-has-children):not(.menu-item-has-children li) {
         height: 46px; }
       header nav.main .menu li.menu-item-has-children li {
         margin-left: 25px;
@@ -1220,7 +1220,7 @@ footer {
     height: 3px; }
 
 .post-navigation {
-  margin: 20px 0; }
+  margin: 0 0 50px; }
   .post-navigation h2 {
     display: none; }
   .post-navigation .nav-links {
@@ -1411,6 +1411,8 @@ footer {
         position: absolute;
         top: 0;
         right: 0; }
+  .page-openingsuren .opening-moment p {
+    margin-bottom: .5em !important; }
 
 .page-trainingen .trainer {
   text-align: center; }
