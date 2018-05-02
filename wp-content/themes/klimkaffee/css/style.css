@@ -1988,7 +1988,7 @@ strong {
   line-height: 1.5em;
   color: #313130; }
 
-.contact-item a:hover:after {
+.contact-item a:after {
   display: none; }
 
 .col-md-9 .row:nth-child(3) {
