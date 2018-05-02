@@ -1280,8 +1280,9 @@ footer {
   color: #FFF;
   text-decoration: none;
   text-align: center;
-  width: 40px;
-  padding: 10px;
+  width: 30px;
+  padding: 5px;
+  margin-right: 5px;
   font-size: 1.3em; }
   .page-contact .social-icons a::after {
     display: none; }
@@ -1290,14 +1291,14 @@ footer {
     background-color: #8e2c28; }
 
 .page-contact select {
-  margin-top: 40px;
   border: none;
   width: 100%;
   font-weight: bold;
   color: #FFF;
   padding: 10px;
   font-family: "Montserrat", sans-serif;
-  background-color: #441c19; }
+  background-color: #441c19;
+  font-weight: 200; }
 
 .page-contact input[type="text"], .page-contact input[type="email"], .page-contact input[type="tel"], .page-contact textarea {
   border: none;
@@ -1306,7 +1307,11 @@ footer {
   margin-top: 20px;
   font-family: "Montserrat", sans-serif;
   width: 100%;
-  font-size: .9em; }
+  font-size: .9em;
+  font-weight: 200; }
+
+.page-contact textarea {
+  height: 150px; }
 
 .page-contact input[type="submit"] {
   margin-top: 20px;
@@ -1317,11 +1322,11 @@ footer {
   transition: all .2s ease;
   text-align: center;
   color: #FFF;
-  font-weight: 500;
   font-family: "Montserrat", sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; }
+  appearance: none;
+  font-weight: 200; }
   .page-contact input[type="submit"]:hover {
     background-color: #8e2c28; }
 
@@ -2156,7 +2161,6 @@ a.read-more-link:hover {
   overflow: hidden; }
 
 .col-md-12.trainer a {
-  -ms-flex-preferred-size: 20%;
   /*flex-basis: 20%;*/
   margin-right: 5%; }
 

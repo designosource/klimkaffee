@@ -17,16 +17,16 @@ include( 'banner.php' ) ?>
 					<?php if ( have_rows( 'content_blocks' ) ): ?>
 					<?php while ( have_rows( 'content_blocks' ) ) : the_row() ?>
                         <div class="row">
+
+                            <div class="col-md-6">
+                                <img src="<?php the_sub_field( 'image' ); ?>" alt="Image wat is boulderen Klimkaffee">
+                            </div>
                             <div class="col-md-6">
 								<?php the_sub_field( 'content' ); ?>
 								<?php if ( ! empty( get_sub_field( 'link_text' ) ) ) : ?>
                                     <a class="red-btn red-text"
                                        href="<?php the_sub_field( 'link_url' ); ?>"><?php the_sub_field( 'link_text' ); ?></a>
 								<?php endif; ?>
-                            </div>
-
-                            <div class="col-md-6">
-                                <img src="<?php the_sub_field( 'image' ); ?>" alt="Image wat is boulderen Klimkaffee">
                             </div>
                         </div>
 					<?php endwhile; ?>
