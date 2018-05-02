@@ -1940,7 +1940,9 @@ strong {
   flex-direction: row; }
 
 .openingsuren-item div {
-  padding: 0.8em 0; }
+  padding: 0.8em 0;
+  line-height: 1.5em;
+}
 
 .openingsuren-item div:nth-child(1) {
   -ms-flex-preferred-size: calc(100% - 150px);
@@ -1982,7 +1984,8 @@ strong {
 .contact-item a {
   -ms-flex-preferred-size: calc(100% - 60px);
   flex-basis: calc(100% - 60px);
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.5em;
   color: #313130; }
 
 .contact-item a:hover:after {
