@@ -1037,7 +1037,7 @@ footer {
           margin: auto;
           padding-top: 20px; }
           footer nav .menu li.menu-item {
-            padding: 5px 0; }
+            padding: 3px 0; }
             footer nav .menu li.menu-item a {
               color: #fff;
               text-transform: uppercase; }
@@ -2157,7 +2157,7 @@ a.read-more-link:hover {
 
 .col-md-12.trainer a {
   -ms-flex-preferred-size: 20%;
-  flex-basis: 20%;
+  /*flex-basis: 20%;*/
   margin-right: 5%; }
 
 .trainer-image-container {
