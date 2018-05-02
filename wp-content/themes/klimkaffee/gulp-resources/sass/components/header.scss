@@ -87,7 +87,6 @@ header {
       li.current-menu-item, li.current-menu-parent {
         a {
           color: $red_light;
-          font-weight: $font-weight-bold;
         }
       }
 
@@ -121,7 +120,6 @@ header {
         left: calc(100vw - 30vw);
         top: -10px;
         width: 0;
-        height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         border-top: 10px solid $red_main;
@@ -221,7 +219,6 @@ header {
 
               a:hover:after {
                 background: none;
-                height: 0;
               }
             }
           }

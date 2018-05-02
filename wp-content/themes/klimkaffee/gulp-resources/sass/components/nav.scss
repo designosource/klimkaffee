@@ -12,7 +12,16 @@
       padding: 10px 0;
 
       a {
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-xtrabold;
+        text-transform: uppercase;
+      }
+
+      @include lg {
+        font-size: $font-size-xs;
+      }
+
+      @include xl {
+        font-size: $font-size-small;
       }
     }
 
@@ -23,7 +32,15 @@
 
       a:hover:after {
         background: none;
-        height: 0;
+      }
+    }
+
+    li.menu-item-has-children {
+      ul {
+        a {
+          text-transform: none;
+          font-weight: normal;
+        }
       }
     }
   }
