@@ -30,7 +30,18 @@
 <body>
 <div class="container">
 
-
+		<div class="dropdown-account">
+			<div class="dropdown-inner-container">
+				<div class="dropdown-account-dropdown">
+					<p>account <i class="fas fa-sort-down"></i></p>
+				</div>
+				<ul class="dropdown-account-items">
+					<li><a href="#">Login</a></li>
+					<li><a href="#">Registreer</a></li>
+					<li><a href="#">Mijn account</a></li>
+				</ul>
+			</div>
+		</div>
     <header>
         <div class="head" style="display:none;">
             <div class="hamburger">

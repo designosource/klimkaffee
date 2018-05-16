@@ -12,6 +12,11 @@ $(document).ready(function(){
         $(this).siblings('.photo-albums-per-year').slideToggle();
         $(this).toggleClass('reverse-arrow');
     });
+	
+		$(".dropdown-account-dropdown").on("click", function(){
+				$(".dropdown-account-items").slideToggle();
+				$(".dropdown-account-dropdown i").toggleClass("flip");
+		});
     
     
 });
