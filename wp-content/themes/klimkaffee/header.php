@@ -33,7 +33,7 @@
 		<div class="dropdown-account">
 			<div class="dropdown-inner-container">
 				<div class="dropdown-account-dropdown">
-					<p>account <i class="fas fa-sort-down"></i></p>
+					<p>account <i class="fa fa-sort-down"></i></p>
 				</div>
 				<ul class="dropdown-account-items">
 					<li><a href="#">Login</a></li>
