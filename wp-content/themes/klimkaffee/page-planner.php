@@ -10,7 +10,7 @@ include( 'banner.php' ) ?>
                 </div>
                 <div class="col-md-4 planner-link">
                     <a href="<?php echo get_site_url(); ?>/planner/shop">SHOP</a>
-                    <a href="<?php echo get_site_url(); ?>/planner/shop" class="planner-link-image" style="background-image: url<?php the_field( 'shop_foto' ); ?>?>)"></a>
+                    <a href="<?php echo get_site_url(); ?>/planner/shop" class="planner-link-image" style="background-image: url(<?php the_field( 'shop_foto' ); ?>)"></a>
                     <?php the_field( 'shop_uitleg' ); ?>
                 </div>
                 <div class="col-md-4 planner-link">

@@ -888,7 +888,7 @@ header {
         content: "home"; }
       header nav.main .menu li.current-menu-item a, header nav.main .menu li.current-menu-parent a {
         color: #bf3e3c; }
-      header nav.main .menu li.menu-item:not(.menu-item-has-children):not(.menu-item-has-children li) {
+      header nav.main .menu li.menu-item:not(.menu-item-has-children) {
         height: 46px; }
       header nav.main .menu li.menu-item-has-children li {
         margin-left: 25px;
@@ -1394,33 +1394,33 @@ footer {
 .page-openingsuren {
   padding: 100px 0; }
 
-.page-openingsuren .opening-moment {
+.opening-moment {
   margin: 40px 0; }
-  .page-openingsuren .opening-moment p {
+  .opening-moment p {
     font-weight: bold; }
-  .page-openingsuren .opening-moment .opening-bar {
+  .opening-moment .opening-bar {
     margin-top: 10px;
     background-color: #441c19;
     height: 40px;
     width: 100%;
     position: relative; }
-    .page-openingsuren .opening-moment .opening-bar .opening-bar-inner {
+    .opening-moment .opening-bar .opening-bar-inner {
       background-color: #8e2c28;
       position: absolute;
       top: 0;
       height: 40px; }
-      .page-openingsuren .opening-moment .opening-bar .opening-bar-inner p {
+      .opening-moment .opening-bar .opening-bar-inner p {
         margin: 10px;
         color: #FFF; }
-      .page-openingsuren .opening-moment .opening-bar .opening-bar-inner p:first-of-type {
+      .opening-moment .opening-bar .opening-bar-inner p:first-of-type {
         position: absolute;
         top: 0;
         left: 0; }
-      .page-openingsuren .opening-moment .opening-bar .opening-bar-inner p:last-of-type {
+      .opening-moment .opening-bar .opening-bar-inner p:last-of-type {
         position: absolute;
         top: 0;
         right: 0; }
-  .page-openingsuren .opening-moment p {
+  .opening-moment p {
     margin-bottom: .5em !important; }
 
 .page-trainingen .trainer {
@@ -1940,9 +1940,7 @@ strong {
   flex-direction: row; }
 
 .openingsuren-item div {
-  padding: 0.8em 0;
-  line-height: 1.5em;
-}
+  padding: 0.8em 0; }
 
 .openingsuren-item div:nth-child(1) {
   -ms-flex-preferred-size: calc(100% - 150px);

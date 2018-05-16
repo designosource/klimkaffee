@@ -62,7 +62,7 @@ function register_view($attr)
         return $res;
 
     } else {
-        return "<form method='POST' action='" . get_site_url() . "/planner/register'>
+        return "<form method='POST' action='" . get_site_url() . "/planner/registreer'>
                 <input type='text' name='firstname' placeholder='Voornaam'>
                 <input type='text' name='lastname' placeholder='Achternaam'>
                 <input type='email' name='email' placeholder='E-Mail'>
@@ -85,7 +85,8 @@ function shop_view($attr)
         $html .= "
     <div class='col-md-3'>
         <div class='shop-item'>
-        <a href='/planner/order?package=" . $sub->SubscriptionId . "'>" . $sub->Description . "</a>
+        <a href='/planner/order?package=" . $sub->SubscriptionId . "'>" . $sub->Description . "<span>
+           € " . $sub->Cost . "</span></a>
         </div></div>";
     }
 
@@ -113,7 +114,7 @@ function order_view($attr)
         $mollie->setApiKey("test_VvzbMtrfKpa8Gw7tcdg3MeCvEeJcux");
 
         $payment = $mollie->payments->create(array(
-            "amount" => $sub->Cost + 5,
+            "amount" => $sub->Cost,
             "description" => $sub->Description,
             "redirectUrl" => "http://klimkaffee.akxis.io/planner/thanks",
             "webhookUrl" => "http://klimkaffee.akxis.io/mollie",

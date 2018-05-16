@@ -25,7 +25,7 @@ include( 'banner.php' ) ?>
 								<?php the_sub_field( 'content' ); ?>
 								<?php if ( ! empty( get_sub_field( 'link_text' ) ) ) : ?>
                                     <a class="red-btn red-text"
-                                       href="<?php the_sub_field( 'link_url' ); ?>"><?php the_sub_field( 'link_text' ); ?></a>
+                                       href="/planner"><?php the_sub_field( 'link_text' ); ?></a>
 								<?php endif; ?>
                             </div>
                         </div>
