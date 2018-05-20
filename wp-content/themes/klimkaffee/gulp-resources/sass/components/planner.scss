@@ -85,6 +85,8 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        cursor: pointer;
+        font-size: 1.2em;
 
         &:hover {
             background-color: $red_dark;

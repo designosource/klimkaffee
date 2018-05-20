@@ -95,6 +95,10 @@ p.price-value {
     margin-right: auto;
 }
 
+.homepage-aanbod a {
+    font-weight: 600;
+}
+
 .slider-btn:hover {
     color: #B93D3C !important;
     background-color:  white !important;
@@ -143,6 +147,7 @@ p.price-value {
     font-size : 20px;
     text-transform: uppercase;
     text-align: left !important;
+    margin-bottom: 0;
     color: white;
 }
 
@@ -151,11 +156,12 @@ p.price-value {
 	font-size: 35px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .slide-text p {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-size: 16px;
     color: white;
 }
@@ -245,7 +251,7 @@ ul.slick-dots li.slick-active button:before {
 
     .slide-text p {
         display: block;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         font-size: 20px;
         color: white;
     }
@@ -359,8 +365,9 @@ strong {
     font-size : 14px;
     line-height : 19px;
     color : white;
-    margin-bottom: 2em;
-    min-height: inherit;
+    max-width: 80%;
+    margin: 0 auto 2em;
+    min-height: 95px;
 }
 
 .homepage-aanbod .red-btn:hover {
@@ -652,6 +659,15 @@ a.read-more-link:hover {
     height: 150px;
     background-size: cover;
     background-position: center 40%;
+    transition: all .2s ease;
+}
+
+.trainer a:hover .trainer-image-container {
+    transform: scale(1.1);
+}
+
+.blog-main {
+    margin-top: 50px;
 }
 
 .col-md-12.trainer {

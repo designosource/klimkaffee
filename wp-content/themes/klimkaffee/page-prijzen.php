@@ -8,6 +8,8 @@ include( 'banner.php' ) ?>
                 </div>
                 <div class="col-md-9">
                     <h2><?php the_title(); ?></h2>
+                    <p class="prijzen-cta">Eerste keer boulderen, een beurtenkaart of een abonnement? Klik hieronder om jouw kaart aan te kopen.</p>
+                    <a href="/planner/shop" class="red-btn">Koop hier</a>
 					<?php if ( have_rows( 'categorie' ) ):
 						// loop through the rows of data
 						while ( have_rows( 'categorie' ) ) : the_row();

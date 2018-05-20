@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<div class="page-contact">
+	<div class="page-contact" style="margin-top: 50px;">
         <div class="custom-container">
             <div class="row">
                 <div class="col-md-4">
@@ -40,7 +40,7 @@
                             </div>
                             <div class="contact-bit">
                                 <i class="fa fa-envelope"></i>
-                                <p><?php echo get_field("email") ?></p>
+                                <p><a href="mailto:<?php echo get_field("email") ?>"><?php echo get_field("email") ?></a></p>
                             </div>
                             <div class="contact-bit">
                                 <i class="fa fa-phone"></i>

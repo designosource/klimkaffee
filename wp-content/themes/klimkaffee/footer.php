@@ -21,8 +21,8 @@
         <a href="https://www.designosource.be" target="_blank" class="copyright">&copy; 2017 - Designosource</a>
 
         <div class="links">
-            <a href="<?php echo get_field('algemene_voorwaarden', 'options'); ?>">Algemene voorwaarden</a>
-            <a href="<?php echo get_field('huisregels', 'options'); ?>">Huisregels</a>
+            <a target="_blank" href="<?php echo get_field('algemene_voorwaarden', 'options'); ?>">Algemene voorwaarden</a>
+            <a target="_blank" href="<?php echo get_field('huisregels', 'options'); ?>">Huisregels</a>
         </div>
     </div>
 </footer>

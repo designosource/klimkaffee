@@ -19,6 +19,7 @@ footer {
         flex-wrap: wrap;
         margin: auto;
         padding-top: 20px;
+        padding-bottom: 20px;
 
         li.menu-item {
 
@@ -27,6 +28,8 @@ footer {
           a {
             color: $white;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
           }
 
           a:hover {
@@ -62,7 +65,7 @@ footer {
             a {
               text-transform: none;
               font-size: $font-size-xs;
-              font-weight: normal;
+              font-weight: 300;
             }
 
             a:hover {
