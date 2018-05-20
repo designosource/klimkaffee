@@ -74,6 +74,10 @@ footer {
         li.menu-item-has-children > a:first-child {
           padding-bottom: 10px;
         }
+				
+				li#menu-item-213 a {
+					margin-top: 40px
+				}
       }
 
       #menu-footer > li:last-of-type {
@@ -123,7 +127,6 @@ footer {
         i {
           color: $white;
           padding: 10px;
-          margin: 0 10px;
           transition: $transition;
         }
 
@@ -164,11 +167,12 @@ footer {
 
       .copyright {
         order: 1;
-        width: initial;
+        width: 200px;
       }
 
       .links {
         order: 2;
+				width: 200px;
 
         a {
           text-align: right;

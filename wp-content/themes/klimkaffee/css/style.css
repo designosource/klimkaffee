@@ -1048,6 +1048,9 @@ footer {
             footer nav .menu li.menu-item a {
               color: #fff;
               text-transform: uppercase; }
+						footer nav .menu li.menu-item-213 a {
+							margin-top: 40px;
+						}
             footer nav .menu li.menu-item a:hover {
               color: #441c19; }
             footer nav .menu li.menu-item a:hover:after {
@@ -1064,7 +1067,7 @@ footer {
           footer nav .menu li.menu-item-has-children ul a {
             text-transform: none;
             font-size: 13px;
-            font-weight: normal; }
+            font-weight: lighter; }
           footer nav .menu li.menu-item-has-children ul a:hover {
             color: #441c19; }
           footer nav .menu li.menu-item-has-children > a:first-child {
@@ -1111,7 +1114,6 @@ footer {
       footer .bottom .social-media a i {
         color: #fff;
         padding: 10px;
-        margin: 0 10px;
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease; }
       footer .bottom .social-media a i:hover {
@@ -1146,11 +1148,12 @@ footer {
           -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
           order: 1;
-          width: initial; }
+          width: 200px; }
         footer .bottom .links {
           -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
-          order: 2; }
+          order: 2;
+					width: 200px; }
           footer .bottom .links a {
             text-align: right; } }
   @media (min-width: 992px) {
@@ -1339,7 +1342,7 @@ footer {
 
 .submenu {
   text-align: right;
-  border-right: 1px solid #d5d5d5;
+  /*border-right: 1px solid #d5d5d5;*/
   padding-right: 30px; }
   .submenu h3 {
     font-size: 1em;
@@ -1606,6 +1609,11 @@ body {
   max-width: 1920px;
   margin: auto; }
 
+.custom-container .col-md-9 {
+	border-left: 1px solid #d5d5d5;
+	padding-left: 30px;
+}
+
 .page-content {
   padding: 75px 0 75px; }
 
@@ -1647,6 +1655,11 @@ p.price-value {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto; }
+
+.slider-btn:hover {
+    color: #B93D3C !important;
+    background-color:  white !important;
+}
 
 .slick-slider {
   margin-bottom: 0;
@@ -1713,8 +1726,7 @@ p.price-value {
   min-width: 150px;
   background-color: #B93D3C;
   -webkit-transition: 0.5s;
-  transition: 0.5s;
-  border: 2px solid #B93D3C; }
+  transition: 0.5s; }
 
 .slide-text a:hover {
   background-color: transparent;
@@ -1821,7 +1833,9 @@ ul.slick-dots li.slick-active button:before {
     display: block; } }
 
 .page-content p {
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+	max-width: 500px;
+}
 
 strong {
   font-weight: bold; }
@@ -1866,7 +1880,11 @@ strong {
   line-height: 19px;
   color: white;
   margin-bottom: 2em;
-  min-height: inherit; }
+  min-height: inherit;
+	max-width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .homepage-aanbod .red-btn:hover {
   color: #B93D3C;
@@ -1955,7 +1973,7 @@ strong {
   padding-left: 1em; }
 
 .homepage-contact-inner-container {
-  width: 80%;
+  width: 60%;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto; }
@@ -2206,6 +2224,7 @@ a.read-more-link:hover {
 .dropdown-account-dropdown {
 	width: 150px;
 	cursor: pointer;
+	text-align: right;
 }
 
 .dropdown-account-dropdown p {
@@ -2230,7 +2249,7 @@ a.read-more-link:hover {
 .dropdown-account-items {
 	position: absolute;
 	top: 35px;
-	right: 15px;
+	right: -45px;
 	width: 150px;
 	background-color: #B93D3C;
 	padding-left: 15px;

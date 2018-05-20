@@ -95,6 +95,11 @@ p.price-value {
     margin-right: auto;
 }
 
+.slider-btn:hover {
+    color: #B93D3C !important;
+    background-color:  white !important;
+}
+
 .slick-slider {
     margin-bottom: 0;
     height: 400px;
@@ -163,7 +168,6 @@ p.price-value {
     min-width: 150px;
     background-color: #B93D3C;
     transition: 0.5s;
-    border: 2px solid #B93D3C;
 }
 
 .slide-text a:hover {
@@ -303,6 +307,7 @@ ul.slick-dots li.slick-active button:before {
 
 .page-content p {
     margin-bottom: 2em;
+		max-width: 500px;
 }
 
 strong {
@@ -452,7 +457,7 @@ strong {
 }
 
 .homepage-contact-inner-container {
-    width: 80%;
+    width: 60%;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -706,6 +711,7 @@ a.read-more-link:hover {
 .dropdown-account-dropdown {
 	width: 150px;
 	cursor: pointer;
+	text-align: right;
 }
 
 .dropdown-account-dropdown p {
@@ -730,7 +736,7 @@ a.read-more-link:hover {
 .dropdown-account-items {
 	position: absolute;
 	top: 35px;
-	right: -15px;
+	right: -45px;
 	width: 150px;
 	background-color: #B93D3C;
 	padding-left: 15px;
