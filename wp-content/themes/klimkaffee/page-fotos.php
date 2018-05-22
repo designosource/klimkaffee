@@ -24,10 +24,12 @@ Template Name: Photo gallery
                     </div>
                     
                     <div class="col-md-9">
-                       
-                        <h2>Foto's</h2>
-                        
-                        <?php echo do_shortcode('[bldrzl-album-loop]'); ?>
+
+                        <div class="line-wrapper">
+                            <h2>Foto's</h2>
+
+                            <?php echo do_shortcode('[bldrzl-album-loop]'); ?>
+                        </div>
                         
                     </div>
                     

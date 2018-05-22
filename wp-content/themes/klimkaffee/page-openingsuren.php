@@ -1,5 +1,5 @@
 <?php get_header();
-include( 'banner.php' )?>
+include('banner.php') ?>
 
     <div class="page-content page-openingsuren">
         <div class="custom-container">
@@ -8,8 +8,9 @@ include( 'banner.php' )?>
                     <?php get_sidebar(); ?>
                 </div>
                 <div class="col-md-9">
-                    <h2>Openingsuren</h2>
-                    <?php
+                    <div class="line-wrapper">
+                        <h2>Openingsuren</h2>
+                        <?php
                         if (have_rows('openingsuren')):
 
                             // loop through the rows of data
@@ -20,7 +21,8 @@ include( 'banner.php' )?>
                                 <div class="opening-moment">
                                     <p><?php echo get_sub_field('dagen'); ?></p>
                                     <div class="opening-bar">
-                                        <div class="opening-bar-inner" style="left: <?php echo get_sub_field('openingsuur') / 24 * 100 ?>%; width: <?php echo (get_sub_field('sluitingsuur') - get_sub_field('openingsuur')) / 24 * 100 ?>%;">
+                                        <div class="opening-bar-inner"
+                                             style="left: <?php echo get_sub_field('openingsuur') / 24 * 100 ?>%; width: <?php echo (get_sub_field('sluitingsuur') - get_sub_field('openingsuur')) / 24 * 100 ?>%;">
                                             <p><?php echo get_sub_field('openingsuur'); ?>u</p>
                                             <p><?php echo get_sub_field('sluitingsuur'); ?>u</p>
                                         </div>
@@ -32,6 +34,7 @@ include( 'banner.php' )?>
 
                         endif;
                         ?>
+                    </div>
                 </div>
             </div>
         </div>

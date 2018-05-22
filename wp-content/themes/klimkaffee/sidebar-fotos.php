@@ -13,7 +13,7 @@
     
     <?php if( have_rows('bldrzl_albums') ) ?>
 <div class="submenu">
-    <h3><?php the_title(); ?></h3>
+    <h3>Foto's</h3>
     <ul>
     <?php
     foreach($navigatie as $jaar) {

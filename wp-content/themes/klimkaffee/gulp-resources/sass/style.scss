@@ -577,6 +577,7 @@ a.read-more-link {
     background: #bf3e3c;
     color: white;
     transition: 0.3s;
+    font-weight: 300;
 }
 
 a.read-more-link:hover {
@@ -738,7 +739,7 @@ a.read-more-link:hover {
 }
 
 .dropdown-account-dropdown {
-	width: 150px;
+	width: 200px;
 	cursor: pointer;
 	text-align: right;
 }
@@ -782,4 +783,12 @@ a.read-more-link:hover {
 .dropdown-account-items li a {
 	text-decoration: none;
 	color: white;
+}
+
+.page-wat .red-btn {
+    margin-bottom: 70px;
+}
+
+.page-wat p a {
+    font-weight: bold;
 }

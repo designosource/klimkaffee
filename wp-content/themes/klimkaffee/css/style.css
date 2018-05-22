@@ -888,7 +888,7 @@ header {
         content: "home"; }
       header nav.main .menu li.current-menu-item a, header nav.main .menu li.current-menu-parent a {
         color: #bf3e3c; }
-      header nav.main .menu li.menu-item:not(.menu-item-has-children) {
+      header nav.main .menu li.menu-item:not(.menu-item-has-children):not(.menu-item-has-children li) {
         height: 46px; }
       header nav.main .menu li.menu-item-has-children li {
         margin-left: 25px;
@@ -1276,7 +1276,8 @@ footer {
       color: #bf3e3c;
       display: inline-block;
       float: left;
-      width: 40px; }
+      width: 40px;
+      height: 50px; }
     .page-contact .contact-bits .contact-bit p {
       position: relative;
       top: -3px;
@@ -1318,7 +1319,7 @@ footer {
   font-weight: 200; }
 
 .page-contact textarea {
-  height: 150px; }
+  height: 100px; }
 
 .page-contact input[type="submit"] {
   margin-top: 20px;
@@ -1341,9 +1342,7 @@ footer {
   padding-left: 50px; }
 
 .submenu {
-  text-align: right;
-  border-right: 1px solid #d5d5d5;
-  padding-right: 30px; }
+  text-align: right; }
   .submenu h3 {
     font-size: 1em;
     color: #252525;
@@ -1360,13 +1359,17 @@ footer {
     .submenu ul li a::after {
       display: none; }
 
+.line-wrapper {
+  padding-left: 40px;
+  border-left: 1px solid #d5d5d5; }
+
 .page-prijzen .prijzen-cta {
   margin-bottom: 15px; }
 
 .page-prijzen .sub-content {
   padding: 0; }
   .page-prijzen .sub-content h3 {
-    margin: 20px 0 5px 0; }
+    margin: 30px 0 15px 0; }
   .page-prijzen .sub-content .prices {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1403,7 +1406,8 @@ footer {
   padding: 100px 0; }
 
 .opening-moment {
-  margin: 40px 0; }
+  max-width: 700px;
+  margin: 30px 0; }
   .opening-moment p {
     font-weight: bold; }
   .opening-moment .opening-bar {
@@ -2091,7 +2095,8 @@ a.read-more-link {
   background: #bf3e3c;
   color: white;
   -webkit-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  font-weight: 300; }
 
 a.read-more-link:hover {
   background: transparent;
@@ -2249,7 +2254,7 @@ a.read-more-link:hover {
   position: relative; }
 
 .dropdown-account-dropdown {
-  width: 150px;
+  width: 200px;
   cursor: pointer;
   text-align: right; }
 
@@ -2291,3 +2296,9 @@ a.read-more-link:hover {
 .dropdown-account-items li a {
   text-decoration: none;
   color: white; }
+
+.page-wat .red-btn {
+  margin-bottom: 70px; }
+
+.page-wat p a {
+  font-weight: bold; }

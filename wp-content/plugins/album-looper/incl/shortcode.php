@@ -53,8 +53,11 @@ function bldrzl_album_loop_filter_functionality( $atts ) {
     foreach( $albums as $jaar ){
         $navigatie[$jaar['bldrzl_jaar']][] = $jaar;
     }
-    
-    echo '<ul class="submenu album-filter boulderzaal">';
+
+    echo '<div class="submenu">';
+    echo '<h3>Foto\'s</h3>';
+
+    echo '<ul class="album-filter boulderzaal">';
     foreach($navigatie as $jaar) {
 
             echo "<li>" .
@@ -75,6 +78,7 @@ function bldrzl_album_loop_filter_functionality( $atts ) {
             echo "</ul></li>";
     }
     echo '</ul>';
+    echo '</div>';
         
 	/*if ( have_rows( $repeater, 'option' ) ): ?>
         <div class="submenu">
