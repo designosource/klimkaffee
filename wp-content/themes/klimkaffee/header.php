@@ -36,9 +36,9 @@
 					<p>account <i class="fa fa-sort-down"></i></p>
 				</div>
 				<ul class="dropdown-account-items">
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Registreer</a></li>
-					<li><a href="#">Mijn account</a></li>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/registreer">Registreer</a></li>
+					<li><a href="/account">Mijn account</a></li>
 				</ul>
 			</div>
 		</div>

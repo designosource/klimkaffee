@@ -28,6 +28,19 @@ Version: 1.0
 @import "components/register";
 @import "components/reserveren";
 
+header {
+	border-bottom: 1px solid #ededed;
+}
+
+
+.page-prijzen .red-btn:hover {
+	color: #B93D3C;
+}
+
+.page-trainingen p {
+	max-width: 100% !important;
+}
+
 html,
 body {
   margin:0;

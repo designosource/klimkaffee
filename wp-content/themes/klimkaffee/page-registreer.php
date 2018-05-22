@@ -1,6 +1,6 @@
 <?php get_header();?>
     <div class="page-content page-register"
-    style="background-image: url( <?php echo $post->post_parent > 0 ?  wp_get_attachment_url(get_post_thumbnail_id($post->post_parent)) :  wp_get_attachment_url(get_post_thumbnail_id($post)); ?>)">
+    style="background-image: url('http://klimkaffee.akxis.io/wp-content/uploads/2018/04/planner.png')">
         <div class="custom-container">
             <div class="row">
                 <div class="col-md-4 title">

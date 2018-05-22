@@ -37,13 +37,25 @@ add_shortcode('shoperino', 'shop_view');
 add_shortcode('orderino', 'order_view');
 add_shortcode('mollierino', 'parse_payment');
 add_shortcode('reserverino', 'reserveer_view');
+add_shortcode('accounterino', 'account_view');
+add_shortcode('loginerino', 'login_view');
 
 define('API_BASE', 'https://klimcaffee.clubplanner.be/api/');
 define('TOKEN', "\$kl1mc@ff00");
 
+function login_view($attr)
+{
+        return "<iframe src='https://klimcaffee.clubplanner.be/Reservation/NewReservation/1' style='border: none; height: 1000px; width: 100%;'></iframe>";
+}
+
 function reserveer_view($attr)
 {
         return "<iframe src='https://klimcaffee.clubplanner.be/Account/LoginMember' style='border: none; height: 1000px; width: 100%;'></iframe>";
+}
+
+function account_view($attr)
+{
+        return "<iframe src='https://klimcaffee.clubplanner.be/Member' style='border: none; height: 1000px; width: 100%;'></iframe>";
 }
 
 function register_view($attr)
@@ -62,7 +74,7 @@ function register_view($attr)
         return $res;
 
     } else {
-        return "<form method='POST' action='" . get_site_url() . "/planner/registreer'>
+        return "<form method='POST' action='" . get_site_url() . "/registreer'>
                 <input type='text' name='firstname' placeholder='Voornaam'>
                 <input type='text' name='lastname' placeholder='Achternaam'>
                 <input type='email' name='email' placeholder='E-Mail'>
